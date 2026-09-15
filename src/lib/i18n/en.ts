@@ -33,7 +33,7 @@ export const messages: Record<string, string> = {
     'Choose the property, room, tenant, and inspection type from one operator workspace.',
   'home.step2Title': 'Let the tenant do their part',
   'home.step2Text':
-    'They open one guided link on their phone—no app, account, or training required.',
+    'They open one guided link on their phone. No app, account, or training required.',
   'home.step3Title': 'Review one complete record',
   'home.step3Text':
     'Photos, condition notes, inventory, keys, meter readings, and signatures arrive together.',
@@ -51,7 +51,7 @@ export const messages: Record<string, string> = {
   'home.units': 'rooms or units under management',
   'home.standard': 'One trusted handover standard across every property',
   'home.operatorsEyebrow': 'More consistency, without more friction',
-  'home.operatorsTitle': 'One confident process—from 50 rooms to 5,000.',
+  'home.operatorsTitle': 'One confident process, from 50 rooms to 5,000.',
   'home.operatorsText':
     'Trailase gives European property teams a professional handover experience they can repeat across locations, while keeping every tenant journey simple.',
   'home.audience.coliving': 'Coliving operators',
@@ -92,7 +92,7 @@ export const messages: Record<string, string> = {
   'operator.intro':
     'Start one guided inspection, share the tenant link, and watch every detail return in one complete record.',
   'operator.prototypeNote':
-    'You’re in the live demo—use the sample data to experience the complete handover flow.',
+    'You’re in the live demo. Use the sample data to experience the complete handover flow.',
   'operator.create': 'Start the Room 4B handover',
   'operator.creating': 'Creating…',
   'operator.queue': 'Evidence queue',

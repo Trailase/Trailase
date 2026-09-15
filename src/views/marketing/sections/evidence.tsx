@@ -17,7 +17,7 @@ export function Evidence() {
         alt=""
         fill
         sizes="100vw"
-        className="-z-30 object-cover object-center"
+        className="-z-30 scale-90 object-cover object-center"
       />
       <div className="video-overlay pointer-events-none absolute inset-0 -z-20" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,transparent_49.9%,rgba(255,255,255,.08)_50%,transparent_50.1%)]" />

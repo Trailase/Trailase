@@ -22,12 +22,13 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        className="-z-30 object-cover object-center"
+        className="-z-30 scale-90 object-cover object-center"
       />
       <AmbientVideo
         src={backgroundVideo('homeHero')}
         poster="/trailase-hero-property.jpg"
-        className="pointer-events-none absolute inset-0 -z-[29] size-full object-cover object-center motion-reduce:hidden"
+        playbackRate={0.6}
+        className="pointer-events-none absolute inset-0 -z-[29] size-full scale-90 object-cover object-center motion-reduce:hidden"
       />
       <div className="video-overlay pointer-events-none absolute inset-0 -z-20" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-background/35 to-transparent" />

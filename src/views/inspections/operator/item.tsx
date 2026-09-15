@@ -65,7 +65,7 @@ export function Item({ item, locale, deleting, onCopy, onDelete }: Props) {
           />
           <Metric
             label={t('operator.completedAt')}
-            value={item.completedAt ? formatDate(item.completedAt, locale) : '—'}
+            value={item.completedAt ? formatDate(item.completedAt, locale) : '-'}
             wide
           />
         </div>

@@ -21,7 +21,7 @@ export function Operators() {
     >
       <AmbientVideo
         src={backgroundVideo('homeOperators')}
-        className="pointer-events-none absolute inset-0 -z-30 size-full object-cover object-center motion-reduce:hidden"
+        className="pointer-events-none absolute inset-0 -z-30 size-full scale-90 object-cover object-center motion-reduce:hidden"
       />
       <div className="video-overlay video-overlay-right pointer-events-none absolute inset-0 -z-20" />
       <div className="pointer-events-none absolute -bottom-48 -right-32 -z-10 size-[32rem] rounded-full bg-brand-200/25 blur-3xl dark:bg-brand-700/15" />

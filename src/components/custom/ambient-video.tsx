@@ -6,18 +6,22 @@ type AmbientVideoProps = {
   src: string;
   poster?: string;
   className?: string;
+  /** Playback speed multiplier: lower than 1 slows the clip down. Defaults to normal speed. */
+  playbackRate?: number;
 };
 
-export function AmbientVideo({ src, poster, className }: AmbientVideoProps) {
+export function AmbientVideo({ src, poster, className, playbackRate = 1 }: AmbientVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+    video.playbackRate = playbackRate;
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const updatePlayback = (visible: boolean) => {
       if (visible && !reducedMotion.matches) {
+        video.playbackRate = playbackRate;
         void video.play().catch(() => undefined);
       } else {
         video.pause();

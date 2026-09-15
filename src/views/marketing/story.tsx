@@ -50,7 +50,7 @@ export function EvidenceScrollStory() {
 
   useEffect(() => {
     // Keep in sync with the `(max-height: 760px)` reflow breakpoint in
-    // custom-style.css — this is the JS half that drives the same threshold's
+    // custom-style.css: this is the JS half that drives the same threshold's
     // scroll-progress math.
     const shortViewportMedia = window.matchMedia('(max-height: 760px)');
 
@@ -159,7 +159,7 @@ export function EvidenceScrollStory() {
         <AmbientVideo
           key={storyVideos[activePhase] ?? storyVideos[0]}
           src={storyVideos[activePhase] ?? storyVideos[0]}
-          className="pointer-events-none absolute inset-0 size-full object-cover object-center motion-reduce:hidden"
+          className="pointer-events-none absolute inset-0 size-full scale-90 object-cover object-center motion-reduce:hidden"
         />
         <div className="video-overlay-story absolute inset-0" />
         <div className="absolute inset-x-0 top-0 h-px bg-brand-300/50 dark:bg-white/10" />
