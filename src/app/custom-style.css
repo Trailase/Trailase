@@ -1,0 +1,279 @@
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Shade the copy area; leave the surrounding footage visible in both themes. */
+.video-overlay {
+  background: linear-gradient(
+    90deg,
+    rgb(247 251 255 / 0.8),
+    rgb(247 251 255 / 0.42) 48%,
+    rgb(247 251 255 / 0.1)
+  );
+}
+
+.dark .video-overlay {
+  background: linear-gradient(
+    90deg,
+    rgb(5 25 51 / 0.72),
+    rgb(5 25 51 / 0.34) 48%,
+    rgb(5 25 51 / 0.08)
+  );
+}
+
+.video-overlay-right {
+  transform: scaleX(-1);
+}
+
+.video-copy {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: rgb(247 251 255 / 0.84);
+  backdrop-filter: blur(6px);
+}
+
+.dark .video-copy {
+  background: rgb(7 23 46 / 0.94);
+  color: var(--foreground);
+}
+
+.dark .video-copy .text-muted-foreground {
+  color: #c9d8eb;
+}
+
+.demo-layout {
+  position: relative;
+  isolation: isolate;
+}
+
+.demo-layout > * {
+  min-width: 0;
+}
+
+.demo-media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: clip;
+  background: var(--card);
+}
+
+.demo-media video {
+  position: sticky;
+  top: 3.5rem;
+  width: 100%;
+  height: calc(100dvh - 3.5rem);
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.demo-complete {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1280px) {
+  .demo-media-condition video {
+    width: 180%;
+    max-width: none;
+    margin-left: -80%;
+  }
+
+  .demo-media-photos video,
+  .demo-media-signature video {
+    width: 120%;
+    max-width: none;
+    margin-left: -20%;
+  }
+
+  .demo-media-notes video {
+    width: 130%;
+    max-width: none;
+    margin-left: -30%;
+  }
+
+  .demo-media-review video {
+    width: 125%;
+    max-width: none;
+    object-position: left center;
+  }
+}
+
+.video-overlay-dark {
+  background: linear-gradient(
+    90deg,
+    rgb(5 25 51 / 0.72),
+    rgb(5 25 51 / 0.4) 58%,
+    rgb(5 25 51 / 0.12)
+  );
+}
+
+.video-copy-dark {
+  background: rgb(5 25 51 / 0.7);
+}
+
+.video-overlay-story {
+  background: linear-gradient(
+    180deg,
+    rgb(247 251 255 / 0.75),
+    rgb(247 251 255 / 0.14) 35%,
+    rgb(247 251 255 / 0.12) 70%,
+    rgb(247 251 255 / 0.78)
+  );
+}
+
+.dark .video-overlay-story {
+  background: linear-gradient(
+    180deg,
+    rgb(7 23 46 / 0.72),
+    rgb(7 23 46 / 0.12) 35%,
+    rgb(7 23 46 / 0.08) 70%,
+    rgb(7 23 46 / 0.72)
+  );
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 88% 4%, oklch(0.92 0.075 245 / 0.34), transparent 28rem),
+    radial-gradient(circle at 8% 90%, oklch(0.92 0.08 190 / 0.2), transparent 26rem);
+  background-attachment: scroll;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+/*
+ * The scroll story needs a classic viewport-unit fallback for embedded and
+ * vendor Android browsers. Keep the fallback and modern value in explicit
+ * cascade order instead of relying on generated utility ordering.
+ */
+.evidence-story {
+  height: 235vh;
+}
+
+.evidence-story-frame {
+  height: calc(100vh - 3.5rem);
+}
+
+.evidence-story-stage {
+  transform: translate(-50%, -50%);
+}
+
+@supports (height: 100svh) {
+  .evidence-story {
+    height: 235svh;
+  }
+
+  .evidence-story-frame {
+    height: calc(100svh - 3.5rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .evidence-story {
+    height: 280vh;
+  }
+}
+
+/*
+ * Browser zoom reduces the viewport's CSS height. Once it becomes too short
+ * for the pinned composition, let the story reflow as normal content instead
+ * of squeezing independently positioned layers on top of each other.
+ */
+@media (max-height: 700px) {
+  .evidence-story {
+    height: auto;
+    min-height: 0;
+  }
+
+  .evidence-story-frame {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .evidence-story-layout {
+    height: auto;
+    min-height: 52rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .evidence-story .evidence-story-heading,
+  .evidence-story .evidence-story-phases,
+  .evidence-story .evidence-story-stage,
+  .evidence-story .evidence-story-note {
+    position: relative;
+    inset: auto;
+  }
+
+  .evidence-story .evidence-story-phases {
+    margin-top: 1.75rem;
+  }
+
+  .evidence-story .evidence-story-stage {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 53.75rem);
+    margin: 2.25rem auto 0;
+    transform: none;
+  }
+
+  .evidence-story .evidence-story-note {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+.dark body {
+  background-image:
+    radial-gradient(circle at 88% 4%, oklch(0.31 0.11 255 / 0.28), transparent 30rem),
+    radial-gradient(circle at 8% 90%, oklch(0.42 0.09 190 / 0.16), transparent 28rem);
+}
+
+::selection {
+  background: var(--brand-200);
+  color: var(--brand-900);
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-reveal {
+    animation: trailase-reveal both linear;
+    animation-timeline: view();
+    animation-range: entry 8% cover 28%;
+  }
+}
+
+@keyframes trailase-reveal {
+  from {
+    opacity: 0.35;
+    transform: translateY(2rem) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-reveal {
+    animation: none;
+  }
+}
