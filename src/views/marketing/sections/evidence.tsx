@@ -1,4 +1,5 @@
 import { ClipboardCheck, FileCheck2, Smartphone } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -11,8 +12,17 @@ export function Evidence() {
   ];
   return (
     <section className="scroll-reveal relative isolate overflow-hidden border-y border-border bg-background px-gutter py-20 text-foreground md:py-28">
+      <Image
+        src="/marketing/section-evidence.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="-z-30 object-cover object-center"
+      />
+      <div className="video-overlay pointer-events-none absolute inset-0 -z-20" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,transparent_49.9%,rgba(255,255,255,.08)_50%,transparent_50.1%)]" />
       <div className="mx-auto w-full max-w-[var(--container-page)]">
-        <div className="max-w-3xl">
+        <div className="video-copy max-w-3xl">
           <p className="text-eyebrow">{t('home.evidenceEyebrow')}</p>
           <h2 className="mt-5 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
             {t('home.evidenceTitle')}

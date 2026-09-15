@@ -1,4 +1,5 @@
 import { Mail } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Button } from '@/components/ui/button';
 import { requestContactRedirect } from '@/lib/contact-redirect';
@@ -12,8 +13,16 @@ export function Contact() {
       id="contact"
       className="relative isolate scroll-mt-20 overflow-hidden bg-background px-gutter py-20 text-foreground md:py-28"
     >
+      <Image
+        src="/marketing/section-contact.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="-z-30 object-cover object-center"
+      />
+      <div className="video-overlay pointer-events-none absolute inset-0 -z-20" />
       <div className="relative mx-auto flex w-full max-w-[var(--container-page)] flex-col gap-8 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-2xl">
+        <div className="video-copy max-w-2xl">
           <p className="text-eyebrow">{t('home.tagline')}</p>
           <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
             {t('home.contactTitle')}

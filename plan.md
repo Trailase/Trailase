@@ -13,22 +13,24 @@ section swaps between 3). Nothing on the page is ever *not* moving — video
 stops being a signature moment and becomes wallpaper, which is exactly the
 "loaded with video" complaint.
 
-**Decision: keep motion only where it's doing narrative work, cut it everywhere
-it's decorative.**
+**Decision: keep motion only where it's doing narrative or "proof" work, cut
+it everywhere it's purely decorative — and don't leave the cut sections
+looking bare.**
 
-- **Keep:** `Hero` (first impression, sets the tone) and `EvidenceScrollStory`
-  (the video *is* the product demo — scroll-driven, actually explains the
-  feature). These two justify the motion.
-- **Remove the background video from:** `Workflow`, `Evidence`, `Operators`,
-  `Contact`. These sections are text + cards; the video added nothing but
-  weight and visual competition with the copy sitting on top of it. Replace
-  with a static tinted gradient (reusing the existing brand palette) so the
-  sections still feel designed, not blank.
-- Net effect: autoplaying videos drop from 7 to 2 (well, 2-slots, 3 clips
-  cycling in the story). Fewer decoders running at once, fewer
-  IntersectionObservers, less battery/data use on mobile, and the hero +
-  story motion actually stands out because it's no longer competing with
-  five other moving backgrounds.
+- **Keep video:** `Hero` (first impression), `EvidenceScrollStory` (the video
+  *is* the product demo), and `Operators` (the "50–5,000 units" claim reads
+  as a live portfolio, not a stock photo — motion earns its place there).
+- **Static image, no video:** `Workflow`, `Evidence`, `Contact`. These are
+  text + card sections where autoplay was pure wallpaper. Going fully flat
+  read as empty, so instead each now uses a still frame pulled from that
+  section's own curated video clip (`ffmpeg` frame grab at ~2.5s into
+  `public/videos/candidates/<group>/01.mp4`, saved to `public/marketing/`) —
+  same visual language and color the video would have shown, zero decode/
+  battery cost, same text-legibility treatment (`.video-overlay` /
+  `.video-copy`) reused as-is.
+- Net effect: autoplaying videos drop from 7 to 3 (Hero, Operators, and the
+  3-clip story). The remaining motion stands out because it's not competing
+  with four other moving backgrounds, and no section looks empty.
 - Leave `AmbientVideo`'s play/pause-on-visibility and `prefers-reduced-motion`
   handling as-is — that logic is correct and should carry over to the demo
   pages (`DemoBackground`) untouched.
@@ -81,6 +83,13 @@ does, so the two bug classes overlap):
   100% and simulating ~150%/200% zoom (i.e. shrinking the viewport further),
   and at short heights (~560-700px) to confirm the story section's reflow
   fallback and the hero don't clip or overlap text.
+- **Also cover the live demo, not just the marketing page** — `/operator/inspections`
+  (`OperatorInspections`) and the tenant flow at `/inspection?token=...`
+  (`InspectionFlow`), both of which use the same `AmbientVideo`/`DemoBackground`
+  pattern with sticky-positioned video and a mobile sticky action bar. Verified
+  with real (non-full-page) viewport screenshots at 375 and 1280 width, scrolled
+  and unscrolled — no overflow, no overlap; the sticky bottom nav and sticky
+  video both behave correctly under real scrolling.
 
 ## 3. Order of work
 

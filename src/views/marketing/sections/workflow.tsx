@@ -1,4 +1,5 @@
 import { ClipboardCheck, FileCheck2, Smartphone } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -15,10 +16,18 @@ export function Workflow() {
       id="how-it-works"
       className="relative isolate scroll-mt-20 overflow-hidden px-gutter py-20 md:py-28"
     >
+      <Image
+        src="/marketing/section-workflow.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="-z-30 object-cover object-center"
+      />
+      <div className="video-overlay pointer-events-none absolute inset-0 -z-20" />
       <div className="pointer-events-none absolute -left-24 top-24 -z-10 size-72 rounded-full border-[48px] border-brand-200/35 dark:border-brand-700/15" />
       <div className="mx-auto w-full max-w-[var(--container-page)]">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-24">
-          <div className="max-w-xl">
+          <div className="video-copy max-w-xl">
             <p className="text-eyebrow">{t('home.workflowEyebrow')}</p>
             <h2 className="mt-5 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
               {t('home.workflowTitle')}
@@ -27,7 +36,7 @@ export function Workflow() {
               {t('home.workflowIntro')}
             </p>
           </div>
-          <p className="hidden border-l border-brand-teal pl-6 text-sm leading-6 text-foreground lg:block">
+          <p className="video-copy hidden border-l border-brand-teal pl-6 text-sm leading-6 text-foreground lg:block">
             {t('home.standard')}
           </p>
         </div>
