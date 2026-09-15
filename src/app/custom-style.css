@@ -181,11 +181,17 @@ body {
 }
 
 /*
- * Browser zoom reduces the viewport's CSS height. Once it becomes too short
- * for the pinned composition, let the story reflow as normal content instead
- * of squeezing independently positioned layers on top of each other.
+ * Browser zoom reduces the viewport's CSS height (e.g. 150% zoom on a 1080p
+ * display is ~720px tall in CSS px). Once it becomes too short for the
+ * pinned composition, let the story reflow as normal content instead of
+ * squeezing independently positioned layers on top of each other. The
+ * threshold has headroom above the ~650px where the heading/phase-pill/
+ * stage stack actually starts overlapping, so common zoom levels (110-150%)
+ * on laptop-class screens land safely in the reflowed layout rather than
+ * the tight edge of the pinned one. Keep in sync with the
+ * `shortViewportMedia` query in story.tsx.
  */
-@media (max-height: 700px) {
+@media (max-height: 760px) {
   .evidence-story {
     height: auto;
     min-height: 0;

@@ -15,7 +15,7 @@ export function Hero() {
   const contactHref = contactMailto(locale);
 
   return (
-    <section className="relative isolate min-h-[760px] overflow-hidden border-b border-brand-200/70 px-gutter py-20 md:py-28 lg:flex lg:items-center lg:py-32 dark:border-white/10">
+    <section className="relative isolate min-h-[min(760px,100dvh)] overflow-hidden border-b border-brand-200/70 px-gutter py-20 md:py-28 lg:flex lg:items-center lg:py-32 dark:border-white/10">
       <Image
         src="/trailase-hero-property.jpg"
         alt=""

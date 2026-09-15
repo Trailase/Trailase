@@ -49,8 +49,10 @@ export function EvidenceScrollStory() {
   const [showEvidenceNote, setShowEvidenceNote] = useState(false);
 
   useEffect(() => {
-    const compactMedia = window.matchMedia('(max-width: 639px)');
-    const shortViewportMedia = window.matchMedia('(max-height: 700px)');
+    // Keep in sync with the `(max-height: 760px)` reflow breakpoint in
+    // custom-style.css — this is the JS half that drives the same threshold's
+    // scroll-progress math.
+    const shortViewportMedia = window.matchMedia('(max-height: 760px)');
 
     const update = () => {
       frameRef.current = null;
@@ -73,7 +75,16 @@ export function EvidenceScrollStory() {
       const compare = smooth(range(progress, 0.6, 0.94));
       const evidenceOpacity = 1 - smooth(range(progress, 0.45, 0.64));
       const reportOpacity = smooth(range(progress, 0.24, 0.48));
-      const mobileScale = compactMedia.matches ? 0.42 : 1;
+      // Card size is fixed (138px below the sm breakpoint), so scaling only
+      // the assembled *position* by a single 0.42 step still let cards clip
+      // on the narrowest phones (~320-360px), where the section's
+      // `overflow-hidden` was cutting off the outer edge. Interpolate the
+      // scale continuously below 640px instead of a single step, anchored so
+      // 375px-wide phones (the common baseline) keep the original 0.42 feel.
+      const mobileScale =
+        window.innerWidth >= 640
+          ? 1
+          : clamp(range(window.innerWidth, 320, 375)) * 0.1 + 0.32;
 
       evidenceRefs.current.forEach((node, index) => {
         const item = evidence[index];
@@ -124,13 +135,11 @@ export function EvidenceScrollStory() {
     };
 
     update();
-    addMediaListener(compactMedia);
     addMediaListener(shortViewportMedia);
     window.addEventListener('scroll', requestUpdate, { passive: true });
     window.addEventListener('resize', requestUpdate);
     window.visualViewport?.addEventListener('resize', requestUpdate);
     return () => {
-      removeMediaListener(compactMedia);
       removeMediaListener(shortViewportMedia);
       window.removeEventListener('scroll', requestUpdate);
       window.removeEventListener('resize', requestUpdate);
@@ -190,7 +199,7 @@ export function EvidenceScrollStory() {
             })}
           </div>
 
-          <div className="evidence-story-stage absolute left-1/2 top-[58%] h-[330px] w-[330px] sm:h-[390px] sm:w-[620px] md:top-[59%] md:h-[430px] md:w-[860px]">
+          <div className="evidence-story-stage absolute left-1/2 top-[58%] h-[330px] w-[min(330px,90vw)] sm:h-[390px] sm:w-[620px] md:top-[59%] md:h-[430px] md:w-[860px]">
             {evidence.map((item, index) => {
               const Icon = item.icon;
               return (

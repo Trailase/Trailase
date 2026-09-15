@@ -51,7 +51,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={activeLocale} dir="ltr" suppressHydrationWarning>
-      <body className="min-h-screen bg-background font-body text-foreground antialiased">
+      <body className="min-h-screen overflow-x-hidden bg-background font-body text-foreground antialiased">
         {/* Framework provider composition. App-wide React providers go in the
             user-owned src/components/providers.tsx (AppProviders, below), which wraps
             the whole app — add providers there, not here. The `nonce` is available to

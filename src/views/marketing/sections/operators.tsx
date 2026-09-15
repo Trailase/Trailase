@@ -1,8 +1,6 @@
 import { Building2, KeyRound } from 'lucide-react';
-import { AmbientVideo } from '@/components/custom/ambient-video';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Badge } from '@/components/ui/badge';
-import { backgroundVideo } from '@/lib/background-videos';
 
 const audiences = [
   'home.audience.coliving',
@@ -19,11 +17,6 @@ export function Operators() {
       id="operators"
       className="scroll-reveal relative isolate scroll-mt-20 overflow-hidden px-gutter py-20 md:py-28"
     >
-      <AmbientVideo
-        src={backgroundVideo('homeOperators')}
-        className="pointer-events-none absolute inset-0 -z-30 size-full object-cover object-center motion-reduce:hidden"
-      />
-      <div className="video-overlay video-overlay-right pointer-events-none absolute inset-0 -z-20" />
       <div className="pointer-events-none absolute -bottom-48 -right-32 -z-10 size-[32rem] rounded-full bg-brand-200/25 blur-3xl dark:bg-brand-700/15" />
       <div className="mx-auto grid w-full max-w-[var(--container-page)] gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-24">
         <div className="relative isolate overflow-hidden rounded-xl border border-brand-teal/40 bg-card/95 p-7 text-card-foreground shadow-2xl backdrop-blur-sm">
@@ -39,7 +32,7 @@ export function Operators() {
             </div>
           </div>
         </div>
-        <div className="video-copy">
+        <div>
           <p className="text-eyebrow">{t('home.operatorsEyebrow')}</p>
           <h2 className="mt-5 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
             {t('home.operatorsTitle')}
