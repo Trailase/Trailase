@@ -21,7 +21,7 @@ export function Workflow() {
         alt=""
         fill
         sizes="100vw"
-        className="-z-30 scale-90 object-cover object-center"
+        className="-z-30 object-cover object-center"
       />
       <div className="video-overlay pointer-events-none absolute inset-0 -z-20" />
       <div className="pointer-events-none absolute -left-24 top-24 -z-10 size-72 rounded-full border-[48px] border-brand-200/35 dark:border-brand-700/15" />

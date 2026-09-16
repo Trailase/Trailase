@@ -159,7 +159,7 @@ export function EvidenceScrollStory() {
         <AmbientVideo
           key={storyVideos[activePhase] ?? storyVideos[0]}
           src={storyVideos[activePhase] ?? storyVideos[0]}
-          className="pointer-events-none absolute inset-0 size-full scale-90 object-cover object-center motion-reduce:hidden"
+          className="pointer-events-none absolute inset-0 size-full object-cover object-center motion-reduce:hidden"
         />
         <div className="video-overlay-story absolute inset-0" />
         <div className="absolute inset-x-0 top-0 h-px bg-brand-300/50 dark:bg-white/10" />

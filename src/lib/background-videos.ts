@@ -22,12 +22,12 @@ export type BackgroundVideo = keyof typeof groups;
 
 // Change any value to 1–10 to select that section's preferred cut.
 export const selectedVideoVariants: Record<BackgroundVideo, VideoVariant> = {
-  homeHero: 1,
-  homeWorkflow: 1,
+  homeHero: 9,
+  homeWorkflow: 10,
   homeStoryCapture: 1,
   homeStoryStructure: 1,
   homeStoryCompare: 1,
-  homeEvidence: 1,
+  homeEvidence: 6,
   homeOperators: 1,
   homeContact: 1,
   demoOperator: 1,
