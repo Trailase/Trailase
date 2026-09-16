@@ -21,11 +21,11 @@ const clamp = (value: number) => Math.min(1, Math.max(0, value));
 const range = (value: number, start: number, end: number) => clamp((value - start) / (end - start));
 const smooth = (value: number) => value * value * (3 - 2 * value);
 
-const storyVideos = [
-  backgroundVideo('homeStoryCapture'),
-  backgroundVideo('homeStoryStructure'),
-  backgroundVideo('homeStoryCompare'),
-] as const;
+// A single clip covering all three phases back-to-back, so it plays through
+// continuously instead of the old approach of swapping between three
+// separate <video src> elements, which caused a visible cut/reload at each
+// phase boundary.
+const storyVideo = backgroundVideo('homeStoryCombined');
 
 const evidence = [
   { key: 'story.photos', value: '12', icon: Camera, x: -330, y: -160, rotate: -7 },
@@ -157,8 +157,7 @@ export function EvidenceScrollStory() {
     >
       <div className="evidence-story-frame sticky top-14 flex min-h-0 items-center overflow-hidden sm:min-h-[650px]">
         <AmbientVideo
-          key={storyVideos[activePhase] ?? storyVideos[0]}
-          src={storyVideos[activePhase] ?? storyVideos[0]}
+          src={storyVideo}
           className="pointer-events-none absolute inset-0 size-full object-cover object-center motion-reduce:hidden"
         />
         <div className="video-overlay-story absolute inset-0" />
