@@ -7,18 +7,12 @@ site.
 
 ## How to use
 
-Preview a candidate at `/marketing/candidates/<name>.jpg` in the dev server,
-then promote your pick by copying it over the live asset:
-
-```sh
-cp public/marketing/candidates/workflow-03.jpg public/marketing/section-workflow.jpg
-cp public/marketing/candidates/evidence-02.jpg public/marketing/section-evidence.jpg
-```
-
-The Contact section (`src/views/marketing/sections/contact.tsx`) currently has
-no background image. To use one of the `contact-*.jpg` candidates, copy it to
-`public/marketing/section-contact.jpg` and add a `next/image` background the
-same way `workflow.tsx` and `evidence.tsx` already do.
+Workflow, Evidence, and Contact currently render with no background image
+(plain `bg-background`, matching Contact's original look). Preview a
+candidate at `/marketing/candidates/<name>.jpg` in the dev server; to bring
+one back as a section background, copy it into `public/marketing/section-<name>.jpg`
+and add a `next/image fill` background to that section the way `workflow.tsx`
+and `evidence.tsx` used to (see git history).
 
 ## Visual direction
 
