@@ -67,7 +67,7 @@ export const messages: Record<string, string> = {
   'home.contactText':
     'Dites-nous où les entrées ou sorties ralentissent votre équipe. Nous vous montrerons comment Trailase transforme ces détails dispersés en un processus clair.',
   'home.contactTiming':
-    'Les résidences étudiantes et les grands portefeuilles concentrent l’essentiel de leurs entrées et sorties sur quelques semaines par an — préparez-vous avant cette période, pas pendant.',
+    'Les résidences étudiantes et les grands portefeuilles concentrent l’essentiel de leurs entrées et sorties sur quelques semaines par an. Préparez-vous avant cette période, pas pendant.',
   'home.contactButton': 'Demander une démo',
   'home.contactNameLabel': 'Nom (facultatif)',
   'home.contactEmailLabel': 'E-mail',
@@ -80,10 +80,9 @@ export const messages: Record<string, string> = {
   'home.contactError': 'L’envoi a échoué. Essayez le lien e-mail ci-dessous.',
   'home.contactFallbackText': 'Vous pouvez aussi nous écrire directement :',
   'home.contactFallbackLink': 'Nous écrire',
-  'home.founderTitle': "Pourquoi j'ai créé ceci",
+  'home.founderTitle': 'Pourquoi cela existe',
   'home.founderText':
-    "J'ai vécu plusieurs années à travers l'Europe en tant que nomade numérique, changeant de chambre louée tous les quelques mois. Il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Une fois, un propriétaire a prétendu que j'avais endommagé la peinture d'un mur — il a fallu deux mois d'allers-retours pour régler cela, et seulement parce que j'avais mes propres photos avant/après. Trailase existe pour que les opérateurs et les locataires n'aient pas à compter sur cette chance. Nous en sommes encore aux débuts, mais nous construisons cela sérieusement dès maintenant.",
-  'home.founderSignature': '— Fondateur de Trailase',
+    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant/après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige. C'est encore récent et en croissance, mais c'est construit sérieusement dès maintenant.",
   'home.contactFreeTrial': 'Gratuit pour vos 10 premières inspections. Sans engagement.',
   'home.contactCalLink': "Vous préférez d'abord en parler ? Réservez un créneau dans notre agenda",
   'story.eyebrow': 'Voyez ce que la clarté change',

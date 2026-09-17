@@ -67,7 +67,7 @@ export const messages: Record<string, string> = {
   'home.contactText':
     'Vertel waar in- of uitchecken je team vertraagt. We laten zien hoe Trailase die losse eindjes omzet in één helder proces.',
   'home.contactTiming':
-    'Studentenhuisvesting en grote portefeuilles zien het meeste verloop in een paar drukke weken per jaar — regel dit vóór die periode, niet erdoorheen.',
+    'Studentenhuisvesting en grote portefeuilles zien het meeste verloop in een paar drukke weken per jaar. Regel dit vóór die periode, niet erdoorheen.',
   'home.contactButton': 'Plan een demo',
   'home.contactNameLabel': 'Naam (optioneel)',
   'home.contactEmailLabel': 'E-mail',
@@ -80,10 +80,9 @@ export const messages: Record<string, string> = {
   'home.contactError': 'Dat is niet gelukt. Probeer de e-maillink hieronder.',
   'home.contactFallbackText': 'U kunt ons ook rechtstreeks bereiken:',
   'home.contactFallbackLink': 'Mail ons',
-  'home.founderTitle': 'Waarom ik dit heb gebouwd',
+  'home.founderTitle': 'Waarom dit bestaat',
   'home.founderText':
-    'Ik heb jarenlang door Europa gereisd als digitale nomade en wisselde elke paar maanden van huurkamer. Er was nooit een consistente manier om de staat van een kamer bij in- of uitcheck aan te tonen. Een keer beweerde een verhuurder dat ik de verf van een muur had beschadigd — het duurde twee maanden heen-en-weer voordat het was opgelost, en alleen omdat ik toevallig mijn eigen foto’s van voor en na had. Trailase bestaat zodat operators en huurders niet op dat geluk hoeven te vertrouwen. We staan nog aan het begin en groeien, maar we bouwen dit nu al goed op.',
-  'home.founderSignature': '— Oprichter van Trailase',
+    'Trailase ontstond na het steeds weer zien van hetzelfde probleem bij het huren van kamers door heel Europa: er was nooit een consistente manier om de staat van een kamer bij in- of uitcheck aan te tonen. In één geval beweerde een verhuurder maanden na vertrek dat de verf van een muur was beschadigd. Het oplossen kostte twee maanden heen-en-weer, en lukte alleen omdat er foto’s van voor en na bestonden. Hetzelfde probleem speelt op grotere schaal. Een team van studentenhuisvesting dat in dezelfde augustusweek 200 kamers oplevert, heeft zelden tijd om elke kamer goed te documenteren, waardoor geschillen weken later ontstaan zonder bewijs aan beide kanten. Een portefeuille in meerdere steden met wisselend personeel per oplevering eindigt met een andere standaard per gebouw, waardoor niemand consistentie kan aantonen. Trailase bestaat om dat gat te dichten voordat het een geschil wordt. Het staat nog aan het begin en groeit, maar wordt vanaf nu goed opgebouwd.',
   'home.contactFreeTrial': 'Gratis voor je eerste 10 inspecties. Geen contract.',
   'home.contactCalLink': 'Liever eerst praten? Boek een moment in onze agenda',
   'story.eyebrow': 'Zie wat duidelijkheid verandert',

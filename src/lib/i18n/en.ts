@@ -64,7 +64,7 @@ export const messages: Record<string, string> = {
   'home.contactText':
     'Tell us where move-ins or move-outs slow your team down. We’ll show you how Trailase turns those loose ends into one clear process.',
   'home.contactTiming':
-    'Student housing and large portfolios see most of their turnover in a few concentrated weeks each year — set this up before that window, not during it.',
+    'Student housing and large portfolios see most of their turnover in a few concentrated weeks each year. Set this up before that window, not during it.',
   'home.contactButton': 'Request a walkthrough',
   'home.contactNameLabel': 'Name (optional)',
   'home.contactEmailLabel': 'Email',
@@ -77,10 +77,9 @@ export const messages: Record<string, string> = {
   'home.contactError': 'That did not go through. Try the email link below instead.',
   'home.contactFallbackText': 'You can also reach us directly:',
   'home.contactFallbackLink': 'Email us',
-  'home.founderTitle': 'Why I built this',
+  'home.founderTitle': 'Why this exists',
   'home.founderText':
-    'I spent years living across Europe as a digital nomad, moving between rented rooms every few months. There was never a consistent way to prove a room’s condition going in or out. Once, a landlord claimed I had damaged a wall’s paint — it took two months of back-and-forth before it was resolved, and only because I happened to have my own before-and-after photos. Trailase exists so operators and tenants don’t have to get lucky like that. We’re still early and growing, but we’re building it properly from here.',
-  'home.founderSignature': '— Trailase, founder',
+    'Trailase started after seeing the same gap play out again and again while renting rooms across Europe: no consistent way to prove a room’s condition going in or out. In one case, a landlord claimed a wall’s paint had been damaged months after move-out. It took two months of back-and-forth to resolve, and only got settled because before-and-after photos happened to exist. The same gap shows up at scale. A student housing team clearing 200 rooms in the same August week rarely has time to document each one properly, so disputes surface weeks later with no evidence on either side. A multi-city portfolio with different staff running each handover ends up with a different standard in every building, so nobody can prove anything was consistent. Trailase exists to close that gap before it becomes a dispute. It is still early and growing, but it is being built properly from here.',
   'home.contactFreeTrial': 'Free for your first 10 inspections. No contract.',
   'home.contactCalLink': 'Prefer to talk first? Book a slot on our calendar',
   'story.eyebrow': 'See the difference clarity makes',

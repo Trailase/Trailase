@@ -42,7 +42,6 @@ export function Contact() {
               {t('home.founderTitle')}
             </p>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">{t('home.founderText')}</p>
-            <p className="mt-3 text-sm font-medium text-foreground">{t('home.founderSignature')}</p>
           </div>
         </div>
 
