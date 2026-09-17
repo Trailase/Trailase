@@ -45,3 +45,14 @@ export function backgroundVideo(key: BackgroundVideo) {
   const variant = String(selectedVideoVariants[key]).padStart(2, '0');
   return `/videos/candidates/${groups[key]}/${variant}.mp4`;
 }
+
+// 720x1280 crop of the same source clip, for full-bleed object-cover
+// backgrounds. A 1280x720 landscape clip cropped to fill a narrow mobile
+// viewport only shows a ~28% center slice of its width; the portrait crop
+// keeps the framing recognizable instead. Only built for groups that render
+// full-bleed (home-hero, home-operators, home-story-combined and its three
+// phase clips) — see scripts/build-video-portrait.sh.
+export function backgroundVideoPortrait(key: BackgroundVideo) {
+  const variant = String(selectedVideoVariants[key]).padStart(2, '0');
+  return `/videos/candidates-portrait/${groups[key]}/${variant}.mp4`;
+}

@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import type { FlowStatus } from '@/controllers/inspections/useFlow';
-import { backgroundVideo } from '@/lib/background-videos';
+import { backgroundVideo, backgroundVideoPortrait } from '@/lib/background-videos';
 
 export function Loading() {
   const { t } = useLanguage();
@@ -27,6 +27,7 @@ export function Failure({ error, retry }: { error: string | null; retry: () => v
     <main className="relative isolate flex min-h-[calc(100svh-3.5rem)] items-center overflow-hidden bg-background px-gutter py-12">
       <AmbientVideo
         src={backgroundVideo('homeHero')}
+        portraitSrc={backgroundVideoPortrait('homeHero')}
         className="pointer-events-none absolute inset-0 -z-20 size-full object-cover"
       />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-background/10" />

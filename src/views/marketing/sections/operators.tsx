@@ -2,7 +2,7 @@ import { Building2, KeyRound } from 'lucide-react';
 import { AmbientVideo } from '@/components/custom/ambient-video';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Badge } from '@/components/ui/badge';
-import { backgroundVideo } from '@/lib/background-videos';
+import { backgroundVideo, backgroundVideoPortrait } from '@/lib/background-videos';
 
 const audiences = [
   'home.audience.coliving',
@@ -21,6 +21,7 @@ export function Operators() {
     >
       <AmbientVideo
         src={backgroundVideo('homeOperators')}
+        portraitSrc={backgroundVideoPortrait('homeOperators')}
         className="pointer-events-none absolute inset-0 -z-30 size-full object-cover object-center motion-reduce:hidden"
         playbackRate={0.6}
       />

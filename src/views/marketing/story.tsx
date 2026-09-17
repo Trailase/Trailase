@@ -15,7 +15,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { AmbientVideo } from '@/components/custom/ambient-video';
 import { useLanguage } from '@/components/i18n/language-provider';
-import { backgroundVideo } from '@/lib/background-videos';
+import { backgroundVideo, backgroundVideoPortrait } from '@/lib/background-videos';
 
 const clamp = (value: number) => Math.min(1, Math.max(0, value));
 const range = (value: number, start: number, end: number) => clamp((value - start) / (end - start));
@@ -26,6 +26,7 @@ const smooth = (value: number) => value * value * (3 - 2 * value);
 // separate <video src> elements, which caused a visible cut/reload at each
 // phase boundary.
 const storyVideo = backgroundVideo('homeStoryCombined');
+const storyVideoPortrait = backgroundVideoPortrait('homeStoryCombined');
 
 const evidence = [
   { key: 'story.photos', value: '12', icon: Camera, x: -330, y: -160, rotate: -7 },
@@ -158,6 +159,7 @@ export function EvidenceScrollStory() {
       <div className="evidence-story-frame sticky top-14 flex min-h-0 items-center overflow-hidden sm:min-h-[650px]">
         <AmbientVideo
           src={storyVideo}
+          portraitSrc={storyVideoPortrait}
           className="pointer-events-none absolute inset-0 size-full object-cover object-center motion-reduce:hidden"
         />
         <div className="video-overlay-story absolute inset-0" />

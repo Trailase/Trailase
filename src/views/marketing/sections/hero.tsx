@@ -6,7 +6,7 @@ import { useLanguage } from '@/components/i18n/language-provider';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { backgroundVideo } from '@/lib/background-videos';
+import { backgroundVideo, backgroundVideoPortrait } from '@/lib/background-videos';
 import { requestContactRedirect } from '@/lib/contact-redirect';
 import { contactMailto } from '@/lib/i18n';
 
@@ -26,6 +26,7 @@ export function Hero() {
       />
       <AmbientVideo
         src={backgroundVideo('homeHero')}
+        portraitSrc={backgroundVideoPortrait('homeHero')}
         poster="/trailase-hero-property.jpg"
         playbackRate={0.6}
         className="pointer-events-none absolute inset-0 -z-[29] size-full object-cover object-center motion-reduce:hidden"
