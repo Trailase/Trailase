@@ -76,24 +76,31 @@ export function EvidenceScrollStory() {
       const compare = smooth(range(progress, 0.6, 0.94));
       const evidenceOpacity = 1 - smooth(range(progress, 0.45, 0.64));
       const reportOpacity = smooth(range(progress, 0.24, 0.48));
-      // Card size is fixed (138px below the sm breakpoint), so scaling only
-      // the assembled *position* by a single 0.42 step still let cards clip
-      // on the narrowest phones (~320-360px), where the section's
-      // `overflow-hidden` was cutting off the outer edge. Interpolate the
-      // scale continuously below 640px instead of a single step, anchored so
-      // 375px-wide phones (the common baseline) keep the original 0.42 feel.
+      // Card size is fixed (138px below the sm breakpoint, 168px at sm+), so
+      // scaling only the assembled *position* by a single step still let
+      // cards clip on the narrowest phones (~320-360px), where the section's
+      // `overflow-hidden` was cutting off the outer edge. It also meant every
+      // width from 375 up to 639 got the same fixed 0.42 scale before
+      // *jumping* straight to 1 at the 640px breakpoint — a visible pop on
+      // resize, and untested territory for the 640-767px band (sm active,
+      // md not) that plan.md flagged. Interpolate continuously across the
+      // whole 320-640 range instead, anchored so 320px and 375px keep their
+      // original feel and 640px+ still lands exactly on the sm-sized layout.
+      const wideStep = clamp(range(window.innerWidth, 375, 640));
       const mobileScale =
         window.innerWidth >= 640
           ? 1
-          : clamp(range(window.innerWidth, 320, 375)) * 0.1 + 0.32;
+          : window.innerWidth <= 375
+            ? clamp(range(window.innerWidth, 320, 375)) * 0.1 + 0.32
+            : 0.42 + wideStep * 0.58;
 
       evidenceRefs.current.forEach((node, index) => {
         const item = evidence[index];
         if (!node || !item) return;
         const x = item.x * mobileScale * (1 - assemble);
         const y = item.y * mobileScale * (1 - assemble);
-        const targetX = ((index % 2) * 2 - 1) * (mobileScale === 1 ? 118 : 63);
-        const targetY = (Math.floor(index / 2) - 1) * (mobileScale === 1 ? 64 : 50);
+        const targetX = ((index % 2) * 2 - 1) * (63 + wideStep * 55);
+        const targetY = (Math.floor(index / 2) - 1) * (50 + wideStep * 14);
         node.style.opacity = String(evidenceOpacity);
         node.style.transform = `translate3d(calc(-50% + ${x + targetX * assemble}px), calc(-50% + ${y + targetY * assemble}px), 0) rotate(${item.rotate * (1 - assemble)}deg) scale(${0.93 + assemble * 0.07})`;
       });
