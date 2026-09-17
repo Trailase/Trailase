@@ -61,7 +61,7 @@ type NavigationProps = {
 export function Navigation({ step, total, submitting, previous, next, submit }: NavigationProps) {
   const { t } = useLanguage();
   return (
-    <div className="sticky bottom-3 z-10 mt-6 flex gap-3 border border-border bg-background/95 p-3 shadow-xl backdrop-blur sm:static sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none">
+    <div className="sticky bottom-3 z-10 mt-6 flex gap-3 border border-border bg-background/95 p-3 shadow-xl backdrop-blur sm:static sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-none">
       {step > 0 && (
         <Button
           type="button"
