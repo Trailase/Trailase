@@ -50,10 +50,15 @@ export function EvidenceScrollStory() {
   const [showEvidenceNote, setShowEvidenceNote] = useState(false);
 
   useEffect(() => {
-    // Keep in sync with the `(max-height: 760px)` reflow breakpoint in
-    // custom-style.css: this is the JS half that drives the same threshold's
-    // scroll-progress math.
-    const shortViewportMedia = window.matchMedia('(max-height: 760px)');
+    // Keep in sync with the reflow breakpoint in custom-style.css. Also
+    // reflows for the 640-767px width band: at that width `sm:` sizing is
+    // active (620px stage, 168px cards) but it's never been visually
+    // verified against the heading/phase-pill stack above it, so this plays
+    // safe there the same way it does for short/zoomed viewports instead of
+    // risking an unverified overlap.
+    const shortViewportMedia = window.matchMedia(
+      '(max-height: 760px), (min-width: 640px) and (max-width: 767px)',
+    );
 
     const update = () => {
       frameRef.current = null;

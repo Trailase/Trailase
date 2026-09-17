@@ -188,10 +188,13 @@ body {
  * threshold has headroom above the ~650px where the heading/phase-pill/
  * stage stack actually starts overlapping, so common zoom levels (110-150%)
  * on laptop-class screens land safely in the reflowed layout rather than
- * the tight edge of the pinned one. Keep in sync with the
- * `shortViewportMedia` query in story.tsx.
+ * the tight edge of the pinned one. Also reflows for 640-767px widths: `sm:`
+ * sizing kicks in there (620px stage, 168px cards) but was never visually
+ * verified against the heading/phase-pill stack above it, so it plays safe
+ * instead of risking an unverified overlap. Keep both conditions in sync
+ * with the `shortViewportMedia` query in story.tsx.
  */
-@media (max-height: 760px) {
+@media (max-height: 760px), (min-width: 640px) and (max-width: 767px) {
   .evidence-story {
     height: auto;
     min-height: 0;

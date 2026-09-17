@@ -43,9 +43,6 @@ export function GlobalMounts() {
             {t('contact.redirectText')}
           </DialogDescription>
         </DialogHeader>
-        <div className="rounded-md border border-border bg-muted/50 px-3 py-2 font-mono text-xs text-muted-foreground">
-          k3y.fl0ws@gmail.com
-        </div>
         <DialogFooter className="mt-2 gap-2 sm:space-x-0">
           <DialogClose asChild>
             <Button type="button" variant="outline">

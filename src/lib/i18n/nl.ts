@@ -82,9 +82,15 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Mail ons',
   'home.founderTitle': 'Waarom dit bestaat',
   'home.founderText':
-    'Trailase ontstond na het steeds weer zien van hetzelfde probleem bij het huren van kamers door heel Europa: er was nooit een consistente manier om de staat van een kamer bij in- of uitcheck aan te tonen. In één geval beweerde een verhuurder maanden na vertrek dat de verf van een muur was beschadigd. Het oplossen kostte twee maanden heen-en-weer, en lukte alleen omdat er foto’s van voor en na bestonden. Hetzelfde probleem speelt op grotere schaal. Een team van studentenhuisvesting dat in dezelfde augustusweek 200 kamers oplevert, heeft zelden tijd om elke kamer goed te documenteren, waardoor geschillen weken later ontstaan zonder bewijs aan beide kanten. Een portefeuille in meerdere steden met wisselend personeel per oplevering eindigt met een andere standaard per gebouw, waardoor niemand consistentie kan aantonen. Trailase bestaat om dat gat te dichten voordat het een geschil wordt. Het staat nog aan het begin en groeit, maar wordt vanaf nu goed opgebouwd.',
+    'Trailase ontstond na het steeds weer zien van hetzelfde probleem bij het huren van kamers door heel Europa: er was nooit een consistente manier om de staat van een kamer bij in- of uitcheck aan te tonen. In één geval beweerde een verhuurder maanden na vertrek dat de verf van een muur was beschadigd. Het oplossen kostte twee maanden heen-en-weer, en lukte alleen omdat er foto’s van voor en na bestonden. Hetzelfde probleem speelt op grotere schaal. Een team van studentenhuisvesting dat in dezelfde augustusweek 200 kamers oplevert, heeft zelden tijd om elke kamer goed te documenteren, waardoor geschillen weken later ontstaan zonder bewijs aan beide kanten. Een portefeuille in meerdere steden met wisselend personeel per oplevering eindigt met een andere standaard per gebouw, waardoor niemand consistentie kan aantonen. Trailase bestaat om dat gat te dichten voordat het een geschil wordt. Daarom zijn de eerste tien inspecties gratis: zie het zelf werken op uw eigen panden voordat u iets anders beslist.',
   'home.contactFreeTrial': 'Gratis voor je eerste 10 inspecties. Geen contract.',
   'home.contactCalLink': 'Liever eerst praten? Boek een moment in onze agenda',
+  'home.faqDeviceQ': 'Wat als een huurder geen smartphone heeft?',
+  'home.faqDeviceA':
+    'Trailase werkt volledig in de browser, dus een huurder kan het invullen op een telefoon, tablet of laptop met camera. Geen app of account nodig.',
+  'home.faqSetupQ': 'Hoeveel tijd kost het opzetten?',
+  'home.faqSetupA':
+    'Een operator maakt in enkele seconden een deellink vanuit één werkruimte. De huurder rondt het af op zijn eigen apparaat, zonder account of installatie.',
   'story.eyebrow': 'Zie wat duidelijkheid verandert',
   'story.title': 'Van losse details naar een dossier waarop je kunt vertrouwen.',
   'story.intro':

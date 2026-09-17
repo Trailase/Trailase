@@ -79,9 +79,15 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Email us',
   'home.founderTitle': 'Why this exists',
   'home.founderText':
-    'Trailase started after seeing the same gap play out again and again while renting rooms across Europe: no consistent way to prove a room’s condition going in or out. In one case, a landlord claimed a wall’s paint had been damaged months after move-out. It took two months of back-and-forth to resolve, and only got settled because before-and-after photos happened to exist. The same gap shows up at scale. A student housing team clearing 200 rooms in the same August week rarely has time to document each one properly, so disputes surface weeks later with no evidence on either side. A multi-city portfolio with different staff running each handover ends up with a different standard in every building, so nobody can prove anything was consistent. Trailase exists to close that gap before it becomes a dispute. It is still early and growing, but it is being built properly from here.',
+    'Trailase started after seeing the same gap play out again and again while renting rooms across Europe: no consistent way to prove a room’s condition going in or out. In one case, a landlord claimed a wall’s paint had been damaged months after move-out. It took two months of back-and-forth to resolve, and only got settled because before-and-after photos happened to exist. The same gap shows up at scale. A student housing team clearing 200 rooms in the same August week rarely has time to document each one properly, so disputes surface weeks later with no evidence on either side. A multi-city portfolio with different staff running each handover ends up with a different standard in every building, so nobody can prove anything was consistent. Trailase exists to close that gap before it becomes a dispute. That is why the first ten inspections are free: see it work on your own properties before deciding anything else.',
   'home.contactFreeTrial': 'Free for your first 10 inspections. No contract.',
   'home.contactCalLink': 'Prefer to talk first? Book a slot on our calendar',
+  'home.faqDeviceQ': 'What if a tenant does not have a smartphone?',
+  'home.faqDeviceA':
+    'Trailase runs entirely in the browser, so tenants can complete it from a phone, tablet, or laptop with a camera. No app or account is required.',
+  'home.faqSetupQ': 'How long does this take to set up?',
+  'home.faqSetupA':
+    'An operator creates a share link in seconds from one workspace. Tenants complete it on their own device with no account or install.',
   'story.eyebrow': 'See the difference clarity makes',
   'story.title': 'From scattered details to a record your team can trust.',
   'story.intro': 'Scroll to turn every inspection detail into one decision-ready record.',

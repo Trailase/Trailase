@@ -78,9 +78,15 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Enviar correo',
   'home.founderTitle': 'Por qué existe esto',
   'home.founderText':
-    'Trailase surgió al ver el mismo problema repetirse una y otra vez alquilando habitaciones por toda Europa: nunca había una forma consistente de demostrar el estado de una habitación al entrar o salir. En un caso, un propietario alegó que la pintura de una pared se había dañado meses después de la salida. Resolverlo tardó dos meses de idas y venidas, y solo se solucionó porque existían fotos de antes y después. El mismo problema aparece a mayor escala. Un equipo de residencias de estudiantes que vacía 200 habitaciones en la misma semana de agosto rara vez tiene tiempo de documentar cada una correctamente, así que las disputas surgen semanas después sin pruebas de ningún lado. Un portafolio multiciudad con distinto personal en cada entrega termina con un estándar diferente en cada edificio, por lo que nadie puede demostrar que algo fue consistente. Trailase existe para cerrar ese vacío antes de que se convierta en una disputa. Todavía está empezando y creciendo, pero se está construyendo bien desde ahora.',
+    'Trailase surgió al ver el mismo problema repetirse una y otra vez alquilando habitaciones por toda Europa: nunca había una forma consistente de demostrar el estado de una habitación al entrar o salir. En un caso, un propietario alegó que la pintura de una pared se había dañado meses después de la salida. Resolverlo tardó dos meses de idas y venidas, y solo se solucionó porque existían fotos de antes y después. El mismo problema aparece a mayor escala. Un equipo de residencias de estudiantes que vacía 200 habitaciones en la misma semana de agosto rara vez tiene tiempo de documentar cada una correctamente, así que las disputas surgen semanas después sin pruebas de ningún lado. Un portafolio multiciudad con distinto personal en cada entrega termina con un estándar diferente en cada edificio, por lo que nadie puede demostrar que algo fue consistente. Trailase existe para cerrar ese vacío antes de que se convierta en una disputa. Por eso las primeras diez inspecciones son gratuitas: compruébalo en tus propias propiedades antes de decidir nada más.',
   'home.contactFreeTrial': 'Gratis para tus primeras 10 inspecciones. Sin contrato.',
   'home.contactCalLink': '¿Prefieres hablar primero? Reserva un horario en nuestro calendario',
+  'home.faqDeviceQ': '¿Qué pasa si un inquilino no tiene smartphone?',
+  'home.faqDeviceA':
+    'Trailase funciona íntegramente en el navegador, así que el inquilino puede completarlo desde un teléfono, tablet o portátil con cámara. No hace falta ninguna app ni cuenta.',
+  'home.faqSetupQ': '¿Cuánto tiempo lleva configurarlo?',
+  'home.faqSetupA':
+    'Un operador crea un enlace para compartir en segundos desde un único espacio de trabajo. El inquilino lo completa en su propio dispositivo sin cuenta ni instalación.',
   'story.eyebrow': 'Descubre lo que cambia con claridad',
   'story.title': 'De detalles dispersos a un registro en el que confiar.',
   'story.intro':

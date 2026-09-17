@@ -82,9 +82,15 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Nous écrire',
   'home.founderTitle': 'Pourquoi cela existe',
   'home.founderText':
-    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant/après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige. C'est encore récent et en croissance, mais c'est construit sérieusement dès maintenant.",
+    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant/après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige. C'est pourquoi les dix premières inspections sont gratuites : voyez par vous-même sur vos propres biens avant de décider quoi que ce soit d'autre.",
   'home.contactFreeTrial': 'Gratuit pour vos 10 premières inspections. Sans engagement.',
   'home.contactCalLink': "Vous préférez d'abord en parler ? Réservez un créneau dans notre agenda",
+  'home.faqDeviceQ': "Que se passe-t-il si un locataire n'a pas de smartphone ?",
+  'home.faqDeviceA':
+    "Trailase fonctionne entièrement dans le navigateur : le locataire peut le faire depuis un téléphone, une tablette ou un ordinateur portable avec caméra. Aucune application ni compte n'est nécessaire.",
+  'home.faqSetupQ': 'Combien de temps faut-il pour la mise en place ?',
+  'home.faqSetupA':
+    'Un opérateur crée un lien à partager en quelques secondes depuis un seul espace de travail. Le locataire le complète sur son propre appareil, sans compte ni installation.',
   'story.eyebrow': 'Voyez ce que la clarté change',
   'story.title': 'Des détails dispersés à un dossier digne de confiance.',
   'story.intro':

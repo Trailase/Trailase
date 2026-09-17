@@ -43,6 +43,21 @@ export function Contact() {
             </p>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">{t('home.founderText')}</p>
           </div>
+
+          <dl className="mt-8 flex max-w-xl flex-col gap-5">
+            <div>
+              <dt className="text-sm font-semibold text-foreground">{t('home.faqDeviceQ')}</dt>
+              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
+                {t('home.faqDeviceA')}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-foreground">{t('home.faqSetupQ')}</dt>
+              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
+                {t('home.faqSetupA')}
+              </dd>
+            </div>
+          </dl>
         </div>
 
         <div className="w-full rounded-xl border border-border bg-card p-6 text-card-foreground shadow-lg sm:p-7">
