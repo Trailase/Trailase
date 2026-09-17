@@ -66,7 +66,26 @@ export const messages: Record<string, string> = {
   'home.contactTitle': 'Faites de votre prochain état des lieux le plus simple à ce jour.',
   'home.contactText':
     'Dites-nous où les entrées ou sorties ralentissent votre équipe. Nous vous montrerons comment Trailase transforme ces détails dispersés en un processus clair.',
+  'home.contactTiming':
+    'Les résidences étudiantes et les grands portefeuilles concentrent l’essentiel de leurs entrées et sorties sur quelques semaines par an — préparez-vous avant cette période, pas pendant.',
   'home.contactButton': 'Demander une démo',
+  'home.contactNameLabel': 'Nom (facultatif)',
+  'home.contactEmailLabel': 'E-mail',
+  'home.contactMessageLabel': 'Qu’est-ce qui aiderait le plus votre équipe ?',
+  'home.contactMessagePlaceholder':
+    'Dites-nous quand commence votre prochaine saison d’entrées ou sorties, et où ça se complique…',
+  'home.contactSending': 'Envoi…',
+  'home.contactSuccessTitle': 'Message envoyé.',
+  'home.contactSuccess': 'Merci — nous répondrons bientôt par e-mail.',
+  'home.contactError': 'L’envoi a échoué. Essayez le lien e-mail ci-dessous.',
+  'home.contactFallbackText': 'Vous pouvez aussi nous écrire directement :',
+  'home.contactFallbackLink': 'Nous écrire',
+  'home.founderTitle': "Pourquoi j'ai créé ceci",
+  'home.founderText':
+    "J'ai vécu plusieurs années à travers l'Europe en tant que nomade numérique, changeant de chambre louée tous les quelques mois. Il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Une fois, un propriétaire a prétendu que j'avais endommagé la peinture d'un mur — il a fallu deux mois d'allers-retours pour régler cela, et seulement parce que j'avais mes propres photos avant/après. Trailase existe pour que les opérateurs et les locataires n'aient pas à compter sur cette chance. Nous en sommes encore aux débuts, mais nous construisons cela sérieusement dès maintenant.",
+  'home.founderSignature': '— Fondateur de Trailase',
+  'home.contactFreeTrial': 'Gratuit pour vos 10 premières inspections. Sans engagement.',
+  'home.contactCalLink': "Vous préférez d'abord en parler ? Réservez un créneau dans notre agenda",
   'story.eyebrow': 'Voyez ce que la clarté change',
   'story.title': 'Des détails dispersés à un dossier digne de confiance.',
   'story.intro':

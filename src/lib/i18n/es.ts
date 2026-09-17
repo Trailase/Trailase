@@ -62,7 +62,26 @@ export const messages: Record<string, string> = {
   'home.contactTitle': 'Haz que tu próxima entrega sea la más sencilla hasta ahora.',
   'home.contactText':
     'Cuéntanos dónde frenan a tu equipo las entradas o salidas. Te mostraremos cómo Trailase convierte esos cabos sueltos en un proceso claro.',
+  'home.contactTiming':
+    'Las residencias de estudiantes y los grandes portafolios concentran la mayoría de sus entradas y salidas en pocas semanas al año — prepárate antes de esa ventana, no durante ella.',
   'home.contactButton': 'Solicitar una demo',
+  'home.contactNameLabel': 'Nombre (opcional)',
+  'home.contactEmailLabel': 'Correo electrónico',
+  'home.contactMessageLabel': '¿Qué ayudaría más a tu equipo?',
+  'home.contactMessagePlaceholder':
+    'Cuéntanos cuándo empieza tu próxima temporada de entradas o salidas y dónde se complica…',
+  'home.contactSending': 'Enviando…',
+  'home.contactSuccessTitle': 'Mensaje enviado.',
+  'home.contactSuccess': 'Gracias — te responderemos por correo en breve.',
+  'home.contactError': 'No se pudo enviar. Prueba con el enlace de correo de abajo.',
+  'home.contactFallbackText': 'También puedes escribirnos directamente:',
+  'home.contactFallbackLink': 'Enviar correo',
+  'home.founderTitle': 'Por qué creé esto',
+  'home.founderText':
+    'Viví varios años por toda Europa como nómada digital, cambiando de habitación alquilada cada pocos meses. Nunca hubo una forma consistente de demostrar el estado de una habitación al entrar o salir. Una vez, un propietario alegó que yo había dañado la pintura de una pared — tardamos dos meses de idas y venidas en resolverlo, y solo porque yo tenía mis propias fotos de antes y después. Trailase existe para que operadores e inquilinos no tengan que depender de esa suerte. Todavía estamos empezando y creciendo, pero lo estamos construyendo bien desde ahora.',
+  'home.founderSignature': '— Fundador de Trailase',
+  'home.contactFreeTrial': 'Gratis para tus primeras 10 inspecciones. Sin contrato.',
+  'home.contactCalLink': '¿Prefieres hablar primero? Reserva un horario en nuestro calendario',
   'story.eyebrow': 'Descubre lo que cambia con claridad',
   'story.title': 'De detalles dispersos a un registro en el que confiar.',
   'story.intro':

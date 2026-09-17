@@ -189,6 +189,17 @@ For a custom domain, optionally set:
 NEXT_PUBLIC_APP_URL=https://your-domain.example
 ```
 
+To let the marketing Contact form actually deliver mail (see `.env.example`),
+also set:
+
+```text
+RESEND_API_KEY=…
+CONTACT_TO_EMAIL=you@yourdomain.example
+```
+
+Without these, `POST /api/contact` returns 503 and the form shows a mailto
+fallback link instead of pretending to send anything.
+
 ## 9. Runtime and privacy limits
 
 This is an interactive product example, not the complete production platform.

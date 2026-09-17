@@ -63,7 +63,26 @@ export const messages: Record<string, string> = {
   'home.contactTitle': 'Make your next handover the easiest one yet.',
   'home.contactText':
     'Tell us where move-ins or move-outs slow your team down. We’ll show you how Trailase turns those loose ends into one clear process.',
+  'home.contactTiming':
+    'Student housing and large portfolios see most of their turnover in a few concentrated weeks each year — set this up before that window, not during it.',
   'home.contactButton': 'Request a walkthrough',
+  'home.contactNameLabel': 'Name (optional)',
+  'home.contactEmailLabel': 'Email',
+  'home.contactMessageLabel': 'What would help your team most?',
+  'home.contactMessagePlaceholder':
+    'Tell us when your next move-in or move-out season starts, and where it gets messy…',
+  'home.contactSending': 'Sending…',
+  'home.contactSuccessTitle': 'Message sent.',
+  'home.contactSuccess': 'Thanks — we will reply by email shortly.',
+  'home.contactError': 'That did not go through. Try the email link below instead.',
+  'home.contactFallbackText': 'You can also reach us directly:',
+  'home.contactFallbackLink': 'Email us',
+  'home.founderTitle': 'Why I built this',
+  'home.founderText':
+    'I spent years living across Europe as a digital nomad, moving between rented rooms every few months. There was never a consistent way to prove a room’s condition going in or out. Once, a landlord claimed I had damaged a wall’s paint — it took two months of back-and-forth before it was resolved, and only because I happened to have my own before-and-after photos. Trailase exists so operators and tenants don’t have to get lucky like that. We’re still early and growing, but we’re building it properly from here.',
+  'home.founderSignature': '— Trailase, founder',
+  'home.contactFreeTrial': 'Free for your first 10 inspections. No contract.',
+  'home.contactCalLink': 'Prefer to talk first? Book a slot on our calendar',
   'story.eyebrow': 'See the difference clarity makes',
   'story.title': 'From scattered details to a record your team can trust.',
   'story.intro': 'Scroll to turn every inspection detail into one decision-ready record.',
