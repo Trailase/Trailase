@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section className="relative isolate min-h-[min(760px,100dvh)] overflow-hidden border-b border-brand-200/70 px-gutter py-20 md:py-28 lg:flex lg:items-center lg:py-32 dark:border-white/10">
       <Image
-        src="/trailase-hero-property.jpg"
+        src="/images/heroProperty.jpg"
         alt=""
         fill
         priority
@@ -27,7 +27,7 @@ export function Hero() {
       <AmbientVideo
         src={backgroundVideo('homeHero')}
         portraitSrc={backgroundVideoPortrait('homeHero')}
-        poster="/trailase-hero-property.jpg"
+        poster="/images/heroProperty.jpg"
         playbackRate={0.6}
         className="pointer-events-none absolute inset-0 -z-[29] size-full object-cover object-center motion-reduce:hidden"
       />

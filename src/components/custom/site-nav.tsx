@@ -44,7 +44,7 @@ export function SiteNav() {
           className="mr-3 shrink-0 rounded-md dark:bg-white/95 dark:px-2 dark:py-1 dark:shadow-sm"
         >
           <Image
-            src="/trailase-logo.png"
+            src="/brand/logo.png"
             alt={siteName}
             width={180}
             height={60}

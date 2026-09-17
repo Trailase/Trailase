@@ -12,6 +12,6 @@ export default function manifest(): MetadataRoute.Manifest {
     display: 'standalone',
     background_color: brandVisual.backgroundColor,
     theme_color: brandVisual.themeColor,
-    icons: [{ src: '/trailase-mark.png', type: 'image/png', sizes: '1254x1254' }],
+    icons: [{ src: '/brand/mark.png', type: 'image/png', sizes: '1254x1254' }],
   };
 }

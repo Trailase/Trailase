@@ -271,7 +271,7 @@ export function EvidenceScrollStory() {
                 >
                   <div className="relative aspect-[1.3/1] overflow-hidden sm:aspect-[1.55/1]">
                     <Image
-                      src="/trailase-inspection-evidence.jpg"
+                      src="/images/inspectionEvidence.jpg"
                       alt=""
                       fill
                       sizes="300px"

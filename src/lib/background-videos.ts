@@ -1,58 +1,40 @@
-type VideoVariant = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-
-const groups = {
-  homeHero: 'home-hero',
-  homeWorkflow: 'home-workflow',
-  homeStoryCapture: 'home-story-capture',
-  homeStoryStructure: 'home-story-structure',
-  homeStoryCompare: 'home-story-compare',
-  homeStoryCombined: 'home-story-combined',
-  homeEvidence: 'home-evidence',
-  homeOperators: 'home-operators',
-  homeContact: 'home-contact',
-  demoOperator: 'demo-operator',
-  demoCondition: 'demo-condition',
-  demoPhotos: 'demo-photos',
-  demoNotes: 'demo-notes',
-  demoSignature: 'demo-signature',
-  demoReview: 'demo-review',
-  demoComplete: 'demo-complete',
+// Marketing sections render full-bleed with object-cover, so they need a
+// portrait crop (see backgroundVideoPortrait) — the demo flow's videos use
+// object-contain instead and never crop, so they don't need one.
+const marketingVideos = {
+  homeHero: 'hero',
+  homeOperators: 'operators',
+  homeStoryCombined: 'evidenceStory',
 } as const;
 
-export type BackgroundVideo = keyof typeof groups;
+const demoVideos = {
+  demoOperator: 'operator',
+  demoCondition: 'condition',
+  demoPhotos: 'photos',
+  demoNotes: 'notes',
+  demoSignature: 'signature',
+  demoReview: 'review',
+  demoComplete: 'complete',
+} as const;
 
-// Change any value to 1–10 to select that section's preferred cut.
-export const selectedVideoVariants: Record<BackgroundVideo, VideoVariant> = {
-  homeHero: 9,
-  homeWorkflow: 10,
-  homeStoryCapture: 1,
-  homeStoryStructure: 1,
-  homeStoryCompare: 1,
-  homeStoryCombined: 1,
-  homeEvidence: 6,
-  homeOperators: 1,
-  homeContact: 1,
-  demoOperator: 1,
-  demoCondition: 1,
-  demoPhotos: 3,
-  demoNotes: 1,
-  demoSignature: 1,
-  demoReview: 1,
-  demoComplete: 3,
-};
+type MarketingVideo = keyof typeof marketingVideos;
+export type BackgroundVideo = MarketingVideo | keyof typeof demoVideos;
 
-export function backgroundVideo(key: BackgroundVideo) {
-  const variant = String(selectedVideoVariants[key]).padStart(2, '0');
-  return `/videos/candidates/${groups[key]}/${variant}.mp4`;
+function isMarketingVideo(key: BackgroundVideo): key is MarketingVideo {
+  return key in marketingVideos;
 }
 
-// 720x1280 crop of the same source clip, for full-bleed object-cover
-// backgrounds. A 1280x720 landscape clip cropped to fill a narrow mobile
-// viewport only shows a ~28% center slice of its width; the portrait crop
-// keeps the framing recognizable instead. Only built for groups that render
-// full-bleed (home-hero, home-operators, home-story-combined and its three
-// phase clips) — see scripts/build-video-portrait.sh.
-export function backgroundVideoPortrait(key: BackgroundVideo) {
-  const variant = String(selectedVideoVariants[key]).padStart(2, '0');
-  return `/videos/candidates-portrait/${groups[key]}/${variant}.mp4`;
+export function backgroundVideo(key: BackgroundVideo): string {
+  if (isMarketingVideo(key)) {
+    return `/videos/marketing/${marketingVideos[key]}.mp4`;
+  }
+  return `/videos/demo/${demoVideos[key]}.mp4`;
+}
+
+// 720x1280 crop of the same clip, for full-bleed object-cover backgrounds. A
+// 1280x720 landscape clip cropped to fill a narrow mobile viewport only shows
+// a ~28% center slice of its width; the portrait crop keeps the framing
+// recognizable instead. See scripts/build-video-portrait.sh.
+export function backgroundVideoPortrait(key: MarketingVideo): string {
+  return `/videos/marketing/${marketingVideos[key]}Portrait.mp4`;
 }

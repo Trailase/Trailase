@@ -47,7 +47,10 @@ PersonalBrand/
 │   │   └── marketing/             product page and scroll story
 │   ├── components/                shared navigation and UI primitives
 │   └── lib/                       localization, security, brand, utilities
-├── public/                        Trailase logo and property photography
+├── public/
+│   ├── brand/                     logo and app icon
+│   ├── images/                    property photography
+│   └── videos/                    marketing/ and demo/ background clips
 ├── scripts/railway-start.mjs     Railway standalone launcher
 ├── Dockerfile                    reproducible Railway image
 ├── next.config.ts                Next.js and response-header configuration

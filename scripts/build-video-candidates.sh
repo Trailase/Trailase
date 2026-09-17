@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Renders draft candidates to try, outside public/ so the live site's
+# public/videos/{marketing,demo}/ stays limited to exactly the files each
+# section plays. Promote a pick with `git mv` and delete the rest — see
+# public/videos/README.md.
+#
+# Usage:
+#   ./scripts/build-video-candidates.sh                # every group (150 renders)
+#   ./scripts/build-video-candidates.sh home-workflow   # just this group's 10 cuts
+
 root_dir="$(cd "$(dirname "$0")/.." && pwd)"
 source_dir="${TMPDIR:-/tmp}/trailase-video-sources"
-output_dir="$root_dir/public/videos/candidates"
-manifest="$output_dir/sources.tsv"
+output_dir="$root_dir/video-drafts/candidates"
+manifest="$root_dir/public/videos/sources.tsv"
 
 mkdir -p "$source_dir" "$output_dir"
 
@@ -72,9 +81,14 @@ render_candidate() {
     -metadata comment="$expected_comment" "$target"
 }
 
+group_filter="$*"
+
 while IFS=$'\t' read -r group variant id _concept; do
   [[ -z "$group" || "$group" == \#* ]] && continue
+  if [[ -n "$group_filter" ]] && [[ ! " $group_filter " == *" $group "* ]]; then
+    continue
+  fi
   render_candidate "$group" "$variant" "$id"
 done < "$manifest"
 
-echo "Created 150 unique-source Trailase video candidates in $output_dir"
+echo "Done. Candidates are in $output_dir"

@@ -5,7 +5,8 @@ set -euo pipefail
 # build-video-candidates.sh, for background videos that render full-bleed
 # with object-cover. A 1280x720 landscape clip cropped to fill a tall mobile
 # viewport only shows a ~28% center slice of its width; a dedicated portrait
-# crop keeps the framing recognizable instead.
+# crop keeps the framing recognizable instead. Renders to video-drafts/, same
+# as build-video-candidates.sh — see public/videos/README.md to promote one.
 #
 # Usage:
 #   ./scripts/build-video-portrait.sh              # every group in the manifest
@@ -13,8 +14,8 @@ set -euo pipefail
 
 root_dir="$(cd "$(dirname "$0")/.." && pwd)"
 source_dir="${TMPDIR:-/tmp}/trailase-video-sources"
-output_dir="$root_dir/public/videos/candidates-portrait"
-manifest="$root_dir/public/videos/candidates/sources.tsv"
+output_dir="$root_dir/video-drafts/candidates-portrait"
+manifest="$root_dir/public/videos/sources.tsv"
 
 mkdir -p "$source_dir" "$output_dir"
 

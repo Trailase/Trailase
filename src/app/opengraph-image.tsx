@@ -15,8 +15,8 @@ const loadAsset = async (filename: string) => {
 
 export default async function OpengraphImage() {
   const [propertyPhoto, logo, locale] = await Promise.all([
-    loadAsset('trailase-hero-property.jpg'),
-    loadAsset('trailase-logo.png'),
+    loadAsset('images/heroProperty.jpg'),
+    loadAsset('brand/logo.png'),
     resolveRequestLocale(),
   ]);
   const t = (key: string) => translate(locale, key);
