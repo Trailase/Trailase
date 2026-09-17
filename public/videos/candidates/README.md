@@ -12,6 +12,17 @@ describes the intended sales-story beat. A source can be opened at:
 The site currently uses `01.mp4`. Choose any candidate from `1` through `10`
 for each section in `src/lib/background-videos.ts`.
 
+`home-story-combined` is the exception: it isn't built by the manifest below.
+Each variant there is a `-c copy` concatenation of one already-approved clip
+each from `home-story-capture`, `home-story-structure`, and
+`home-story-compare`, so the Capture → Structure → Compare scroll story plays
+as one continuous 30-second clip instead of cutting between three `<video>`
+elements. `01.mp4` pairs `capture/01 + structure/01 + compare/01`; `02.mp4`
+pairs `capture/03 + structure/02 + compare/04`; `03.mp4` pairs
+`capture/05 + structure/06 + compare/03`; `04.mp4` pairs
+`capture/07 + structure/04 + compare/07`. No new source footage — all four use
+clips already credited in `ATTRIBUTION.md`.
+
 ## Visual direction
 
 - `home-hero`: people-free apartment atmosphere and professional presentation.
