@@ -6,6 +6,7 @@ export const messages: Record<string, string> = {
   'theme.toggle': 'Basculer entre les thèmes clair et sombre',
   'nav.how': 'Fonctionnement',
   'nav.for': 'Pour qui',
+  'nav.pricing': 'Tarifs',
   'nav.prototype': 'Démo en direct',
   'nav.contact': 'Demander une démo',
   'nav.openMenu': 'Ouvrir le menu',
@@ -91,6 +92,82 @@ export const messages: Record<string, string> = {
   'home.faqSetupQ': 'Combien de temps faut-il pour la mise en place ?',
   'home.faqSetupA':
     'Un opérateur crée un lien à partager en quelques secondes depuis un seul espace de travail. Le locataire le complète sur son propre appareil, sans compte ni installation.',
+  'home.faqPmsQ': 'Devons-nous remplacer notre logiciel de gestion immobilière ?',
+  'home.faqPmsA':
+    "Non. Trailase gère uniquement l'état des lieux et la preuve. Il fonctionne aux côtés du logiciel que votre équipe utilise déjà pour la location, la maintenance ou la comptabilité.",
+  'home.faqScaleQ': 'À quelle vitesse pouvons-nous déployer cela sur un grand portefeuille ?',
+  'home.faqScaleA':
+    "La plupart des équipes créent leur premier lien d'inspection en quelques minutes. Les grands portefeuilles peuvent le déployer propriété par propriété, car aucune formation ni installation n'est requise pour les locataires ou le personnel.",
+  'home.faqLiabilityQ': 'Trailase décide-t-il qui est responsable des dégâts ?',
+  'home.faqLiabilityA':
+    'Non. Trailase réunit des preuves claires et comparées. Votre équipe garde la décision finale — nous évitons simplement de deviner.',
+  'home.pricingEyebrow': 'Tarifs',
+  'home.pricingTitle': 'Des tarifs simples qui évoluent avec votre portefeuille.',
+  'home.pricingIntro':
+    "Le tarif évolue selon le nombre de logements gérés, pas selon le nombre de photos prises par votre équipe — d'un premier immeuble pilote à un portefeuille national.",
+  'home.pricingFreeNote':
+    'Gratuit pour vos 10 premières inspections, quelle que soit l’offre. Sans engagement, résiliable à tout moment.',
+  'home.pricingDisclaimer':
+    "Tarifs de départ indiqués pour les portefeuilles européens. Le tarif final dépend de la taille du portefeuille et de l'ampleur du déploiement — contactez-nous pour un devis précis.",
+  'home.pricingCta': 'Parlez-nous de votre portefeuille',
+  'home.pricingIncludedTitle': 'Inclus dans toutes les offres',
+  'home.pricingIncludedFeature1': 'Inspections illimitées',
+  'home.pricingIncludedFeature2': "Membres d'équipe illimités",
+  'home.pricingIncludedFeature3': 'Preuves photo, signature et état',
+  'home.pricingIncludedFeature4': 'Liens locataire multilingues (EN, ES, FR, NL)',
+  'home.pricingTier1Name': 'Pilot',
+  'home.pricingTier1Range': "Jusqu'à 25 logements",
+  'home.pricingTier1Price': '39 €',
+  'home.pricingTier1Period': '/mois',
+  'home.pricingTier1Tagline': 'Pour un seul immeuble ou un premier test.',
+  'home.pricingTier2Name': 'Starter',
+  'home.pricingTier2Range': '26 à 100 logements',
+  'home.pricingTier2Price': '99 €',
+  'home.pricingTier2Period': '/mois',
+  'home.pricingTier2Tagline':
+    'Pour les équipes en croissance qui standardisent leur premier processus.',
+  'home.pricingTier3Badge': 'Le plus populaire',
+  'home.pricingTier3Name': 'Growth',
+  'home.pricingTier3Range': '101 à 300 logements',
+  'home.pricingTier3Price': '249 €',
+  'home.pricingTier3Period': '/mois',
+  'home.pricingTier3Tagline': 'Pour les équipes multi-biens qui font évoluer leurs remises.',
+  'home.pricingTier4Name': 'Scale',
+  'home.pricingTier4Range': '301 à 1 000 logements',
+  'home.pricingTier4Price': '549 €',
+  'home.pricingTier4Period': '/mois',
+  'home.pricingTier4Tagline': 'Pour les portefeuilles régionaux avec du personnel dédié.',
+  'home.pricingTier5Name': 'Portfolio',
+  'home.pricingTier5Range': '1 001 à 5 000 logements',
+  'home.pricingTier5Price': '999 €',
+  'home.pricingTier5Period': '/mois',
+  'home.pricingTier5Tagline':
+    'Pour les grands portefeuilles ayant besoin d’un support prioritaire.',
+  'home.pricingTier6Name': 'Enterprise',
+  'home.pricingTier6Range': 'Plus de 5 000 logements',
+  'home.pricingTier6Price': 'Sur mesure',
+  'home.pricingTier6Period': '',
+  'home.pricingTier6Tagline': 'Pour les plateformes nationales et les réseaux de franchise.',
+  'home.trustEyebrow': 'Confiance et données',
+  'home.trustTitle': 'Aucun compte locataire. Aucune donnée revendue.',
+  'home.trustIntro':
+    "Trailase est conçu pour recueillir des preuves, pas une empreinte de données personnelles. Voici exactement ce que cela signifie aujourd'hui.",
+  'home.trustPoint1Title': 'Aucun compte locataire',
+  'home.trustPoint1Text':
+    'Le locataire complète son inspection via un seul lien. Aucun compte, mot de passe ni application à créer, retenir ou perdre.',
+  'home.trustPoint2Title': 'Liens à usage unique',
+  'home.trustPoint2Text':
+    'Chaque lien locataire est un jeton impossible à deviner, limité à une seule inspection. Il ne peut être ni parcouru ni réutilisé pour autre chose.',
+  'home.trustPoint3Title': 'Accès opérateur limité à la session',
+  'home.trustPoint3Text':
+    "La file d'inspections de votre équipe n'est visible que depuis votre propre session opérateur. Aucun autre visiteur ne peut voir vos biens ou dossiers.",
+  'home.trustPoint4Title': 'Jamais vendu, jamais partagé',
+  'home.trustPoint4Text':
+    'Trailase ne vend ni ne partage les données des locataires avec des annonceurs ou des tiers non liés.',
+  'home.trustScope':
+    "Trailase réunit des preuves. Il n'attribue pas de responsabilité, ne détermine pas de faute et ne calcule pas de retenue sur dépôt de garantie — cette décision reste celle de votre équipe.",
+  'home.founderHook':
+    'Un litige comme celui-ci coûte des semaines d’allers-retours. Une seule photo peut le régler en quelques minutes.',
   'story.eyebrow': 'Voyez ce que la clarté change',
   'story.title': 'Des détails dispersés à un dossier digne de confiance.',
   'story.intro':

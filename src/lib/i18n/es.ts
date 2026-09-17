@@ -3,6 +3,7 @@ export const messages: Record<string, string> = {
   'theme.toggle': 'Cambiar entre tema claro y oscuro',
   'nav.how': 'Cómo funciona',
   'nav.for': 'Para quién es',
+  'nav.pricing': 'Precios',
   'nav.prototype': 'Demo en vivo',
   'nav.contact': 'Solicitar una demo',
   'nav.openMenu': 'Abrir menú',
@@ -87,6 +88,80 @@ export const messages: Record<string, string> = {
   'home.faqSetupQ': '¿Cuánto tiempo lleva configurarlo?',
   'home.faqSetupA':
     'Un operador crea un enlace para compartir en segundos desde un único espacio de trabajo. El inquilino lo completa en su propio dispositivo sin cuenta ni instalación.',
+  'home.faqPmsQ': '¿Necesitamos sustituir nuestro software de gestión inmobiliaria?',
+  'home.faqPmsA':
+    'No. Trailase solo se encarga de la inspección y la evidencia. Funciona junto al software que ya usa tu equipo para alquiler, mantenimiento o contabilidad.',
+  'home.faqScaleQ': '¿Con qué rapidez podemos implantarlo en una cartera grande?',
+  'home.faqScaleA':
+    'La mayoría de los equipos crean su primer enlace de inspección en minutos. Las carteras grandes pueden implantarlo propiedad por propiedad, ya que no requiere formación ni instalación para inquilinos ni personal.',
+  'home.faqLiabilityQ': '¿Trailase decide quién es responsable del daño?',
+  'home.faqLiabilityA':
+    'No. Trailase reúne evidencia clara y comparada. Tu equipo sigue tomando la decisión — nosotros solo evitamos que tengas que adivinar.',
+  'home.pricingEyebrow': 'Precios',
+  'home.pricingTitle': 'Precios claros que escalan con tu cartera.',
+  'home.pricingIntro':
+    'El precio escala según el número de unidades gestionadas, no según cuántas fotos tome tu equipo — desde un primer edificio piloto hasta una cartera nacional.',
+  'home.pricingFreeNote':
+    'Gratis para tus primeras 10 inspecciones en cualquier plan. Sin contrato, cancela cuando quieras.',
+  'home.pricingDisclaimer':
+    'Precios de partida para carteras europeas. El precio final depende del tamaño de la cartera y del alcance de la implantación — contáctanos para un presupuesto exacto.',
+  'home.pricingCta': 'Habla con nosotros sobre tu cartera',
+  'home.pricingIncludedTitle': 'Incluido en todos los planes',
+  'home.pricingIncludedFeature1': 'Inspecciones ilimitadas',
+  'home.pricingIncludedFeature2': 'Miembros de equipo ilimitados',
+  'home.pricingIncludedFeature3': 'Evidencia de fotos, firma y estado',
+  'home.pricingIncludedFeature4': 'Enlaces multilingües para el inquilino (EN, ES, FR, NL)',
+  'home.pricingTier1Name': 'Pilot',
+  'home.pricingTier1Range': 'Hasta 25 unidades',
+  'home.pricingTier1Price': '39 €',
+  'home.pricingTier1Period': '/mes',
+  'home.pricingTier1Tagline': 'Para un único edificio o un primer piloto.',
+  'home.pricingTier2Name': 'Starter',
+  'home.pricingTier2Range': '26–100 unidades',
+  'home.pricingTier2Price': '99 €',
+  'home.pricingTier2Period': '/mes',
+  'home.pricingTier2Tagline': 'Para equipos en crecimiento que estandarizan su primer proceso.',
+  'home.pricingTier3Badge': 'Más popular',
+  'home.pricingTier3Name': 'Growth',
+  'home.pricingTier3Range': '101–300 unidades',
+  'home.pricingTier3Price': '249 €',
+  'home.pricingTier3Period': '/mes',
+  'home.pricingTier3Tagline': 'Para equipos multipropiedad que escalan sus entregas.',
+  'home.pricingTier4Name': 'Scale',
+  'home.pricingTier4Range': '301–1.000 unidades',
+  'home.pricingTier4Price': '549 €',
+  'home.pricingTier4Period': '/mes',
+  'home.pricingTier4Tagline': 'Para carteras regionales con personal de operaciones dedicado.',
+  'home.pricingTier5Name': 'Portfolio',
+  'home.pricingTier5Range': '1.001–5.000 unidades',
+  'home.pricingTier5Price': '999 €',
+  'home.pricingTier5Period': '/mes',
+  'home.pricingTier5Tagline': 'Para grandes carteras que necesitan soporte prioritario.',
+  'home.pricingTier6Name': 'Enterprise',
+  'home.pricingTier6Range': 'Más de 5.000 unidades',
+  'home.pricingTier6Price': 'A medida',
+  'home.pricingTier6Period': '',
+  'home.pricingTier6Tagline': 'Para plataformas nacionales y redes de franquicias.',
+  'home.trustEyebrow': 'Confianza y datos',
+  'home.trustTitle': 'Sin cuentas para inquilinos. Sin venta de datos.',
+  'home.trustIntro':
+    'Trailase está pensado para recoger evidencia, no una huella de datos personales. Esto es exactamente lo que eso significa hoy.',
+  'home.trustPoint1Title': 'Sin cuentas de inquilino',
+  'home.trustPoint1Text':
+    'El inquilino completa su inspección mediante un único enlace. Sin cuenta, contraseña ni app que crear, recordar o perder.',
+  'home.trustPoint2Title': 'Enlaces de un solo propósito',
+  'home.trustPoint2Text':
+    'Cada enlace del inquilino es un token imposible de adivinar, limitado a una sola inspección. No se puede navegar ni reutilizar para nada más.',
+  'home.trustPoint3Title': 'Acceso de operador limitado a la sesión',
+  'home.trustPoint3Text':
+    'La cola de inspecciones de tu equipo solo es visible desde tu propia sesión de operador. Otros visitantes no pueden ver tus propiedades ni registros.',
+  'home.trustPoint4Title': 'Nunca se vende ni se comparte',
+  'home.trustPoint4Text':
+    'Trailase no vende los datos del inquilino ni los comparte con anunciantes o terceros ajenos.',
+  'home.trustScope':
+    'Trailase reúne evidencia. No asigna culpas, no determina responsabilidades ni calcula deducciones del depósito — esa decisión sigue siendo de tu equipo.',
+  'home.founderHook':
+    'Una disputa así cuesta semanas de idas y venidas. Una sola foto puede resolverla en minutos.',
   'story.eyebrow': 'Descubre lo que cambia con claridad',
   'story.title': 'De detalles dispersos a un registro en el que confiar.',
   'story.intro':

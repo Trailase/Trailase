@@ -22,6 +22,12 @@ export const navItems: NavItem[] = [
     group: 'primary',
   },
   {
+    label: 'Pricing',
+    translationKey: 'nav.pricing',
+    href: '/#pricing',
+    group: 'primary',
+  },
+  {
     label: 'Live demo',
     translationKey: 'nav.prototype',
     href: '/operator/inspections',

@@ -6,6 +6,7 @@ export const messages: Record<string, string> = {
   'theme.toggle': 'Wissel tussen licht en donker thema',
   'nav.how': 'Zo werkt het',
   'nav.for': 'Voor wie',
+  'nav.pricing': 'Prijzen',
   'nav.prototype': 'Live demo',
   'nav.contact': 'Plan een demo',
   'nav.openMenu': 'Menu openen',
@@ -91,6 +92,80 @@ export const messages: Record<string, string> = {
   'home.faqSetupQ': 'Hoeveel tijd kost het opzetten?',
   'home.faqSetupA':
     'Een operator maakt in enkele seconden een deellink vanuit één werkruimte. De huurder rondt het af op zijn eigen apparaat, zonder account of installatie.',
+  'home.faqPmsQ': 'Moeten we ons vastgoedbeheersysteem vervangen?',
+  'home.faqPmsA':
+    'Nee. Trailase regelt alleen de inspectie en het bewijs. Het werkt naast de software die je team al gebruikt voor verhuur, onderhoud of boekhouding.',
+  'home.faqScaleQ': 'Hoe snel kunnen we dit uitrollen over een grote portefeuille?',
+  'home.faqScaleA':
+    'De meeste teams maken hun eerste inspectielink binnen enkele minuten aan. Grote portefeuilles kunnen pand voor pand uitrollen, omdat er geen training of installatie nodig is voor huurders of personeel.',
+  'home.faqLiabilityQ': 'Bepaalt Trailase wie verantwoordelijk is voor schade?',
+  'home.faqLiabilityA':
+    'Nee. Trailase verzamelt helder, naast elkaar geplaatst bewijs. Je team neemt nog steeds de beslissing — wij zorgen er alleen voor dat je niet hoeft te gokken.',
+  'home.pricingEyebrow': 'Prijzen',
+  'home.pricingTitle': 'Heldere prijzen die meegroeien met je portefeuille.',
+  'home.pricingIntro':
+    'De prijs schaalt met het aantal beheerde units, niet met hoeveel foto’s je team maakt — van een eerste pilotpand tot een landelijke portefeuille.',
+  'home.pricingFreeNote':
+    'Gratis voor je eerste 10 inspecties op elk plan. Geen contract, altijd opzegbaar.',
+  'home.pricingDisclaimer':
+    'Startprijzen voor Europese portefeuilles. De uiteindelijke prijs hangt af van portefeuillegrootte en uitrolomvang — neem contact op voor een exacte offerte.',
+  'home.pricingCta': 'Praat met ons over je portefeuille',
+  'home.pricingIncludedTitle': 'Inbegrepen bij elk plan',
+  'home.pricingIncludedFeature1': 'Onbeperkt inspecties',
+  'home.pricingIncludedFeature2': 'Onbeperkt teamleden',
+  'home.pricingIncludedFeature3': 'Foto-, handtekening- en conditiebewijs',
+  'home.pricingIncludedFeature4': 'Meertalige huurderlinks (EN, ES, FR, NL)',
+  'home.pricingTier1Name': 'Pilot',
+  'home.pricingTier1Range': 'Tot 25 units',
+  'home.pricingTier1Price': '€39',
+  'home.pricingTier1Period': '/maand',
+  'home.pricingTier1Tagline': 'Voor één pand of een eerste pilot.',
+  'home.pricingTier2Name': 'Starter',
+  'home.pricingTier2Range': '26–100 units',
+  'home.pricingTier2Price': '€99',
+  'home.pricingTier2Period': '/maand',
+  'home.pricingTier2Tagline': 'Voor groeiende teams die hun eerste proces standaardiseren.',
+  'home.pricingTier3Badge': 'Meest gekozen',
+  'home.pricingTier3Name': 'Growth',
+  'home.pricingTier3Range': '101–300 units',
+  'home.pricingTier3Price': '€249',
+  'home.pricingTier3Period': '/maand',
+  'home.pricingTier3Tagline': 'Voor teams met meerdere panden die opleveringen opschalen.',
+  'home.pricingTier4Name': 'Scale',
+  'home.pricingTier4Range': '301–1.000 units',
+  'home.pricingTier4Price': '€549',
+  'home.pricingTier4Period': '/maand',
+  'home.pricingTier4Tagline': 'Voor regionale portefeuilles met toegewijde operationele staf.',
+  'home.pricingTier5Name': 'Portfolio',
+  'home.pricingTier5Range': '1.001–5.000 units',
+  'home.pricingTier5Price': '€999',
+  'home.pricingTier5Period': '/maand',
+  'home.pricingTier5Tagline': 'Voor grote portefeuilles die voorrangsondersteuning nodig hebben.',
+  'home.pricingTier6Name': 'Enterprise',
+  'home.pricingTier6Range': '5.000+ units',
+  'home.pricingTier6Price': 'Op maat',
+  'home.pricingTier6Period': '',
+  'home.pricingTier6Tagline': 'Voor landelijke platforms en franchisenetwerken.',
+  'home.trustEyebrow': 'Vertrouwen en data',
+  'home.trustTitle': 'Geen huurdersaccounts. Geen dataverkoop.',
+  'home.trustIntro':
+    'Trailase is gebouwd om bewijs te verzamelen, geen persoonlijke data-voetafdruk. Dit is precies wat dat vandaag betekent.',
+  'home.trustPoint1Title': 'Geen huurdersaccounts',
+  'home.trustPoint1Text':
+    'Huurders ronden hun inspectie af via één link. Geen account, wachtwoord of app om aan te maken, te onthouden of kwijt te raken.',
+  'home.trustPoint2Title': 'Links met één doel',
+  'home.trustPoint2Text':
+    'Elke huurderlink is een niet te raden token, beperkt tot één inspectie. Hij kan niet worden doorzocht of voor iets anders hergebruikt.',
+  'home.trustPoint3Title': 'Operatortoegang beperkt tot de sessie',
+  'home.trustPoint3Text':
+    'De inspectiewachtrij van je team is alleen zichtbaar vanuit je eigen operatorsessie. Andere bezoekers kunnen je panden of dossiers niet zien.',
+  'home.trustPoint4Title': 'Nooit verkocht, nooit gedeeld',
+  'home.trustPoint4Text':
+    'Trailase verkoopt huurdersdata niet en deelt deze niet met adverteerders of onverwante derde partijen.',
+  'home.trustScope':
+    'Trailase verzamelt bewijs. Het wijst geen schuld toe, bepaalt geen aansprakelijkheid en berekent geen inhouding op de borg — die beslissing blijft bij je team.',
+  'home.founderHook':
+    'Zo’n geschil kost weken heen-en-weer. Eén foto kan het in enkele minuten oplossen.',
   'story.eyebrow': 'Zie wat duidelijkheid verandert',
   'story.title': 'Van losse details naar een dossier waarop je kunt vertrouwen.',
   'story.intro':

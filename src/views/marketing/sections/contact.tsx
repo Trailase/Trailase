@@ -41,6 +41,9 @@ export function Contact() {
             <p className="text-caption font-semibold uppercase tracking-[0.14em] text-muted-foreground">
               {t('home.founderTitle')}
             </p>
+            <p className="mt-3 font-display text-lg leading-7 text-foreground">
+              {t('home.founderHook')}
+            </p>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">{t('home.founderText')}</p>
           </div>
 
@@ -55,6 +58,22 @@ export function Contact() {
               <dt className="text-sm font-semibold text-foreground">{t('home.faqSetupQ')}</dt>
               <dd className="mt-1 text-sm leading-6 text-muted-foreground">
                 {t('home.faqSetupA')}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-foreground">{t('home.faqPmsQ')}</dt>
+              <dd className="mt-1 text-sm leading-6 text-muted-foreground">{t('home.faqPmsA')}</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-foreground">{t('home.faqScaleQ')}</dt>
+              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
+                {t('home.faqScaleA')}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm font-semibold text-foreground">{t('home.faqLiabilityQ')}</dt>
+              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
+                {t('home.faqLiabilityA')}
               </dd>
             </div>
           </dl>
