@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 
-export function Header({ step, total }: { step: number; total: number }) {
+export function Header({ step, total, room }: { step: number; total: number; room: string }) {
   const { t } = useLanguage();
   return (
     <header className="video-copy mb-5 flex min-h-52 items-end justify-between gap-5 border border-border shadow-2xl sm:p-8">
@@ -11,7 +11,7 @@ export function Header({ step, total }: { step: number; total: number }) {
         <p className="text-caption font-semibold uppercase tracking-[0.14em] text-primary">
           {t('inspection.eyebrow')}
         </p>
-        <h1 className="mt-2 font-display text-h2 tracking-tight text-foreground">Room 4B</h1>
+        <h1 className="mt-2 font-display text-h2 tracking-tight text-foreground">{room}</h1>
         <p className="mt-2 text-sm text-muted-foreground">{t('inspection.intro')}</p>
       </div>
       <Badge className="mb-1 shrink-0 rounded-full border border-border bg-accent text-accent-foreground">

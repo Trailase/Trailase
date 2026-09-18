@@ -31,7 +31,7 @@ const additions: Record<AppLocale, Record<string, string>> = {
     'inspection.photoTooLarge':
       'This photo is too large for the inspection record. Try a closer frame.',
     'inspection.demoCanvasTitle': 'DEMO CAMERA CAPTURE',
-    'inspection.demoCanvasCaption': 'Room 4B · sample evidence frame',
+    'inspection.demoCanvasCaption': 'Sample evidence frame',
     'inspection.livePreviewAria': 'Live rear-facing camera preview',
     'inspection.photoPreviewAlt': 'Preview of the camera photo',
     'inspection.demoPhotoAlt': 'Demo camera capture',
@@ -78,7 +78,7 @@ const additions: Record<AppLocale, Record<string, string>> = {
     'inspection.photoTooLarge':
       'La foto es demasiado grande para el registro. Prueba con un encuadre más cercano.',
     'inspection.demoCanvasTitle': 'CAPTURA DE CÁMARA DEMO',
-    'inspection.demoCanvasCaption': 'Habitación 4B · ejemplo de evidencia',
+    'inspection.demoCanvasCaption': 'Ejemplo de evidencia',
     'inspection.livePreviewAria': 'Vista en directo de la cámara trasera',
     'inspection.photoPreviewAlt': 'Vista previa de la foto de la cámara',
     'inspection.demoPhotoAlt': 'Captura de cámara de demostración',
@@ -121,7 +121,7 @@ const additions: Record<AppLocale, Record<string, string>> = {
     'inspection.photoTooLarge':
       'Cette photo est trop volumineuse pour le dossier. Essayez un cadrage plus rapproché.',
     'inspection.demoCanvasTitle': 'CAPTURE PHOTO DE DÉMONSTRATION',
-    'inspection.demoCanvasCaption': 'Chambre 4B · exemple de preuve',
+    'inspection.demoCanvasCaption': 'Exemple de preuve',
     'inspection.livePreviewAria': 'Aperçu en direct de la caméra arrière',
     'inspection.photoPreviewAlt': 'Aperçu de la photo prise',
     'inspection.demoPhotoAlt': 'Capture photo de démonstration',
@@ -165,7 +165,7 @@ const additions: Record<AppLocale, Record<string, string>> = {
     'inspection.photoTooLarge':
       'Deze foto is te groot voor het inspectiedossier. Probeer een kleinere uitsnede.',
     'inspection.demoCanvasTitle': 'DEMO-CAMERAOPNAME',
-    'inspection.demoCanvasCaption': 'Kamer 4B · voorbeeld van bewijs',
+    'inspection.demoCanvasCaption': 'Voorbeeld van bewijs',
     'inspection.livePreviewAria': 'Livevoorbeeld van de camera aan de achterzijde',
     'inspection.photoPreviewAlt': 'Voorbeeld van de camerafoto',
     'inspection.demoPhotoAlt': 'Demo-cameraopname',

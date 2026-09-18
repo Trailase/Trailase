@@ -109,6 +109,8 @@ export const messages: Record<string, string> = {
     'Gratuit pour vos 10 premières inspections, quelle que soit l’offre. Sans engagement, résiliable à tout moment.',
   'home.pricingDisclaimer':
     "Tarifs de départ indiqués pour les portefeuilles européens. Le tarif final dépend de la taille du portefeuille et de l'ampleur du déploiement — contactez-nous pour un devis précis.",
+  'home.pricingCtaText':
+    'Vous hésitez encore sur la formule ? Obtenez une réponse claire pour la taille exacte de votre portefeuille.',
   'home.pricingCta': 'Parlez-nous de votre portefeuille',
   'home.pricingIncludedTitle': 'Inclus dans toutes les offres',
   'home.pricingIncludedFeature1': 'Inspections illimitées',
@@ -198,7 +200,8 @@ export const messages: Record<string, string> = {
     'Lancez une inspection guidée, partagez le lien et voyez chaque détail revenir dans un dossier complet.',
   'operator.prototypeNote':
     'Vous êtes dans la démo : utilisez les exemples pour vivre tout le parcours de remise.',
-  'operator.create': 'Lancer la remise de la chambre 4B',
+  'operator.create': 'Lancer la remise',
+  'operator.roomLabelPlaceholder': 'ex. Chambre 4B, Lot 12, 221B rue Baker',
   'operator.creating': 'Création…',
   'operator.queue': 'File des preuves',
   'operator.recent': 'Inspections récentes',
@@ -212,7 +215,7 @@ export const messages: Record<string, string> = {
   'operator.loading': 'Chargement des inspections…',
   'operator.tryAgain': 'Réessayer',
   'operator.empty': 'Aucune inspection pour le moment.',
-  'operator.emptyText': 'Créez un lien pour la chambre 4B afin de commencer.',
+  'operator.emptyText': 'Créez votre premier lien d’inspection pour commencer.',
   'operator.created': 'Créée le {date}',
   'operator.photos': 'Photos',
   'operator.status': 'Statut',
@@ -220,7 +223,7 @@ export const messages: Record<string, string> = {
   'operator.copy': 'Copier le lien',
   'operator.open': 'Ouvrir la vue locataire',
   'operator.latest': 'Dernier lien partagé',
-  'operator.createSuccess': 'La nouvelle inspection de la chambre 4B est prête à être partagée.',
+  'operator.createSuccess': 'La nouvelle inspection de {room} est prête à être partagée.',
   'operator.copySuccess': 'Lien d’inspection copié.',
   'operator.copyError': 'La copie a été bloquée. Sélectionnez le lien pour le copier manuellement.',
   'operator.delete': 'Supprimer',
@@ -238,7 +241,7 @@ export const messages: Record<string, string> = {
   'inspection.damage': 'Dommage signalé',
   'inspection.required': 'Obligatoire',
   'inspection.optionalNote': 'Note facultative',
-  'inspection.loading': 'Préparation de l’inspection de la chambre 4B…',
+  'inspection.loading': 'Préparation de votre inspection…',
   'inspection.linkTitle': 'Ce lien doit être vérifié.',
   'inspection.linkUnavailable': 'Ce lien d’inspection n’est pas disponible.',
   'inspection.recoveryHelp':
@@ -294,7 +297,7 @@ export const messages: Record<string, string> = {
   'inspection.signatureTitle': 'Signez la remise',
   'inspection.signatureText': 'Votre signature confirme que vous avez vérifié cet état des lieux.',
   'inspection.consent':
-    'Je confirme que cette inspection reflète l’état dans lequel j’ai trouvé la chambre 4B.',
+    'Je confirme que cette inspection reflète l’état dans lequel j’ai trouvé {room}.',
   'inspection.reviewTitle': 'Une dernière vérification',
   'inspection.reviewText': 'Vérifiez votre dossier avant de l’envoyer à l’opérateur.',
   'inspection.areasChecked': 'Zones vérifiées',

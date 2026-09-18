@@ -36,7 +36,7 @@ export const navItems: NavItem[] = [
   {
     label: 'Book a walkthrough',
     translationKey: 'nav.contact',
-    href: 'mailto:k3y.fl0ws@gmail.com',
+    href: 'mailto:trai1ases@gmail.com',
     group: 'secondary',
   },
 ];

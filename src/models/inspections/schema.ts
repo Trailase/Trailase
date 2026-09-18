@@ -14,6 +14,12 @@ const imageDataUrl = (label: string, maxLength: number) =>
 export const InspectionStatus = z.enum(['pending', 'completed']);
 export const ConditionValue = z.enum(['good', 'attention', 'damage']);
 
+const RoomLabel = z
+  .string()
+  .trim()
+  .min(1, 'Add a room or property label')
+  .max(80, 'Keep it under 80 characters');
+
 export const ConditionArea = z.object({
   id: z.enum(['entryway', 'living-room', 'kitchen', 'bathroom', 'bedroom']),
   label: z.string().min(1).max(80),
@@ -34,12 +40,12 @@ export const SignaturePayload = z.object({
 });
 
 export const InspectionCreate = z.object({
-  roomLabel: z.literal('Room 4B'),
+  roomLabel: RoomLabel,
 });
 
 export const InspectionTenant = z.object({
   id: z.string(),
-  roomLabel: z.literal('Room 4B'),
+  roomLabel: RoomLabel,
   status: InspectionStatus,
   createdAt: z.string().datetime(),
   areas: z.array(ConditionArea).length(5),
@@ -57,7 +63,7 @@ export const InspectionSubmission = z.object({
 
 export const InspectionOperatorItem = z.object({
   id: z.string(),
-  roomLabel: z.literal('Room 4B'),
+  roomLabel: RoomLabel,
   status: InspectionStatus,
   createdAt: z.string().datetime(),
   completedAt: z.string().datetime().nullable(),

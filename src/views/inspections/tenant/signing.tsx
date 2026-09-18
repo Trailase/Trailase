@@ -10,10 +10,11 @@ type Props = {
   consent: boolean;
   onSignature: (value: string) => void;
   onConsent: (value: boolean) => void;
+  room: string;
   className: string;
 };
 
-export function Signing({ signature, consent, onSignature, onConsent, className }: Props) {
+export function Signing({ signature, consent, onSignature, onConsent, room, className }: Props) {
   const { t } = useLanguage();
   return (
     <Card className={className}>
@@ -34,7 +35,7 @@ export function Signing({ signature, consent, onSignature, onConsent, className 
             className="mt-0.5"
           />
           <Label htmlFor="signature-consent" className="text-sm font-normal leading-6">
-            {t('inspection.consent')}
+            {t('inspection.consent', { room })}
           </Label>
         </div>
       </CardContent>

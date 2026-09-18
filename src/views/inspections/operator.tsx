@@ -19,7 +19,7 @@ export function OperatorInspections() {
           <Header
             creating={controller.creating}
             disabled={controller.items === null}
-            onCreate={() => void controller.create()}
+            onCreate={(roomLabel) => void controller.create(roomLabel)}
           />
           <Queue
             {...controller}

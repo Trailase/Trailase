@@ -21,7 +21,7 @@ production). Steps:
 4. Add to `.env.local` and Railway:
    ```text
    RESEND_API_KEY=re_your_key_here
-   CONTACT_TO_EMAIL=k3y.fl0ws@gmail.com
+   CONTACT_TO_EMAIL=trai1ases@gmail.com
    ```
 5. Send a real test submission through the live form before calling this done.
 

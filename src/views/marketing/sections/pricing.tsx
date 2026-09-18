@@ -3,15 +3,12 @@ import { useLanguage } from '@/components/i18n/language-provider';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { requestContactRedirect } from '@/lib/contact-redirect';
-import { contactMailto } from '@/lib/i18n';
 
 const tierNumbers = [1, 2, 3, 4, 5, 6] as const;
 const featuredTier = 3;
 
 export function Pricing() {
-  const { locale, t } = useLanguage();
-  const contactHref = contactMailto(locale);
+  const { t } = useLanguage();
   const includedFeatures = [1, 2, 3, 4].map((n) => t(`home.pricingIncludedFeature${n}`));
 
   return (
@@ -83,28 +80,19 @@ export function Pricing() {
                   <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">
                     {t(`home.pricingTier${n}Tagline`)}
                   </p>
-                  <div className="mt-5 pt-1">
-                    <Button
-                      asChild
-                      variant={featured ? 'default' : 'outline'}
-                      size="sm"
-                      className="w-full rounded-sm"
-                    >
-                      <a
-                        href={contactHref}
-                        onClick={(event) => {
-                          event.preventDefault();
-                          requestContactRedirect(contactHref);
-                        }}
-                      >
-                        {t('home.pricingCta')}
-                      </a>
-                    </Button>
-                  </div>
                 </CardContent>
               </Card>
             );
           })}
+        </div>
+
+        <div className="mt-10 flex flex-col items-start gap-4 rounded-xl border border-primary/30 bg-card/95 p-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-md text-sm leading-6 text-muted-foreground">
+            {t('home.pricingCtaText')}
+          </p>
+          <Button asChild size="lg" className="h-auto min-h-11 rounded-sm px-6 shadow-brand">
+            <a href="#contact">{t('home.pricingCta')}</a>
+          </Button>
         </div>
 
         <p className="mt-8 max-w-2xl text-xs leading-5 text-muted-foreground">

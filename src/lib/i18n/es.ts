@@ -104,6 +104,8 @@ export const messages: Record<string, string> = {
     'Gratis para tus primeras 10 inspecciones en cualquier plan. Sin contrato, cancela cuando quieras.',
   'home.pricingDisclaimer':
     'Precios de partida para carteras europeas. El precio final depende del tamaño de la cartera y del alcance de la implantación — contáctanos para un presupuesto exacto.',
+  'home.pricingCtaText':
+    '¿Aún decidiendo qué plan te conviene? Te damos una respuesta clara para tu cartera exacta.',
   'home.pricingCta': 'Habla con nosotros sobre tu cartera',
   'home.pricingIncludedTitle': 'Incluido en todos los planes',
   'home.pricingIncludedFeature1': 'Inspecciones ilimitadas',
@@ -191,7 +193,8 @@ export const messages: Record<string, string> = {
     'Inicia una inspección guiada, comparte el enlace y observa cómo cada detalle vuelve en un registro completo.',
   'operator.prototypeNote':
     'Estás en la demo: usa los datos de ejemplo para vivir el proceso de entrega completo.',
-  'operator.create': 'Iniciar la entrega de la habitación 4B',
+  'operator.create': 'Iniciar la entrega',
+  'operator.roomLabelPlaceholder': 'p. ej. Habitación 4B, Unidad 12, Calle Mayor 21',
   'operator.creating': 'Creando…',
   'operator.queue': 'Cola de evidencias',
   'operator.recent': 'Inspecciones recientes',
@@ -205,7 +208,7 @@ export const messages: Record<string, string> = {
   'operator.loading': 'Cargando inspecciones…',
   'operator.tryAgain': 'Reintentar',
   'operator.empty': 'Aún no hay inspecciones.',
-  'operator.emptyText': 'Crea un enlace para la habitación 4B y empieza la demo.',
+  'operator.emptyText': 'Crea tu primer enlace de inspección para empezar.',
   'operator.created': 'Creada {date}',
   'operator.photos': 'Fotos',
   'operator.status': 'Estado',
@@ -213,7 +216,7 @@ export const messages: Record<string, string> = {
   'operator.copy': 'Copiar enlace',
   'operator.open': 'Abrir vista del inquilino',
   'operator.latest': 'Último enlace compartido',
-  'operator.createSuccess': 'La nueva inspección de la habitación 4B está lista para compartir.',
+  'operator.createSuccess': 'La nueva inspección de {room} está lista para compartir.',
   'operator.copySuccess': 'Enlace de inspección copiado.',
   'operator.copyError': 'No se pudo copiar. Selecciona el enlace para copiarlo manualmente.',
   'operator.delete': 'Eliminar',
@@ -231,7 +234,7 @@ export const messages: Record<string, string> = {
   'inspection.damage': 'Daño registrado',
   'inspection.required': 'Obligatorio',
   'inspection.optionalNote': 'Nota opcional',
-  'inspection.loading': 'Preparando la inspección de la habitación 4B…',
+  'inspection.loading': 'Preparando tu inspección…',
   'inspection.linkTitle': 'Este enlace necesita revisión.',
   'inspection.linkUnavailable': 'Este enlace de inspección no está disponible.',
   'inspection.recoveryHelp':
@@ -283,8 +286,7 @@ export const messages: Record<string, string> = {
   'inspection.notesPlaceholder': 'Por ejemplo: dos llaves en la estantería de entrada…',
   'inspection.signatureTitle': 'Firma la entrega',
   'inspection.signatureText': 'Tu firma confirma que has revisado este registro de entrada.',
-  'inspection.consent':
-    'Confirmo que esta inspección refleja el estado en el que encontré la habitación 4B.',
+  'inspection.consent': 'Confirmo que esta inspección refleja el estado en el que encontré {room}.',
   'inspection.reviewTitle': 'Una última revisión',
   'inspection.reviewText': 'Revisa el registro antes de enviarlo al operador.',
   'inspection.areasChecked': 'Zonas revisadas',

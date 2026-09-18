@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { InspectionFlow } from '@/views/inspections/flow';
 
 export const metadata: Metadata = {
-  title: 'Room 4B move-in inspection',
-  description: 'A guided move-in inspection for Room 4B.',
+  title: 'Move-in inspection',
+  description: 'A guided move-in inspection for your room.',
 };
 
 export default async function InspectionPage({

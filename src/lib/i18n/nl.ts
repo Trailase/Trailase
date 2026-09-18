@@ -109,6 +109,8 @@ export const messages: Record<string, string> = {
     'Gratis voor je eerste 10 inspecties op elk plan. Geen contract, altijd opzegbaar.',
   'home.pricingDisclaimer':
     'Startprijzen voor Europese portefeuilles. De uiteindelijke prijs hangt af van portefeuillegrootte en uitrolomvang — neem contact op voor een exacte offerte.',
+  'home.pricingCtaText':
+    'Nog twijfelen welk plan past? Krijg een duidelijk antwoord voor je exacte portefeuillegrootte.',
   'home.pricingCta': 'Praat met ons over je portefeuille',
   'home.pricingIncludedTitle': 'Inbegrepen bij elk plan',
   'home.pricingIncludedFeature1': 'Onbeperkt inspecties',
@@ -196,7 +198,8 @@ export const messages: Record<string, string> = {
     'Start één begeleide inspectie, deel de huurderslink en zie elk detail terugkomen in één compleet dossier.',
   'operator.prototypeNote':
     'Je bent in de live demo: gebruik de voorbeeldgegevens om de complete oplevering te ervaren.',
-  'operator.create': 'Start de oplevering van kamer 4B',
+  'operator.create': 'Start de oplevering',
+  'operator.roomLabelPlaceholder': 'bv. Kamer 4B, Unit 12, Kerkstraat 21',
   'operator.creating': 'Bezig met maken…',
   'operator.queue': 'Bewijswachtrij',
   'operator.recent': 'Recente inspecties',
@@ -210,7 +213,7 @@ export const messages: Record<string, string> = {
   'operator.loading': 'Inspecties laden…',
   'operator.tryAgain': 'Opnieuw proberen',
   'operator.empty': 'Nog geen inspecties.',
-  'operator.emptyText': 'Maak een link voor kamer 4B om de demo te starten.',
+  'operator.emptyText': 'Maak je eerste inspectielink om te beginnen.',
   'operator.created': 'Aangemaakt {date}',
   'operator.photos': 'Foto’s',
   'operator.status': 'Status',
@@ -218,7 +221,7 @@ export const messages: Record<string, string> = {
   'operator.copy': 'Link kopiëren',
   'operator.open': 'Huurdersweergave openen',
   'operator.latest': 'Nieuwste deellink',
-  'operator.createSuccess': 'De nieuwe inspectie voor kamer 4B is klaar om te delen.',
+  'operator.createSuccess': 'De nieuwe inspectie voor {room} is klaar om te delen.',
   'operator.copySuccess': 'Inspectielink gekopieerd.',
   'operator.copyError': 'Kopiëren is geblokkeerd. Selecteer de link om hem handmatig te kopiëren.',
   'operator.delete': 'Verwijderen',
@@ -236,7 +239,7 @@ export const messages: Record<string, string> = {
   'inspection.damage': 'Schade gemeld',
   'inspection.required': 'Verplicht',
   'inspection.optionalNote': 'Optionele notitie',
-  'inspection.loading': 'Inspectie van kamer 4B voorbereiden…',
+  'inspection.loading': 'Je inspectie wordt voorbereid…',
   'inspection.linkTitle': 'Deze link moet worden gecontroleerd.',
   'inspection.linkUnavailable': 'Deze inspectielink is niet beschikbaar.',
   'inspection.recoveryHelp':
@@ -291,7 +294,7 @@ export const messages: Record<string, string> = {
   'inspection.signatureText':
     'Je handtekening bevestigt dat je dit intrekdossier hebt gecontroleerd.',
   'inspection.consent':
-    'Ik bevestig dat deze inspectie de toestand weergeeft waarin ik kamer 4B aantrof.',
+    'Ik bevestig dat deze inspectie de toestand weergeeft waarin ik {room} aantrof.',
   'inspection.reviewTitle': 'Nog één controle',
   'inspection.reviewText': 'Controleer je dossier voordat je het naar de beheerder stuurt.',
   'inspection.areasChecked': 'Onderdelen gecontroleerd',

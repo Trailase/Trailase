@@ -39,14 +39,14 @@ export function useOperator(t: Translate, feedback: Feedback) {
     if (currentPage > totalPages) setCurrentPage(totalPages);
   }, [currentPage, totalPages]);
 
-  async function create() {
+  async function create(roomLabel: string) {
     setCreating(true);
     try {
-      const created = await inspectionClient.createOperator({ roomLabel: 'Room 4B' });
+      const created = await inspectionClient.createOperator({ roomLabel });
       setItems((current) => (current ? [created, ...current] : [created]));
       setCurrentPage(1);
       setLatestLink(created.shareUrl);
-      feedback.success(t('operator.createSuccess'));
+      feedback.success(t('operator.createSuccess', { room: created.roomLabel }));
     } catch (error) {
       feedback.error(errorMessage(error, t('operator.createError')));
     } finally {

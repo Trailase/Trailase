@@ -31,8 +31,9 @@ export function InspectionFlow({ token }: { token: string }) {
   if (flow.status === 'not-found' || flow.status === 'error') {
     return <Failure error={flow.error} retry={() => void flow.retry()} />;
   }
+  const room = flow.inspection?.roomLabel ?? '';
   if (flow.status === 'submitted' || flow.status === 'already-completed') {
-    return <Complete status={flow.status} room={flow.inspection?.roomLabel ?? 'Room 4B'} />;
+    return <Complete status={flow.status} room={room} />;
   }
 
   return (
@@ -45,7 +46,7 @@ export function InspectionFlow({ token }: { token: string }) {
         src={backgroundVideo(phaseVideos[flow.step] ?? 'demoCondition')}
       />
       <div className="mx-auto w-full max-w-3xl">
-        <Header step={flow.step} total={flow.steps.length} />
+        <Header step={flow.step} total={flow.steps.length} room={room} />
         <Steps step={flow.step} labels={flow.steps} />
         {flow.error && (
           <p
@@ -87,6 +88,7 @@ export function InspectionFlow({ token }: { token: string }) {
             consent={flow.consent}
             onSignature={flow.setSignature}
             onConsent={flow.setConsent}
+            room={room}
             className={cardClass}
           />
         )}

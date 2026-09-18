@@ -17,7 +17,7 @@ export function resolveLocale(value: string | null | undefined): AppLocale {
   return supportedLocales.includes(value as AppLocale) ? (value as AppLocale) : 'en';
 }
 
-const contactEmail = 'k3y.fl0ws@gmail.com';
+const contactEmail = 'trai1ases@gmail.com';
 
 const contactCopy: Record<AppLocale, { subject: string; body: string }> = {
   en: {
