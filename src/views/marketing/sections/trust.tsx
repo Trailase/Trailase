@@ -1,4 +1,4 @@
-import { KeyRound, Link2, ShieldCheck, UserX } from 'lucide-react';
+import { Globe, KeyRound, Link2, ShieldCheck, UserX } from 'lucide-react';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -9,6 +9,12 @@ export function Trust() {
     { icon: Link2, title: t('home.trustPoint2Title'), text: t('home.trustPoint2Text') },
     { icon: KeyRound, title: t('home.trustPoint3Title'), text: t('home.trustPoint3Text') },
     { icon: ShieldCheck, title: t('home.trustPoint4Title'), text: t('home.trustPoint4Text') },
+    {
+      icon: Globe,
+      title: t('home.trustPoint5Title'),
+      text: t('home.trustPoint5Text'),
+      span: true,
+    },
   ];
 
   return (
@@ -30,7 +36,11 @@ export function Trust() {
             return (
               <Card
                 key={point.title}
-                className="border-brand-200/80 bg-card/95 shadow-md dark:border-brand-800"
+                className={
+                  point.span
+                    ? 'relative border-brand-200/80 bg-card/95 shadow-md dark:border-brand-800 md:col-span-2'
+                    : 'relative border-brand-200/80 bg-card/95 shadow-md dark:border-brand-800'
+                }
               >
                 <CardContent className="flex items-start gap-4 p-6">
                   <span className="grid size-10 shrink-0 place-items-center rounded-sm bg-accent text-accent-foreground">

@@ -45,6 +45,24 @@ export function Contact() {
               {t('home.founderHook')}
             </p>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">{t('home.founderText')}</p>
+            <div className="mt-5 grid grid-cols-2 gap-4">
+              <div>
+                <p className="font-display text-2xl tracking-tight text-primary">
+                  {t('home.founderStat1Value')}
+                </p>
+                <p className="mt-1 text-xs leading-5 text-muted-foreground">
+                  {t('home.founderStat1Label')}
+                </p>
+              </div>
+              <div>
+                <p className="font-display text-2xl tracking-tight text-primary">
+                  {t('home.founderStat2Value')}
+                </p>
+                <p className="mt-1 text-xs leading-5 text-muted-foreground">
+                  {t('home.founderStat2Label')}
+                </p>
+              </div>
+            </div>
           </div>
 
           <dl className="mt-8 flex max-w-xl flex-col gap-5">
@@ -105,6 +123,23 @@ export function Contact() {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
+                <Label htmlFor="contact-units">{t('home.contactUnitsLabel')}</Label>
+                <select
+                  id="contact-units"
+                  className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  value={form.unitsRange}
+                  onChange={(event) => form.setUnitsRange(event.target.value)}
+                >
+                  <option value="">{t('home.contactUnitsPlaceholder')}</option>
+                  <option value="up-to-25">{t('home.contactUnitsUpTo25')}</option>
+                  <option value="26-100">{t('home.contactUnitsRange26to100')}</option>
+                  <option value="101-300">{t('home.contactUnitsRange101to300')}</option>
+                  <option value="301-1000">{t('home.contactUnitsRange301to1000')}</option>
+                  <option value="1001-5000">{t('home.contactUnitsRange1001to5000')}</option>
+                  <option value="5000-plus">{t('home.contactUnits5000Plus')}</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-1.5">
                 <Label htmlFor="contact-message">{t('home.contactMessageLabel')}</Label>
                 <Textarea
                   id="contact-message"
@@ -119,24 +154,29 @@ export function Contact() {
               <p className="text-xs font-semibold uppercase tracking-[0.1em] text-primary">
                 {t('home.contactFreeTrial')}
               </p>
-              <Button
-                type="submit"
-                size="lg"
-                disabled={form.submitting}
-                className="h-auto min-h-12 whitespace-normal rounded-sm px-7 py-3 font-semibold shadow-brand"
-              >
-                {form.submitting ? t('home.contactSending') : t('home.contactButton')}
-              </Button>
-              {env.NEXT_PUBLIC_CAL_LINK && (
-                <a
-                  href={env.NEXT_PUBLIC_CAL_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center text-sm font-medium text-primary underline underline-offset-2"
+              <p className="text-xs text-muted-foreground">{t('home.contactSlaNote')}</p>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={form.submitting}
+                  className="h-auto min-h-12 flex-1 whitespace-normal rounded-sm px-7 py-3 font-semibold shadow-brand"
                 >
-                  {t('home.contactCalLink')}
-                </a>
-              )}
+                  {form.submitting ? t('home.contactSending') : t('home.contactButton')}
+                </Button>
+                {env.NEXT_PUBLIC_CAL_LINK && (
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="h-auto min-h-12 flex-1 whitespace-normal rounded-sm px-7 py-3 font-semibold"
+                  >
+                    <a href={env.NEXT_PUBLIC_CAL_LINK} target="_blank" rel="noopener noreferrer">
+                      {t('home.contactCalButton')}
+                    </a>
+                  </Button>
+                )}
+              </div>
               {form.unavailable && (
                 <p className="text-sm text-muted-foreground">
                   {t('home.contactFallbackText')}{' '}

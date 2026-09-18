@@ -3,6 +3,15 @@
 import { env } from '@/lib/env';
 import type { ContactMessageCreateType } from './schema';
 
+const unitsRangeLabels: Record<string, string> = {
+  'up-to-25': 'Up to 25 units',
+  '26-100': '26–100 units',
+  '101-300': '101–300 units',
+  '301-1000': '301–1,000 units',
+  '1001-5000': '1,001–5,000 units',
+  '5000-plus': '5,000+ units',
+};
+
 export type SendContactMessageResult =
   | { ok: true }
   | { ok: false; reason: 'not-configured' | 'send-failed' };
@@ -21,6 +30,7 @@ export async function sendContactMessage(
   const text = [
     input.name ? `Name: ${input.name}` : null,
     `Email: ${input.email}`,
+    input.unitsRange ? `Portfolio size: ${unitsRangeLabels[input.unitsRange]}` : null,
     '',
     input.message,
   ]

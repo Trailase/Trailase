@@ -76,11 +76,20 @@ export const messages: Record<string, string> = {
   'home.contactNameLabel': 'Naam (optioneel)',
   'home.contactEmailLabel': 'E-mail',
   'home.contactMessageLabel': 'Waar heeft uw team het meeste aan?',
+  'home.contactUnitsLabel': 'Hoeveel eenheden beheert u? (optioneel)',
+  'home.contactUnitsPlaceholder': 'Kies een bereik',
+  'home.contactUnitsUpTo25': 'Tot 25 eenheden',
+  'home.contactUnitsRange26to100': '26–100 eenheden',
+  'home.contactUnitsRange101to300': '101–300 eenheden',
+  'home.contactUnitsRange301to1000': '301–1.000 eenheden',
+  'home.contactUnitsRange1001to5000': '1.001–5.000 eenheden',
+  'home.contactUnits5000Plus': 'Meer dan 5.000 eenheden',
+  'home.contactSlaNote': 'We reageren dezelfde werkdag nog.',
   'home.contactMessagePlaceholder':
     'Vertel ons wanneer je volgende in- of uitcheckseizoen begint, en waar het lastig wordt…',
   'home.contactSending': 'Verzenden…',
   'home.contactSuccessTitle': 'Bericht verzonden.',
-  'home.contactSuccess': 'Bedankt — we reageren binnenkort per e-mail.',
+  'home.contactSuccess': 'Bedankt — we reageren dezelfde werkdag nog.',
   'home.contactError': 'Dat is niet gelukt. Probeer de e-maillink hieronder.',
   'home.contactFallbackText': 'U kunt ons ook rechtstreeks bereiken:',
   'home.contactFallbackLink': 'Mail ons',
@@ -88,7 +97,7 @@ export const messages: Record<string, string> = {
   'home.founderText':
     'Trailase ontstond na het steeds weer zien van hetzelfde probleem bij het huren van kamers door heel Europa: er was nooit een consistente manier om de staat van een kamer bij in- of uitcheck aan te tonen. In één geval beweerde een verhuurder maanden na vertrek dat de verf van een muur was beschadigd. Het oplossen kostte twee maanden heen-en-weer, en lukte alleen omdat er foto’s van voor en na bestonden. Hetzelfde probleem speelt op grotere schaal. Een team van studentenhuisvesting dat in dezelfde augustusweek 200 kamers oplevert, heeft zelden tijd om elke kamer goed te documenteren, waardoor geschillen weken later ontstaan zonder bewijs aan beide kanten. Een portefeuille in meerdere steden met wisselend personeel per oplevering eindigt met een andere standaard per gebouw, waardoor niemand consistentie kan aantonen. Trailase bestaat om dat gat te dichten voordat het een geschil wordt.',
   'home.contactFreeTrial': 'Gratis voor je eerste 10 inspecties. Geen contract.',
-  'home.contactCalLink': 'Liever eerst praten? Boek een moment in onze agenda',
+  'home.contactCalButton': 'Boek liever een gesprek',
   'home.faqDeviceQ': 'Wat als een huurder geen smartphone heeft?',
   'home.faqDeviceA':
     'Trailase werkt volledig in de browser, dus een huurder kan het invullen op een telefoon, tablet of laptop met camera. Geen app of account nodig.',
@@ -107,6 +116,8 @@ export const messages: Record<string, string> = {
     'De prijs schaalt met het aantal beheerde units, niet met hoeveel foto’s je team maakt — van een eerste pilotpand tot een landelijke portefeuille.',
   'home.pricingFreeNote':
     'Gratis voor je eerste 10 inspecties op elk plan. Geen contract, altijd opzegbaar.',
+  'home.pricingLockInNote':
+    'Meld u nu aan en behoud de huidige prijs zolang u klant blijft, ook als de reguliere prijzen later stijgen.',
   'home.pricingDisclaimer':
     'Startprijzen voor Europese portefeuilles. De uiteindelijke prijs hangt af van portefeuillegrootte en uitrolomvang — neem contact op voor een exacte offerte.',
   'home.pricingCtaText':
@@ -164,10 +175,19 @@ export const messages: Record<string, string> = {
   'home.trustPoint4Title': 'Nooit verkocht, nooit gedeeld',
   'home.trustPoint4Text':
     'Trailase verkoopt huurdersdata niet en deelt deze niet met adverteerders of onverwante derde partijen.',
+  'home.trustPoint5Title': 'In de EU gehoste infrastructuur',
+  'home.trustPoint5Text':
+    'Trailase draait op infrastructuur binnen de Europese Unie, in lijn met de AVG-vereisten voor Europese portefeuilles.',
   'home.trustScope':
     'Trailase verzamelt bewijs. Het wijst geen schuld toe, bepaalt geen aansprakelijkheid en berekent geen inhouding op de borg — die beslissing blijft bij je team.',
   'home.founderHook':
     'Zo’n geschil kost weken heen-en-weer. Eén foto kan het in enkele minuten oplossen.',
+  'home.founderStat1Value': '2 maanden',
+  'home.founderStat1Label':
+    'heen-en-weer over één betwiste muur — alleen opgelost dankzij bestaande voor-en-na-foto’s.',
+  'home.founderStat2Value': '200 kamers',
+  'home.founderStat2Label':
+    'opgeleverd in één augustusweek, zonder tijd om elke kamer goed te documenteren.',
   'story.eyebrow': 'Zie wat duidelijkheid verandert',
   'story.title': 'Van losse details naar een dossier waarop je kunt vertrouwen.',
   'story.intro':

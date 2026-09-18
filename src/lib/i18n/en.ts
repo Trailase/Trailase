@@ -72,11 +72,20 @@ export const messages: Record<string, string> = {
   'home.contactNameLabel': 'Name (optional)',
   'home.contactEmailLabel': 'Email',
   'home.contactMessageLabel': 'What would help your team most?',
+  'home.contactUnitsLabel': 'How many units do you manage? (optional)',
+  'home.contactUnitsPlaceholder': 'Select a range',
+  'home.contactUnitsUpTo25': 'Up to 25 units',
+  'home.contactUnitsRange26to100': '26–100 units',
+  'home.contactUnitsRange101to300': '101–300 units',
+  'home.contactUnitsRange301to1000': '301–1,000 units',
+  'home.contactUnitsRange1001to5000': '1,001–5,000 units',
+  'home.contactUnits5000Plus': '5,000+ units',
+  'home.contactSlaNote': 'We reply the same business day.',
   'home.contactMessagePlaceholder':
     'Tell us when your next move-in or move-out season starts, and where it gets messy…',
   'home.contactSending': 'Sending…',
   'home.contactSuccessTitle': 'Message sent.',
-  'home.contactSuccess': 'Thanks — we will reply by email shortly.',
+  'home.contactSuccess': 'Thanks — we will reply the same business day.',
   'home.contactError': 'That did not go through. Try the email link below instead.',
   'home.contactFallbackText': 'You can also reach us directly:',
   'home.contactFallbackLink': 'Email us',
@@ -84,7 +93,7 @@ export const messages: Record<string, string> = {
   'home.founderText':
     'Trailase started after seeing the same gap play out again and again while renting rooms across Europe: no consistent way to prove a room’s condition going in or out. In one case, a landlord claimed a wall’s paint had been damaged months after move-out. It took two months of back-and-forth to resolve, and only got settled because before-and-after photos happened to exist. The same gap shows up at scale. A student housing team clearing 200 rooms in the same August week rarely has time to document each one properly, so disputes surface weeks later with no evidence on either side. A multi-city portfolio with different staff running each handover ends up with a different standard in every building, so nobody can prove anything was consistent. Trailase exists to close that gap before it becomes a dispute.',
   'home.contactFreeTrial': 'Free for your first 10 inspections. No contract.',
-  'home.contactCalLink': 'Prefer to talk first? Book a slot on our calendar',
+  'home.contactCalButton': 'Book a call instead',
   'home.faqDeviceQ': 'What if a tenant does not have a smartphone?',
   'home.faqDeviceA':
     'Trailase runs entirely in the browser, so tenants can complete it from a phone, tablet, or laptop with a camera. No app or account is required.',
@@ -102,6 +111,8 @@ export const messages: Record<string, string> = {
   'home.pricingIntro':
     'Pricing scales with the number of units you manage, not with how many photos your team takes — from a single pilot building to a national portfolio.',
   'home.pricingFreeNote': 'First 10 inspections free on any plan. No contract, cancel anytime.',
+  'home.pricingLockInNote':
+    "Sign up now and keep today's price for as long as you stay with us, even as list prices rise later.",
   'home.pricingDisclaimer':
     'Starting prices shown for European portfolios. Final pricing depends on portfolio size and rollout scope — talk to us for an exact quote.',
   'home.pricingCtaText':
@@ -159,10 +170,19 @@ export const messages: Record<string, string> = {
   'home.trustPoint4Title': 'Never sold, never shared',
   'home.trustPoint4Text':
     'Trailase does not sell tenant data or share it with advertisers or unrelated third parties.',
+  'home.trustPoint5Title': 'EU-hosted infrastructure',
+  'home.trustPoint5Text':
+    'Trailase runs on infrastructure located in the European Union, in line with GDPR requirements for European portfolios.',
   'home.trustScope':
     'Trailase gathers evidence. It does not assign blame, determine liability, or calculate a deposit deduction — that decision stays with your team.',
   'home.founderHook':
     'A dispute like this costs weeks of back-and-forth. A single photo can settle it in minutes.',
+  'home.founderStat1Value': '2 months',
+  'home.founderStat1Label':
+    'of back-and-forth over one disputed wall — settled only because before/after photos existed.',
+  'home.founderStat2Value': '200 rooms',
+  'home.founderStat2Label':
+    'cleared in a single August week, with no time to document each one properly.',
   'story.eyebrow': 'See the difference clarity makes',
   'story.title': 'From scattered details to a record your team can trust.',
   'story.intro': 'Scroll to turn every inspection detail into one decision-ready record.',

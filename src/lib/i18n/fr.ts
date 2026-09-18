@@ -76,11 +76,20 @@ export const messages: Record<string, string> = {
   'home.contactNameLabel': 'Nom (facultatif)',
   'home.contactEmailLabel': 'E-mail',
   'home.contactMessageLabel': 'Qu’est-ce qui aiderait le plus votre équipe ?',
+  'home.contactUnitsLabel': 'Combien de logements gérez-vous ? (facultatif)',
+  'home.contactUnitsPlaceholder': 'Choisissez une tranche',
+  'home.contactUnitsUpTo25': 'Jusqu’à 25 logements',
+  'home.contactUnitsRange26to100': '26–100 logements',
+  'home.contactUnitsRange101to300': '101–300 logements',
+  'home.contactUnitsRange301to1000': '301–1 000 logements',
+  'home.contactUnitsRange1001to5000': '1 001–5 000 logements',
+  'home.contactUnits5000Plus': 'Plus de 5 000 logements',
+  'home.contactSlaNote': 'Nous répondons dans la journée (jour ouvré).',
   'home.contactMessagePlaceholder':
     'Dites-nous quand commence votre prochaine saison d’entrées ou sorties, et où ça se complique…',
   'home.contactSending': 'Envoi…',
   'home.contactSuccessTitle': 'Message envoyé.',
-  'home.contactSuccess': 'Merci — nous répondrons bientôt par e-mail.',
+  'home.contactSuccess': 'Merci — nous répondrons dans la journée (jour ouvré).',
   'home.contactError': 'L’envoi a échoué. Essayez le lien e-mail ci-dessous.',
   'home.contactFallbackText': 'Vous pouvez aussi nous écrire directement :',
   'home.contactFallbackLink': 'Nous écrire',
@@ -88,7 +97,7 @@ export const messages: Record<string, string> = {
   'home.founderText':
     "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant/après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige.",
   'home.contactFreeTrial': 'Gratuit pour vos 10 premières inspections. Sans engagement.',
-  'home.contactCalLink': "Vous préférez d'abord en parler ? Réservez un créneau dans notre agenda",
+  'home.contactCalButton': 'Réserver un appel',
   'home.faqDeviceQ': "Que se passe-t-il si un locataire n'a pas de smartphone ?",
   'home.faqDeviceA':
     "Trailase fonctionne entièrement dans le navigateur : le locataire peut le faire depuis un téléphone, une tablette ou un ordinateur portable avec caméra. Aucune application ni compte n'est nécessaire.",
@@ -107,6 +116,8 @@ export const messages: Record<string, string> = {
     "Le tarif évolue selon le nombre de logements gérés, pas selon le nombre de photos prises par votre équipe — d'un premier immeuble pilote à un portefeuille national.",
   'home.pricingFreeNote':
     'Gratuit pour vos 10 premières inspections, quelle que soit l’offre. Sans engagement, résiliable à tout moment.',
+  'home.pricingLockInNote':
+    'Inscrivez-vous maintenant et gardez le prix actuel tant que vous restez client, même si les tarifs affichés augmentent ensuite.',
   'home.pricingDisclaimer':
     "Tarifs de départ indiqués pour les portefeuilles européens. Le tarif final dépend de la taille du portefeuille et de l'ampleur du déploiement — contactez-nous pour un devis précis.",
   'home.pricingCtaText':
@@ -166,10 +177,19 @@ export const messages: Record<string, string> = {
   'home.trustPoint4Title': 'Jamais vendu, jamais partagé',
   'home.trustPoint4Text':
     'Trailase ne vend ni ne partage les données des locataires avec des annonceurs ou des tiers non liés.',
+  'home.trustPoint5Title': "Infrastructure hébergée dans l'UE",
+  'home.trustPoint5Text':
+    "Trailase fonctionne sur une infrastructure située dans l'Union européenne, conformément aux exigences du RGPD pour les portefeuilles européens.",
   'home.trustScope':
     "Trailase réunit des preuves. Il n'attribue pas de responsabilité, ne détermine pas de faute et ne calcule pas de retenue sur dépôt de garantie — cette décision reste celle de votre équipe.",
   'home.founderHook':
     'Un litige comme celui-ci coûte des semaines d’allers-retours. Une seule photo peut le régler en quelques minutes.',
+  'home.founderStat1Value': '2 mois',
+  'home.founderStat1Label':
+    'd’allers-retours pour un mur contesté — réglé uniquement grâce à des photos avant/après.',
+  'home.founderStat2Value': '200 chambres',
+  'home.founderStat2Label':
+    'libérées en une seule semaine d’août, sans le temps de documenter chacune correctement.',
   'story.eyebrow': 'Voyez ce que la clarté change',
   'story.title': 'Des détails dispersés à un dossier digne de confiance.',
   'story.intro':

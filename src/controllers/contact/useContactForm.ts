@@ -10,6 +10,7 @@ type Feedback = { success: (message: string) => void; error: (message: string) =
 export function useContactForm(t: Translate, feedback: Feedback) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [unitsRange, setUnitsRange] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
@@ -23,7 +24,12 @@ export function useContactForm(t: Translate, feedback: Feedback) {
     try {
       await apiFetch('/api/contact', {
         method: 'POST',
-        body: JSON.stringify({ name: name || undefined, email, message }),
+        body: JSON.stringify({
+          name: name || undefined,
+          email,
+          unitsRange: unitsRange || undefined,
+          message,
+        }),
       });
       setSent(true);
       feedback.success(t('home.contactSuccess'));
@@ -40,6 +46,8 @@ export function useContactForm(t: Translate, feedback: Feedback) {
     setName,
     email,
     setEmail,
+    unitsRange,
+    setUnitsRange,
     message,
     setMessage,
     submitting,

@@ -28,6 +28,9 @@ export function Pricing() {
           <p className="mt-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary">
             {t('home.pricingFreeNote')}
           </p>
+          <p className="mt-2 text-sm font-medium text-muted-foreground">
+            {t('home.pricingLockInNote')}
+          </p>
         </div>
 
         <div className="mt-10 flex flex-col gap-3 rounded-xl border border-brand-teal/30 bg-card/95 p-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3">

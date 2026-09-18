@@ -71,11 +71,20 @@ export const messages: Record<string, string> = {
   'home.contactNameLabel': 'Nombre (opcional)',
   'home.contactEmailLabel': 'Correo electrónico',
   'home.contactMessageLabel': '¿Qué ayudaría más a tu equipo?',
+  'home.contactUnitsLabel': '¿Cuántas unidades gestionas? (opcional)',
+  'home.contactUnitsPlaceholder': 'Selecciona un rango',
+  'home.contactUnitsUpTo25': 'Hasta 25 unidades',
+  'home.contactUnitsRange26to100': '26–100 unidades',
+  'home.contactUnitsRange101to300': '101–300 unidades',
+  'home.contactUnitsRange301to1000': '301–1.000 unidades',
+  'home.contactUnitsRange1001to5000': '1.001–5.000 unidades',
+  'home.contactUnits5000Plus': 'Más de 5.000 unidades',
+  'home.contactSlaNote': 'Respondemos el mismo día laborable.',
   'home.contactMessagePlaceholder':
     'Cuéntanos cuándo empieza tu próxima temporada de entradas o salidas y dónde se complica…',
   'home.contactSending': 'Enviando…',
   'home.contactSuccessTitle': 'Mensaje enviado.',
-  'home.contactSuccess': 'Gracias — te responderemos por correo en breve.',
+  'home.contactSuccess': 'Gracias — te responderemos el mismo día laborable.',
   'home.contactError': 'No se pudo enviar. Prueba con el enlace de correo de abajo.',
   'home.contactFallbackText': 'También puedes escribirnos directamente:',
   'home.contactFallbackLink': 'Enviar correo',
@@ -83,7 +92,7 @@ export const messages: Record<string, string> = {
   'home.founderText':
     'Trailase surgió al ver el mismo problema repetirse una y otra vez alquilando habitaciones por toda Europa: nunca había una forma consistente de demostrar el estado de una habitación al entrar o salir. En un caso, un propietario alegó que la pintura de una pared se había dañado meses después de la salida. Resolverlo tardó dos meses de idas y venidas, y solo se solucionó porque existían fotos de antes y después. El mismo problema aparece a mayor escala. Un equipo de residencias de estudiantes que vacía 200 habitaciones en la misma semana de agosto rara vez tiene tiempo de documentar cada una correctamente, así que las disputas surgen semanas después sin pruebas de ningún lado. Un portafolio multiciudad con distinto personal en cada entrega termina con un estándar diferente en cada edificio, por lo que nadie puede demostrar que algo fue consistente. Trailase existe para cerrar ese vacío antes de que se convierta en una disputa.',
   'home.contactFreeTrial': 'Gratis para tus primeras 10 inspecciones. Sin contrato.',
-  'home.contactCalLink': '¿Prefieres hablar primero? Reserva un horario en nuestro calendario',
+  'home.contactCalButton': 'Reservar una llamada',
   'home.faqDeviceQ': '¿Qué pasa si un inquilino no tiene smartphone?',
   'home.faqDeviceA':
     'Trailase funciona íntegramente en el navegador, así que el inquilino puede completarlo desde un teléfono, tablet o portátil con cámara. No hace falta ninguna app ni cuenta.',
@@ -102,6 +111,8 @@ export const messages: Record<string, string> = {
     'El precio escala según el número de unidades gestionadas, no según cuántas fotos tome tu equipo — desde un primer edificio piloto hasta una cartera nacional.',
   'home.pricingFreeNote':
     'Gratis para tus primeras 10 inspecciones en cualquier plan. Sin contrato, cancela cuando quieras.',
+  'home.pricingLockInNote':
+    'Date de alta ahora y conserva el precio actual mientras sigas siendo cliente, aunque los precios de lista suban más adelante.',
   'home.pricingDisclaimer':
     'Precios de partida para carteras europeas. El precio final depende del tamaño de la cartera y del alcance de la implantación — contáctanos para un presupuesto exacto.',
   'home.pricingCtaText':
@@ -159,10 +170,19 @@ export const messages: Record<string, string> = {
   'home.trustPoint4Title': 'Nunca se vende ni se comparte',
   'home.trustPoint4Text':
     'Trailase no vende los datos del inquilino ni los comparte con anunciantes o terceros ajenos.',
+  'home.trustPoint5Title': 'Infraestructura alojada en la UE',
+  'home.trustPoint5Text':
+    'Trailase funciona sobre infraestructura ubicada en la Unión Europea, conforme a los requisitos del RGPD para carteras europeas.',
   'home.trustScope':
     'Trailase reúne evidencia. No asigna culpas, no determina responsabilidades ni calcula deducciones del depósito — esa decisión sigue siendo de tu equipo.',
   'home.founderHook':
     'Una disputa así cuesta semanas de idas y venidas. Una sola foto puede resolverla en minutos.',
+  'home.founderStat1Value': '2 meses',
+  'home.founderStat1Label':
+    'de idas y venidas por una pared en disputa — resuelto solo porque existían fotos de antes y después.',
+  'home.founderStat2Value': '200 habitaciones',
+  'home.founderStat2Label':
+    'liberadas en una sola semana de agosto, sin tiempo para documentar cada una correctamente.',
   'story.eyebrow': 'Descubre lo que cambia con claridad',
   'story.title': 'De detalles dispersos a un registro en el que confiar.',
   'story.intro':
