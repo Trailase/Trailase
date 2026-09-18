@@ -43,7 +43,8 @@ export const messages: Record<string, string> = {
   'home.evidenceText':
     'Trailase places move-in and move-out evidence side by side, helping your team spot potential changes quickly while keeping people in control of every decision.',
   'home.tenantTitle': 'Easy to complete',
-  'home.tenantText': 'A focused mobile journey tenants can finish without an account or app.',
+  'home.tenantText':
+    'Most tenants finish their inspection in under five minutes, right from their own phone.',
   'home.teamTitle': 'Consistent by default',
   'home.teamText': 'The same guided evidence standard across every room, property, and city.',
   'home.readyTitle': 'Clear when it counts',
@@ -51,6 +52,7 @@ export const messages: Record<string, string> = {
   'home.portfolioEyebrow': 'Built to grow with your portfolio',
   'home.units': 'rooms or units under management',
   'home.standard': 'One trusted handover standard across every property',
+  'home.workflowStandard': 'Every handover follows the same three steps, so nothing gets skipped.',
   'home.operatorsEyebrow': 'More consistency, without more friction',
   'home.operatorsTitle': 'One confident process, from 50 rooms to 5,000.',
   'home.operatorsText':
@@ -80,7 +82,7 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Email us',
   'home.founderTitle': 'Why this exists',
   'home.founderText':
-    'Trailase started after seeing the same gap play out again and again while renting rooms across Europe: no consistent way to prove a room’s condition going in or out. In one case, a landlord claimed a wall’s paint had been damaged months after move-out. It took two months of back-and-forth to resolve, and only got settled because before-and-after photos happened to exist. The same gap shows up at scale. A student housing team clearing 200 rooms in the same August week rarely has time to document each one properly, so disputes surface weeks later with no evidence on either side. A multi-city portfolio with different staff running each handover ends up with a different standard in every building, so nobody can prove anything was consistent. Trailase exists to close that gap before it becomes a dispute. That is why the first ten inspections are free: see it work on your own properties before deciding anything else.',
+    'Trailase started after seeing the same gap play out again and again while renting rooms across Europe: no consistent way to prove a room’s condition going in or out. In one case, a landlord claimed a wall’s paint had been damaged months after move-out. It took two months of back-and-forth to resolve, and only got settled because before-and-after photos happened to exist. The same gap shows up at scale. A student housing team clearing 200 rooms in the same August week rarely has time to document each one properly, so disputes surface weeks later with no evidence on either side. A multi-city portfolio with different staff running each handover ends up with a different standard in every building, so nobody can prove anything was consistent. Trailase exists to close that gap before it becomes a dispute.',
   'home.contactFreeTrial': 'Free for your first 10 inspections. No contract.',
   'home.contactCalLink': 'Prefer to talk first? Book a slot on our calendar',
   'home.faqDeviceQ': 'What if a tenant does not have a smartphone?',
@@ -88,16 +90,13 @@ export const messages: Record<string, string> = {
     'Trailase runs entirely in the browser, so tenants can complete it from a phone, tablet, or laptop with a camera. No app or account is required.',
   'home.faqSetupQ': 'How long does this take to set up?',
   'home.faqSetupA':
-    'An operator creates a share link in seconds from one workspace. Tenants complete it on their own device with no account or install.',
+    'An operator creates a share link in seconds from one workspace, with nothing to configure first.',
   'home.faqPmsQ': 'Do we need to replace our property management software?',
   'home.faqPmsA':
     'No. Trailase handles the inspection and evidence step only. It works alongside whatever software your team already uses for leasing, maintenance, or accounting.',
   'home.faqScaleQ': 'How fast can we roll this out across a large portfolio?',
   'home.faqScaleA':
     'Most teams create their first inspection link within minutes. Larger portfolios can roll out property by property, since no training or install is required for tenants or staff.',
-  'home.faqLiabilityQ': 'Does Trailase decide who is responsible for damage?',
-  'home.faqLiabilityA':
-    'No. Trailase gathers clear, side-by-side evidence. Your team still makes the call — we just make sure you are not guessing.',
   'home.pricingEyebrow': 'Pricing',
   'home.pricingTitle': 'Straightforward pricing that scales with your portfolio.',
   'home.pricingIntro':
@@ -148,7 +147,7 @@ export const messages: Record<string, string> = {
     'Trailase is built to collect evidence, not a personal-data footprint. Here is exactly what that means today.',
   'home.trustPoint1Title': 'No tenant accounts',
   'home.trustPoint1Text':
-    'Tenants complete their inspection through a single link. No account, password, or app to create, remember, or lose.',
+    'No account means no password or personal profile for us to store beyond what the inspection itself needs.',
   'home.trustPoint2Title': 'Single-purpose links',
   'home.trustPoint2Text':
     'Each tenant link is an unguessable token scoped to one inspection. It cannot be browsed or reused for anything else.',

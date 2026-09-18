@@ -42,7 +42,8 @@ export const messages: Record<string, string> = {
   'home.evidenceText':
     'Trailase muestra en paralelo la evidencia de entrada y salida para que tu equipo detecte posibles cambios rápidamente y mantenga el control de cada decisión.',
   'home.tenantTitle': 'Fácil de completar',
-  'home.tenantText': 'Un recorrido móvil sencillo que el inquilino termina sin cuenta ni app.',
+  'home.tenantText':
+    'La mayoría de los inquilinos terminan su inspección en menos de cinco minutos, desde su propio teléfono.',
   'home.teamTitle': 'Consistente por defecto',
   'home.teamText': 'El mismo estándar guiado en cada habitación, propiedad y ciudad.',
   'home.readyTitle': 'Claro cuando cuenta',
@@ -50,6 +51,7 @@ export const messages: Record<string, string> = {
   'home.portfolioEyebrow': 'Creado para crecer con tu cartera',
   'home.units': 'habitaciones o unidades gestionadas',
   'home.standard': 'Un estándar de entrega fiable en cada propiedad',
+  'home.workflowStandard': 'Cada entrega sigue los mismos tres pasos, así que nada se salta.',
   'home.operatorsEyebrow': 'Más consistencia, sin más fricción',
   'home.operatorsTitle': 'Un proceso fiable, desde 50 habitaciones hasta 5.000.',
   'home.operatorsText':
@@ -79,7 +81,7 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Enviar correo',
   'home.founderTitle': 'Por qué existe esto',
   'home.founderText':
-    'Trailase surgió al ver el mismo problema repetirse una y otra vez alquilando habitaciones por toda Europa: nunca había una forma consistente de demostrar el estado de una habitación al entrar o salir. En un caso, un propietario alegó que la pintura de una pared se había dañado meses después de la salida. Resolverlo tardó dos meses de idas y venidas, y solo se solucionó porque existían fotos de antes y después. El mismo problema aparece a mayor escala. Un equipo de residencias de estudiantes que vacía 200 habitaciones en la misma semana de agosto rara vez tiene tiempo de documentar cada una correctamente, así que las disputas surgen semanas después sin pruebas de ningún lado. Un portafolio multiciudad con distinto personal en cada entrega termina con un estándar diferente en cada edificio, por lo que nadie puede demostrar que algo fue consistente. Trailase existe para cerrar ese vacío antes de que se convierta en una disputa. Por eso las primeras diez inspecciones son gratuitas: compruébalo en tus propias propiedades antes de decidir nada más.',
+    'Trailase surgió al ver el mismo problema repetirse una y otra vez alquilando habitaciones por toda Europa: nunca había una forma consistente de demostrar el estado de una habitación al entrar o salir. En un caso, un propietario alegó que la pintura de una pared se había dañado meses después de la salida. Resolverlo tardó dos meses de idas y venidas, y solo se solucionó porque existían fotos de antes y después. El mismo problema aparece a mayor escala. Un equipo de residencias de estudiantes que vacía 200 habitaciones en la misma semana de agosto rara vez tiene tiempo de documentar cada una correctamente, así que las disputas surgen semanas después sin pruebas de ningún lado. Un portafolio multiciudad con distinto personal en cada entrega termina con un estándar diferente en cada edificio, por lo que nadie puede demostrar que algo fue consistente. Trailase existe para cerrar ese vacío antes de que se convierta en una disputa.',
   'home.contactFreeTrial': 'Gratis para tus primeras 10 inspecciones. Sin contrato.',
   'home.contactCalLink': '¿Prefieres hablar primero? Reserva un horario en nuestro calendario',
   'home.faqDeviceQ': '¿Qué pasa si un inquilino no tiene smartphone?',
@@ -87,16 +89,13 @@ export const messages: Record<string, string> = {
     'Trailase funciona íntegramente en el navegador, así que el inquilino puede completarlo desde un teléfono, tablet o portátil con cámara. No hace falta ninguna app ni cuenta.',
   'home.faqSetupQ': '¿Cuánto tiempo lleva configurarlo?',
   'home.faqSetupA':
-    'Un operador crea un enlace para compartir en segundos desde un único espacio de trabajo. El inquilino lo completa en su propio dispositivo sin cuenta ni instalación.',
+    'Un operador crea un enlace para compartir en segundos desde un único espacio de trabajo, sin nada que configurar antes.',
   'home.faqPmsQ': '¿Necesitamos sustituir nuestro software de gestión inmobiliaria?',
   'home.faqPmsA':
     'No. Trailase solo se encarga de la inspección y la evidencia. Funciona junto al software que ya usa tu equipo para alquiler, mantenimiento o contabilidad.',
   'home.faqScaleQ': '¿Con qué rapidez podemos implantarlo en una cartera grande?',
   'home.faqScaleA':
     'La mayoría de los equipos crean su primer enlace de inspección en minutos. Las carteras grandes pueden implantarlo propiedad por propiedad, ya que no requiere formación ni instalación para inquilinos ni personal.',
-  'home.faqLiabilityQ': '¿Trailase decide quién es responsable del daño?',
-  'home.faqLiabilityA':
-    'No. Trailase reúne evidencia clara y comparada. Tu equipo sigue tomando la decisión — nosotros solo evitamos que tengas que adivinar.',
   'home.pricingEyebrow': 'Precios',
   'home.pricingTitle': 'Precios claros que escalan con tu cartera.',
   'home.pricingIntro':
@@ -148,7 +147,7 @@ export const messages: Record<string, string> = {
     'Trailase está pensado para recoger evidencia, no una huella de datos personales. Esto es exactamente lo que eso significa hoy.',
   'home.trustPoint1Title': 'Sin cuentas de inquilino',
   'home.trustPoint1Text':
-    'El inquilino completa su inspección mediante un único enlace. Sin cuenta, contraseña ni app que crear, recordar o perder.',
+    'Sin cuenta significa sin contraseña ni perfil personal que almacenemos más allá de lo que la propia inspección necesita.',
   'home.trustPoint2Title': 'Enlaces de un solo propósito',
   'home.trustPoint2Text':
     'Cada enlace del inquilino es un token imposible de adivinar, limitado a una sola inspección. No se puede navegar ni reutilizar para nada más.',

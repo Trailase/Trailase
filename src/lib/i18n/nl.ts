@@ -45,7 +45,8 @@ export const messages: Record<string, string> = {
   'home.evidenceText':
     'Trailase zet het bewijs van in- en uitcheck naast elkaar, zodat je team mogelijke veranderingen snel ziet en zelf iedere beslissing blijft nemen.',
   'home.tenantTitle': 'Makkelijk af te ronden',
-  'home.tenantText': 'Een eenvoudige mobiele route die huurders zonder account of app voltooien.',
+  'home.tenantText':
+    'De meeste huurders ronden hun inspectie af in minder dan vijf minuten, rechtstreeks vanaf hun eigen telefoon.',
   'home.teamTitle': 'Standaard consistent',
   'home.teamText': 'Dezelfde begeleide bewijsstandaard in elke kamer, elk pand en elke stad.',
   'home.readyTitle': 'Helder wanneer het telt',
@@ -54,6 +55,8 @@ export const messages: Record<string, string> = {
   'home.portfolioEyebrow': 'Gebouwd om met je portefeuille mee te groeien',
   'home.units': 'kamers of woningen in beheer',
   'home.standard': 'Eén betrouwbare opleverstandaard voor ieder pand',
+  'home.workflowStandard':
+    'Elke oplevering volgt dezelfde drie stappen, zodat niets wordt overgeslagen.',
   'home.operatorsEyebrow': 'Meer consistentie, zonder extra gedoe',
   'home.operatorsTitle': 'Eén betrouwbaar proces, van 50 kamers tot 5.000.',
   'home.operatorsText':
@@ -83,7 +86,7 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Mail ons',
   'home.founderTitle': 'Waarom dit bestaat',
   'home.founderText':
-    'Trailase ontstond na het steeds weer zien van hetzelfde probleem bij het huren van kamers door heel Europa: er was nooit een consistente manier om de staat van een kamer bij in- of uitcheck aan te tonen. In één geval beweerde een verhuurder maanden na vertrek dat de verf van een muur was beschadigd. Het oplossen kostte twee maanden heen-en-weer, en lukte alleen omdat er foto’s van voor en na bestonden. Hetzelfde probleem speelt op grotere schaal. Een team van studentenhuisvesting dat in dezelfde augustusweek 200 kamers oplevert, heeft zelden tijd om elke kamer goed te documenteren, waardoor geschillen weken later ontstaan zonder bewijs aan beide kanten. Een portefeuille in meerdere steden met wisselend personeel per oplevering eindigt met een andere standaard per gebouw, waardoor niemand consistentie kan aantonen. Trailase bestaat om dat gat te dichten voordat het een geschil wordt. Daarom zijn de eerste tien inspecties gratis: zie het zelf werken op uw eigen panden voordat u iets anders beslist.',
+    'Trailase ontstond na het steeds weer zien van hetzelfde probleem bij het huren van kamers door heel Europa: er was nooit een consistente manier om de staat van een kamer bij in- of uitcheck aan te tonen. In één geval beweerde een verhuurder maanden na vertrek dat de verf van een muur was beschadigd. Het oplossen kostte twee maanden heen-en-weer, en lukte alleen omdat er foto’s van voor en na bestonden. Hetzelfde probleem speelt op grotere schaal. Een team van studentenhuisvesting dat in dezelfde augustusweek 200 kamers oplevert, heeft zelden tijd om elke kamer goed te documenteren, waardoor geschillen weken later ontstaan zonder bewijs aan beide kanten. Een portefeuille in meerdere steden met wisselend personeel per oplevering eindigt met een andere standaard per gebouw, waardoor niemand consistentie kan aantonen. Trailase bestaat om dat gat te dichten voordat het een geschil wordt.',
   'home.contactFreeTrial': 'Gratis voor je eerste 10 inspecties. Geen contract.',
   'home.contactCalLink': 'Liever eerst praten? Boek een moment in onze agenda',
   'home.faqDeviceQ': 'Wat als een huurder geen smartphone heeft?',
@@ -91,16 +94,13 @@ export const messages: Record<string, string> = {
     'Trailase werkt volledig in de browser, dus een huurder kan het invullen op een telefoon, tablet of laptop met camera. Geen app of account nodig.',
   'home.faqSetupQ': 'Hoeveel tijd kost het opzetten?',
   'home.faqSetupA':
-    'Een operator maakt in enkele seconden een deellink vanuit één werkruimte. De huurder rondt het af op zijn eigen apparaat, zonder account of installatie.',
+    'Een operator maakt in enkele seconden een deellink vanuit één werkruimte, zonder dat er vooraf iets ingesteld moet worden.',
   'home.faqPmsQ': 'Moeten we ons vastgoedbeheersysteem vervangen?',
   'home.faqPmsA':
     'Nee. Trailase regelt alleen de inspectie en het bewijs. Het werkt naast de software die je team al gebruikt voor verhuur, onderhoud of boekhouding.',
   'home.faqScaleQ': 'Hoe snel kunnen we dit uitrollen over een grote portefeuille?',
   'home.faqScaleA':
     'De meeste teams maken hun eerste inspectielink binnen enkele minuten aan. Grote portefeuilles kunnen pand voor pand uitrollen, omdat er geen training of installatie nodig is voor huurders of personeel.',
-  'home.faqLiabilityQ': 'Bepaalt Trailase wie verantwoordelijk is voor schade?',
-  'home.faqLiabilityA':
-    'Nee. Trailase verzamelt helder, naast elkaar geplaatst bewijs. Je team neemt nog steeds de beslissing — wij zorgen er alleen voor dat je niet hoeft te gokken.',
   'home.pricingEyebrow': 'Prijzen',
   'home.pricingTitle': 'Heldere prijzen die meegroeien met je portefeuille.',
   'home.pricingIntro':
@@ -152,7 +152,7 @@ export const messages: Record<string, string> = {
     'Trailase is gebouwd om bewijs te verzamelen, geen persoonlijke data-voetafdruk. Dit is precies wat dat vandaag betekent.',
   'home.trustPoint1Title': 'Geen huurdersaccounts',
   'home.trustPoint1Text':
-    'Huurders ronden hun inspectie af via één link. Geen account, wachtwoord of app om aan te maken, te onthouden of kwijt te raken.',
+    'Geen account betekent geen wachtwoord of persoonlijk profiel dat wij bewaren, verder dan wat de inspectie zelf nodig heeft.',
   'home.trustPoint2Title': 'Links met één doel',
   'home.trustPoint2Text':
     'Elke huurderlink is een niet te raden token, beperkt tot één inspectie. Hij kan niet worden doorzocht of voor iets anders hergebruikt.',

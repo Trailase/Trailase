@@ -70,12 +70,6 @@ export function Contact() {
                 {t('home.faqScaleA')}
               </dd>
             </div>
-            <div>
-              <dt className="text-sm font-semibold text-foreground">{t('home.faqLiabilityQ')}</dt>
-              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
-                {t('home.faqLiabilityA')}
-              </dd>
-            </div>
           </dl>
         </div>
 

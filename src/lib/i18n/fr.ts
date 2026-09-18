@@ -46,7 +46,8 @@ export const messages: Record<string, string> = {
   'home.evidenceText':
     'Trailase place les preuves d’entrée et de sortie côte à côte pour aider votre équipe à repérer rapidement les changements possibles, tout en lui laissant chaque décision.',
   'home.tenantTitle': 'Facile à terminer',
-  'home.tenantText': 'Un parcours mobile simple, sans compte ni application à installer.',
+  'home.tenantText':
+    'La plupart des locataires terminent leur état des lieux en moins de cinq minutes, depuis leur propre téléphone.',
   'home.teamTitle': 'Cohérent par défaut',
   'home.teamText': 'Le même standard guidé dans chaque chambre, propriété et ville.',
   'home.readyTitle': 'Clair quand cela compte',
@@ -54,6 +55,8 @@ export const messages: Record<string, string> = {
   'home.portfolioEyebrow': 'Conçu pour grandir avec votre portefeuille',
   'home.units': 'chambres ou logements gérés',
   'home.standard': 'Un standard de remise fiable dans chaque propriété',
+  'home.workflowStandard':
+    'Chaque état des lieux suit les mêmes trois étapes, pour ne rien oublier.',
   'home.operatorsEyebrow': 'Plus de cohérence, sans plus de friction',
   'home.operatorsTitle': 'Un processus fiable, de 50 chambres à 5 000.',
   'home.operatorsText':
@@ -83,7 +86,7 @@ export const messages: Record<string, string> = {
   'home.contactFallbackLink': 'Nous écrire',
   'home.founderTitle': 'Pourquoi cela existe',
   'home.founderText':
-    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant/après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige. C'est pourquoi les dix premières inspections sont gratuites : voyez par vous-même sur vos propres biens avant de décider quoi que ce soit d'autre.",
+    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant/après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige.",
   'home.contactFreeTrial': 'Gratuit pour vos 10 premières inspections. Sans engagement.',
   'home.contactCalLink': "Vous préférez d'abord en parler ? Réservez un créneau dans notre agenda",
   'home.faqDeviceQ': "Que se passe-t-il si un locataire n'a pas de smartphone ?",
@@ -91,16 +94,13 @@ export const messages: Record<string, string> = {
     "Trailase fonctionne entièrement dans le navigateur : le locataire peut le faire depuis un téléphone, une tablette ou un ordinateur portable avec caméra. Aucune application ni compte n'est nécessaire.",
   'home.faqSetupQ': 'Combien de temps faut-il pour la mise en place ?',
   'home.faqSetupA':
-    'Un opérateur crée un lien à partager en quelques secondes depuis un seul espace de travail. Le locataire le complète sur son propre appareil, sans compte ni installation.',
+    'Un opérateur crée un lien à partager en quelques secondes depuis un seul espace de travail, sans rien à configurer au préalable.',
   'home.faqPmsQ': 'Devons-nous remplacer notre logiciel de gestion immobilière ?',
   'home.faqPmsA':
     "Non. Trailase gère uniquement l'état des lieux et la preuve. Il fonctionne aux côtés du logiciel que votre équipe utilise déjà pour la location, la maintenance ou la comptabilité.",
   'home.faqScaleQ': 'À quelle vitesse pouvons-nous déployer cela sur un grand portefeuille ?',
   'home.faqScaleA':
     "La plupart des équipes créent leur premier lien d'inspection en quelques minutes. Les grands portefeuilles peuvent le déployer propriété par propriété, car aucune formation ni installation n'est requise pour les locataires ou le personnel.",
-  'home.faqLiabilityQ': 'Trailase décide-t-il qui est responsable des dégâts ?',
-  'home.faqLiabilityA':
-    'Non. Trailase réunit des preuves claires et comparées. Votre équipe garde la décision finale — nous évitons simplement de deviner.',
   'home.pricingEyebrow': 'Tarifs',
   'home.pricingTitle': 'Des tarifs simples qui évoluent avec votre portefeuille.',
   'home.pricingIntro':
@@ -154,7 +154,7 @@ export const messages: Record<string, string> = {
     "Trailase est conçu pour recueillir des preuves, pas une empreinte de données personnelles. Voici exactement ce que cela signifie aujourd'hui.",
   'home.trustPoint1Title': 'Aucun compte locataire',
   'home.trustPoint1Text':
-    'Le locataire complète son inspection via un seul lien. Aucun compte, mot de passe ni application à créer, retenir ou perdre.',
+    'Pas de compte signifie pas de mot de passe ni de profil personnel que nous stockons au-delà de ce que l’état des lieux exige.',
   'home.trustPoint2Title': 'Liens à usage unique',
   'home.trustPoint2Text':
     'Chaque lien locataire est un jeton impossible à deviner, limité à une seule inspection. Il ne peut être ni parcouru ni réutilisé pour autre chose.',

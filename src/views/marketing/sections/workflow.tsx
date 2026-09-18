@@ -28,7 +28,7 @@ export function Workflow() {
             </p>
           </div>
           <p className="hidden border-l border-brand-teal pl-6 text-sm leading-6 text-foreground lg:block">
-            {t('home.standard')}
+            {t('home.workflowStandard')}
           </p>
         </div>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
