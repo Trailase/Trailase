@@ -1,4 +1,5 @@
 import { Globe, KeyRound, Link2, ShieldCheck, UserX } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -18,8 +19,16 @@ export function Trust() {
   ];
 
   return (
-    <section className="scroll-reveal relative isolate overflow-hidden border-y border-border bg-background px-gutter py-20 text-foreground md:py-28">
-      <div className="mx-auto w-full max-w-[var(--container-page)]">
+    <section className="scroll-reveal relative isolate overflow-hidden border-y border-border px-gutter py-20 text-foreground md:py-28">
+      <Image
+        src="/images/trustHandshake.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="-z-30 object-cover object-[38%_45%]"
+      />
+      <div className="video-overlay-story absolute inset-0 -z-20" />
+      <div className="relative mx-auto w-full max-w-[var(--container-page)]">
         <div className="max-w-2xl">
           <p className="text-eyebrow">{t('home.trustEyebrow')}</p>
           <h2 className="mt-5 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
