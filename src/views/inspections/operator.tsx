@@ -12,7 +12,7 @@ export function OperatorInspections() {
   const { locale, t } = useLanguage();
   const controller = useOperator(t, toast);
   return (
-    <main className="demo-layout h-[calc(100svh-7rem)] overflow-hidden bg-background px-gutter py-3">
+    <main className="demo-layout min-h-[calc(100svh-7rem)] bg-background px-gutter py-3">
       <DemoBackground src={backgroundVideo('demoOperator')} />
       <div className="mx-auto w-full max-w-xl">
         <div className="grid gap-4">

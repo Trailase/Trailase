@@ -1044,6 +1044,10 @@
     min-height: calc(var(--spacing) * 10);
   }
 
+  .min-h-11 {
+    min-height: calc(var(--spacing) * 11);
+  }
+
   .min-h-12 {
     min-height: calc(var(--spacing) * 12);
   }
@@ -1066,6 +1070,10 @@
 
   .min-h-\[calc\(100svh-3\.5rem\)\] {
     min-height: calc(100svh - 3.5rem);
+  }
+
+  .min-h-\[calc\(100svh-7rem\)\] {
+    min-height: calc(100svh - 7rem);
   }
 
   .min-h-\[calc\(100vh-3\.5rem\)\] {
@@ -1601,6 +1609,16 @@
     border-color: var(--primary);
   }
 
+  .border-primary\/30 {
+    border-color: var(--primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-primary\/30 {
+      border-color: color-mix(in oklab, var(--primary) 30%, transparent);
+    }
+  }
+
   .border-transparent {
     border-color: #0000;
   }
@@ -1966,6 +1984,10 @@
 
   .object-cover {
     object-fit: cover;
+  }
+
+  .object-\[38\%_45\%\] {
+    object-position: 38% 45%;
   }
 
   .object-\[38\%_center\] {
@@ -3499,6 +3521,12 @@
   @media (min-width: 48rem) {
     .md\:bottom-10 {
       bottom: calc(var(--spacing) * 10);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:col-span-2 {
+      grid-column: span 2 / span 2;
     }
   }
 
