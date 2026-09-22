@@ -10,8 +10,8 @@ export const messages: Record<string, string> = {
   'nav.prototype': 'Démo en direct',
   'nav.contact': 'Demander une démo',
   'nav.openMenu': 'Ouvrir le menu',
-  'home.badge': 'Chaque état des lieux. Un dossier clair.',
-  'home.title': 'Des états des lieux clairs. Des décisions sereines.',
+  'home.badge': 'Chaque état des lieux, un dossier clair.',
+  'home.title': 'Des états des lieux clairs, des décisions sereines.',
   'home.intro':
     'Trailase guide les locataires pendant les états des lieux d’entrée et de sortie, puis réunit chaque photo, note, relevé et signature dans un dossier prêt à être vérifié.',
   'home.walkthrough': 'Voir Trailase en action',
@@ -30,7 +30,7 @@ export const messages: Record<string, string> = {
   'home.wallNote': 'Marque de surface existante documentée et confirmée par le locataire.',
   'home.evidenceRecorded': 'Preuve enregistrée',
   'home.workflowEyebrow': 'Des relances à un parcours fluide',
-  'home.workflowTitle': 'Fini les détails à réclamer. Chaque remise avance.',
+  'home.workflowTitle': 'Fini les détails à réclamer, chaque remise avance enfin.',
   'home.workflowIntro':
     'Remplacez formulaires papier, photos éparses et fils de messages par un processus simple que votre équipe peut répéter en toute confiance.',
   'home.step1Title': 'Lancez la remise',
@@ -44,13 +44,13 @@ export const messages: Record<string, string> = {
   'home.evidenceEyebrow': 'La clarté au bon moment',
   'home.evidenceTitle': 'Quand une question se pose, tout le contexte est déjà là.',
   'home.evidenceText':
-    'Trailase place les preuves d’entrée et de sortie côte à côte pour aider votre équipe à repérer rapidement les changements possibles, tout en lui laissant chaque décision.',
+    'Trailase place les preuves d’entrée et de sortie côte à côte, afin que votre équipe repère vite les changements et garde la main sur chaque décision.',
   'home.tenantTitle': 'Facile à terminer',
   'home.tenantText':
     'La plupart des locataires terminent leur état des lieux en moins de cinq minutes, depuis leur propre téléphone.',
   'home.teamTitle': 'Cohérent par défaut',
   'home.teamText': 'Le même standard guidé dans chaque chambre, propriété et ville.',
-  'home.readyTitle': 'Clair quand cela compte',
+  'home.readyTitle': 'Prêt dès que vous en avez besoin',
   'home.readyText': 'Un historique structuré et vérifiable, prêt dès qu’une question se pose.',
   'home.portfolioEyebrow': 'Conçu pour grandir avec votre portefeuille',
   'home.units': 'chambres ou logements gérés',
@@ -89,13 +89,13 @@ export const messages: Record<string, string> = {
     'Dites-nous quand commence votre prochaine saison d’entrées ou sorties, et où ça se complique…',
   'home.contactSending': 'Envoi…',
   'home.contactSuccessTitle': 'Message envoyé.',
-  'home.contactSuccess': 'Merci — nous répondrons dans la journée (jour ouvré).',
+  'home.contactSuccess': 'Merci, nous répondrons dans la journée (jour ouvré).',
   'home.contactError': 'L’envoi a échoué. Essayez le lien e-mail ci-dessous.',
   'home.contactFallbackText': 'Vous pouvez aussi nous écrire directement :',
   'home.contactFallbackLink': 'Nous écrire',
   'home.founderTitle': 'Pourquoi cela existe',
   'home.founderText':
-    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant/après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige.",
+    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant-après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige.",
   'home.contactFreeTrial': 'Gratuit pour vos 10 premières inspections. Sans engagement.',
   'home.contactCalButton': 'Réserver un appel',
   'home.faqDeviceQ': "Que se passe-t-il si un locataire n'a pas de smartphone ?",
@@ -113,13 +113,13 @@ export const messages: Record<string, string> = {
   'home.pricingEyebrow': 'Tarifs',
   'home.pricingTitle': 'Des tarifs simples qui évoluent avec votre portefeuille.',
   'home.pricingIntro':
-    "Le tarif évolue selon le nombre de logements gérés, pas selon le nombre de photos prises par votre équipe — d'un premier immeuble pilote à un portefeuille national.",
+    "Le tarif évolue selon le nombre de logements gérés, pas selon le nombre de photos prises par votre équipe, d'un premier immeuble pilote à un portefeuille national.",
   'home.pricingFreeNote':
     'Gratuit pour vos 10 premières inspections, quelle que soit l’offre. Sans engagement, résiliable à tout moment.',
   'home.pricingLockInNote':
     'Inscrivez-vous maintenant et gardez le prix actuel tant que vous restez client, même si les tarifs affichés augmentent ensuite.',
   'home.pricingDisclaimer':
-    "Tarifs de départ indiqués pour les portefeuilles européens. Le tarif final dépend de la taille du portefeuille et de l'ampleur du déploiement — contactez-nous pour un devis précis.",
+    "Tarifs de départ indiqués pour les portefeuilles européens. Le tarif final dépend de la taille du portefeuille et de l'ampleur du déploiement. Contactez-nous pour un devis précis.",
   'home.pricingCtaText':
     'Vous hésitez encore sur la formule ? Obtenez une réponse claire pour la taille exacte de votre portefeuille.',
   'home.pricingCta': 'Parlez-nous de votre portefeuille',
@@ -162,9 +162,9 @@ export const messages: Record<string, string> = {
   'home.pricingTier6Period': '',
   'home.pricingTier6Tagline': 'Pour les plateformes nationales et les réseaux de franchise.',
   'home.trustEyebrow': 'Confiance et données',
-  'home.trustTitle': 'Aucun compte locataire. Aucune donnée revendue.',
+  'home.trustTitle': 'Aucun compte locataire, aucune donnée revendue.',
   'home.trustIntro':
-    "Trailase est conçu pour recueillir des preuves, pas une empreinte de données personnelles. Voici exactement ce que cela signifie aujourd'hui.",
+    "Trailase est conçu pour recueillir des preuves, pas pour accumuler des données personnelles. Voici ce que cela signifie concrètement.",
   'home.trustPoint1Title': 'Aucun compte locataire',
   'home.trustPoint1Text':
     'Pas de compte signifie pas de mot de passe ni de profil personnel que nous stockons au-delà de ce que l’état des lieux exige.',
@@ -181,12 +181,12 @@ export const messages: Record<string, string> = {
   'home.trustPoint5Text':
     "Trailase fonctionne sur une infrastructure située dans l'Union européenne, conformément aux exigences du RGPD pour les portefeuilles européens.",
   'home.trustScope':
-    "Trailase réunit des preuves. Il n'attribue pas de responsabilité, ne détermine pas de faute et ne calcule pas de retenue sur dépôt de garantie — cette décision reste celle de votre équipe.",
+    "Trailase réunit des preuves. Il n'attribue pas de responsabilité, ne détermine pas de faute et ne calcule pas de retenue sur dépôt de garantie. Cette décision reste celle de votre équipe.",
   'home.founderHook':
     'Un litige comme celui-ci coûte des semaines d’allers-retours. Une seule photo peut le régler en quelques minutes.',
   'home.founderStat1Value': '2 mois',
   'home.founderStat1Label':
-    'd’allers-retours pour un mur contesté — réglé uniquement grâce à des photos avant/après.',
+    'd’allers-retours pour un mur contesté, réglé uniquement grâce à des photos avant-après.',
   'home.founderStat2Value': '200 chambres',
   'home.founderStat2Label':
     'libérées en une seule semaine d’août, sans le temps de documenter chacune correctement.',
@@ -208,7 +208,7 @@ export const messages: Record<string, string> = {
   'story.moveIn': 'Entrée',
   'story.moveOut': 'Sortie',
   'story.potentialChange': 'Changement potentiel',
-  'story.evidenceNote': 'Comparez les deux moments. Repérez ce qui a changé. Décidez sereinement.',
+  'story.evidenceNote': 'Comparez les deux moments, repérez ce qui a changé et décidez sereinement.',
   'contact.redirectTitle': 'Ouvrir votre messagerie ?',
   'contact.redirectText':
     'Vous allez quitter Trailase pour ouvrir un e-mail préparé dans un nouvel onglet.',
@@ -342,8 +342,8 @@ export const messages: Record<string, string> = {
   'inspection.area.furniture': 'Mobilier',
   'inspection.area.windows': 'Fenêtres',
   'og.eyebrow': 'ÉTATS DES LIEUX',
-  'og.headline': 'Des états des lieux clairs. Des décisions sereines.',
-  'og.description': 'Une inspection guidée. Un dossier complet. Aucun détail perdu.',
+  'og.headline': 'Des états des lieux clairs, des décisions sereines.',
+  'og.description': 'Une inspection guidée, un dossier complet, aucun détail perdu.',
   'og.noApp': 'Sans appli locataire',
   'og.photoFirst': 'Axé sur la photo',
   'og.comparisons': 'Comparaisons claires',

@@ -10,8 +10,8 @@ export const messages: Record<string, string> = {
   'nav.prototype': 'Live demo',
   'nav.contact': 'Plan een demo',
   'nav.openMenu': 'Menu openen',
-  'home.badge': 'Elke oplevering. Eén helder dossier.',
-  'home.title': 'Helder opleveren. Zeker beslissen.',
+  'home.badge': 'Elke oplevering, één helder dossier.',
+  'home.title': 'Helder opleveren, zeker beslissen.',
   'home.intro':
     'Trailase begeleidt huurders door in- en uitcheckinspecties en brengt elke foto, notitie, meterstand en handtekening samen in één dossier dat direct klaar is voor controle.',
   'home.walkthrough': 'Bekijk Trailase in actie',
@@ -29,7 +29,7 @@ export const messages: Record<string, string> = {
   'home.wallNote': 'Bestaande oppervlaktemarkering vastgelegd en bevestigd door de huurder.',
   'home.evidenceRecorded': 'Bewijs vastgelegd',
   'home.workflowEyebrow': 'Van najagen naar doorpakken',
-  'home.workflowTitle': 'Stop met details najagen. Houd elke oplevering in beweging.',
+  'home.workflowTitle': 'Stop met details najagen en houd elke oplevering in beweging.',
   'home.workflowIntro':
     'Vervang papieren formulieren, losse foto’s en berichtendiscussies door één eenvoudig proces dat je team met vertrouwen kan herhalen.',
   'home.step1Title': 'Zet de oplevering in gang',
@@ -49,7 +49,7 @@ export const messages: Record<string, string> = {
     'De meeste huurders ronden hun inspectie af in minder dan vijf minuten, rechtstreeks vanaf hun eigen telefoon.',
   'home.teamTitle': 'Standaard consistent',
   'home.teamText': 'Dezelfde begeleide bewijsstandaard in elke kamer, elk pand en elke stad.',
-  'home.readyTitle': 'Helder wanneer het telt',
+  'home.readyTitle': 'Klaar wanneer je het nodig hebt',
   'home.readyText':
     'Een gestructureerde, controleerbare historie staat klaar zodra er een vraag ontstaat.',
   'home.portfolioEyebrow': 'Gebouwd om met je portefeuille mee te groeien',
@@ -89,7 +89,7 @@ export const messages: Record<string, string> = {
     'Vertel ons wanneer je volgende in- of uitcheckseizoen begint, en waar het lastig wordt…',
   'home.contactSending': 'Verzenden…',
   'home.contactSuccessTitle': 'Bericht verzonden.',
-  'home.contactSuccess': 'Bedankt — we reageren dezelfde werkdag nog.',
+  'home.contactSuccess': 'Bedankt, we reageren dezelfde werkdag nog.',
   'home.contactError': 'Dat is niet gelukt. Probeer de e-maillink hieronder.',
   'home.contactFallbackText': 'U kunt ons ook rechtstreeks bereiken:',
   'home.contactFallbackLink': 'Mail ons',
@@ -113,13 +113,13 @@ export const messages: Record<string, string> = {
   'home.pricingEyebrow': 'Prijzen',
   'home.pricingTitle': 'Heldere prijzen die meegroeien met je portefeuille.',
   'home.pricingIntro':
-    'De prijs schaalt met het aantal beheerde units, niet met hoeveel foto’s je team maakt — van een eerste pilotpand tot een landelijke portefeuille.',
+    'De prijs schaalt met het aantal beheerde units, niet met hoeveel foto’s je team maakt, van een eerste pilotpand tot een landelijke portefeuille.',
   'home.pricingFreeNote':
     'Gratis voor je eerste 10 inspecties op elk plan. Geen contract, altijd opzegbaar.',
   'home.pricingLockInNote':
     'Meld u nu aan en behoud de huidige prijs zolang u klant blijft, ook als de reguliere prijzen later stijgen.',
   'home.pricingDisclaimer':
-    'Startprijzen voor Europese portefeuilles. De uiteindelijke prijs hangt af van portefeuillegrootte en uitrolomvang — neem contact op voor een exacte offerte.',
+    'Startprijzen voor Europese portefeuilles. De uiteindelijke prijs hangt af van portefeuillegrootte en uitrolomvang. Neem contact op voor een exacte offerte.',
   'home.pricingCtaText':
     'Nog twijfelen welk plan past? Krijg een duidelijk antwoord voor je exacte portefeuillegrootte.',
   'home.pricingCta': 'Praat met ons over je portefeuille',
@@ -160,9 +160,9 @@ export const messages: Record<string, string> = {
   'home.pricingTier6Period': '',
   'home.pricingTier6Tagline': 'Voor landelijke platforms en franchisenetwerken.',
   'home.trustEyebrow': 'Vertrouwen en data',
-  'home.trustTitle': 'Geen huurdersaccounts. Geen dataverkoop.',
+  'home.trustTitle': 'Geen huurdersaccounts, geen dataverkoop.',
   'home.trustIntro':
-    'Trailase is gebouwd om bewijs te verzamelen, geen persoonlijke data-voetafdruk. Dit is precies wat dat vandaag betekent.',
+    'Trailase is gebouwd om bewijs te verzamelen, niet om persoonlijke data te verzamelen. Dit is wat dat in de praktijk betekent.',
   'home.trustPoint1Title': 'Geen huurdersaccounts',
   'home.trustPoint1Text':
     'Geen account betekent geen wachtwoord of persoonlijk profiel dat wij bewaren, verder dan wat de inspectie zelf nodig heeft.',
@@ -179,12 +179,12 @@ export const messages: Record<string, string> = {
   'home.trustPoint5Text':
     'Trailase draait op infrastructuur binnen de Europese Unie, in lijn met de AVG-vereisten voor Europese portefeuilles.',
   'home.trustScope':
-    'Trailase verzamelt bewijs. Het wijst geen schuld toe, bepaalt geen aansprakelijkheid en berekent geen inhouding op de borg — die beslissing blijft bij je team.',
+    'Trailase verzamelt bewijs. Het wijst geen schuld toe, bepaalt geen aansprakelijkheid en berekent geen inhouding op de borg. Die beslissing blijft bij je team.',
   'home.founderHook':
     'Zo’n geschil kost weken heen-en-weer. Eén foto kan het in enkele minuten oplossen.',
   'home.founderStat1Value': '2 maanden',
   'home.founderStat1Label':
-    'heen-en-weer over één betwiste muur — alleen opgelost dankzij bestaande voor-en-na-foto’s.',
+    'heen-en-weer over één betwiste muur, alleen opgelost dankzij bestaande voor-en-na-foto’s.',
   'home.founderStat2Value': '200 kamers',
   'home.founderStat2Label':
     'opgeleverd in één augustusweek, zonder tijd om elke kamer goed te documenteren.',
@@ -206,7 +206,7 @@ export const messages: Record<string, string> = {
   'story.moveIn': 'Intrek',
   'story.moveOut': 'Vertrek',
   'story.potentialChange': 'Mogelijke verandering',
-  'story.evidenceNote': 'Vergelijk beide momenten. Zie wat veranderde. Beslis met vertrouwen.',
+  'story.evidenceNote': 'Vergelijk beide momenten, zie wat veranderde en beslis met vertrouwen.',
   'contact.redirectTitle': 'Je e-maildienst openen?',
   'contact.redirectText':
     'Je verlaat Trailase om een voorbereide e-mail in een nieuw tabblad te openen.',
@@ -340,8 +340,8 @@ export const messages: Record<string, string> = {
   'inspection.area.furniture': 'Meubilair',
   'inspection.area.windows': 'Ramen',
   'og.eyebrow': 'WONINGOVERDRACHTEN',
-  'og.headline': 'Helder opleveren. Zeker beslissen.',
-  'og.description': 'Eén begeleide inspectie. Eén compleet dossier. Geen losse eindjes.',
+  'og.headline': 'Helder opleveren, zeker beslissen.',
+  'og.description': 'Eén begeleide inspectie, één compleet dossier, geen losse eindjes.',
   'og.noApp': 'Geen huurdersapp',
   'og.photoFirst': 'Foto’s centraal',
   'og.comparisons': 'Heldere vergelijkingen',

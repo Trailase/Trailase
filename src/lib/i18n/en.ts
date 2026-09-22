@@ -7,8 +7,8 @@ export const messages: Record<string, string> = {
   'nav.prototype': 'Live demo',
   'nav.contact': 'Book a walkthrough',
   'nav.openMenu': 'Open menu',
-  'home.badge': 'Every handover. One clear record.',
-  'home.title': 'Clear handovers. Confident decisions.',
+  'home.badge': 'Every handover, one clear record.',
+  'home.title': 'Clear handovers, confident decisions.',
   'home.intro':
     'Trailase guides tenants through move-in and move-out inspections, then brings every photo, note, reading, and signature into one review-ready record.',
   'home.walkthrough': 'See Trailase in action',
@@ -26,7 +26,7 @@ export const messages: Record<string, string> = {
   'home.wallNote': 'Existing surface mark documented and confirmed by the tenant.',
   'home.evidenceRecorded': 'Evidence recorded',
   'home.workflowEyebrow': 'From follow-up to flow',
-  'home.workflowTitle': 'Stop chasing details. Keep every handover moving.',
+  'home.workflowTitle': 'Stop chasing details and keep every handover moving.',
   'home.workflowIntro':
     'Replace paper forms, loose camera rolls, and message threads with one simple process your team can repeat with confidence.',
   'home.step1Title': 'Set the handover in motion',
@@ -41,13 +41,13 @@ export const messages: Record<string, string> = {
   'home.evidenceEyebrow': 'Clarity when it matters',
   'home.evidenceTitle': 'When questions arise, the full context is already there.',
   'home.evidenceText':
-    'Trailase places move-in and move-out evidence side by side, helping your team spot potential changes quickly while keeping people in control of every decision.',
+    'Trailase places move-in and move-out evidence side by side, so your team can spot changes quickly and still make every call themselves.',
   'home.tenantTitle': 'Easy to complete',
   'home.tenantText':
     'Most tenants finish their inspection in under five minutes, right from their own phone.',
   'home.teamTitle': 'Consistent by default',
   'home.teamText': 'The same guided evidence standard across every room, property, and city.',
-  'home.readyTitle': 'Clear when it counts',
+  'home.readyTitle': 'Ready whenever you need it',
   'home.readyText': 'A structured, reviewable history is ready whenever a question comes up.',
   'home.portfolioEyebrow': 'Built to grow with your portfolio',
   'home.units': 'rooms or units under management',
@@ -85,8 +85,8 @@ export const messages: Record<string, string> = {
     'Tell us when your next move-in or move-out season starts, and where it gets messy…',
   'home.contactSending': 'Sending…',
   'home.contactSuccessTitle': 'Message sent.',
-  'home.contactSuccess': 'Thanks — we will reply the same business day.',
-  'home.contactError': 'That did not go through. Try the email link below instead.',
+  'home.contactSuccess': 'Thanks, we’ll reply the same business day.',
+  'home.contactError': 'That didn’t go through. Try the email link below instead.',
   'home.contactFallbackText': 'You can also reach us directly:',
   'home.contactFallbackLink': 'Email us',
   'home.founderTitle': 'Why this exists',
@@ -109,12 +109,12 @@ export const messages: Record<string, string> = {
   'home.pricingEyebrow': 'Pricing',
   'home.pricingTitle': 'Straightforward pricing that scales with your portfolio.',
   'home.pricingIntro':
-    'Pricing scales with the number of units you manage, not with how many photos your team takes — from a single pilot building to a national portfolio.',
+    'Pricing scales with the number of units you manage, not with how many photos your team takes, from a single pilot building to a national portfolio.',
   'home.pricingFreeNote': 'First 10 inspections free on any plan. No contract, cancel anytime.',
   'home.pricingLockInNote':
     "Sign up now and keep today's price for as long as you stay with us, even as list prices rise later.",
   'home.pricingDisclaimer':
-    'Starting prices shown for European portfolios. Final pricing depends on portfolio size and rollout scope — talk to us for an exact quote.',
+    'Starting prices shown for European portfolios. Final pricing depends on portfolio size and rollout scope. Talk to us for an exact quote.',
   'home.pricingCtaText':
     'Still deciding which tier fits? Get a straight answer for your exact portfolio size.',
   'home.pricingCta': 'Talk to us about your portfolio',
@@ -155,9 +155,9 @@ export const messages: Record<string, string> = {
   'home.pricingTier6Period': '',
   'home.pricingTier6Tagline': 'For national platforms and franchise networks.',
   'home.trustEyebrow': 'Trust & data',
-  'home.trustTitle': 'No tenant accounts. No data for sale.',
+  'home.trustTitle': 'No tenant accounts, no data for sale.',
   'home.trustIntro':
-    'Trailase is built to collect evidence, not a personal-data footprint. Here is exactly what that means today.',
+    'Trailase is built to collect evidence, not a pile of personal data. Here’s what that means in practice.',
   'home.trustPoint1Title': 'No tenant accounts',
   'home.trustPoint1Text':
     'No account means no password or personal profile for us to store beyond what the inspection itself needs.',
@@ -174,12 +174,12 @@ export const messages: Record<string, string> = {
   'home.trustPoint5Text':
     'Trailase runs on infrastructure located in the European Union, in line with GDPR requirements for European portfolios.',
   'home.trustScope':
-    'Trailase gathers evidence. It does not assign blame, determine liability, or calculate a deposit deduction — that decision stays with your team.',
+    'Trailase gathers evidence. It does not assign blame, determine liability, or calculate a deposit deduction. That decision stays with your team.',
   'home.founderHook':
     'A dispute like this costs weeks of back-and-forth. A single photo can settle it in minutes.',
   'home.founderStat1Value': '2 months',
   'home.founderStat1Label':
-    'of back-and-forth over one disputed wall — settled only because before/after photos existed.',
+    'of back-and-forth over one disputed wall, settled only because before-and-after photos existed.',
   'home.founderStat2Value': '200 rooms',
   'home.founderStat2Label':
     'cleared in a single August week, with no time to document each one properly.',
@@ -201,7 +201,7 @@ export const messages: Record<string, string> = {
   'story.moveOut': 'Move-out',
   'story.potentialChange': 'Potential change',
   'story.evidenceNote':
-    'See both moments side by side. Spot what changed. Make the call with confidence.',
+    'See both moments side by side, spot what changed, and make the call with confidence.',
   'contact.redirectTitle': 'Open your email service?',
   'contact.redirectText': 'You are about to leave Trailase and open a prepared email in a new tab.',
   'contact.cancel': 'Stay here',
@@ -242,7 +242,7 @@ export const messages: Record<string, string> = {
   'operator.deleting': 'Deleting…',
   'operator.deleteConfirm': 'Delete this inspection from your session?',
   'operator.deleteSuccess': 'Inspection deleted.',
-  'operator.deleteError': 'The inspection could not be deleted. Try again.',
+  'operator.deleteError': 'The inspection couldn’t be deleted. Try again.',
   'inspection.steps.condition': 'Condition',
   'inspection.steps.photos': 'Photos',
   'inspection.steps.notes': 'Notes',
@@ -290,7 +290,7 @@ export const messages: Record<string, string> = {
   'inspection.retake': 'Retake',
   'inspection.usePhoto': 'Use photo',
   'inspection.cameraUnavailable': 'Camera unavailable',
-  'inspection.cameraFailed': 'The camera could not be opened.',
+  'inspection.cameraFailed': 'The camera couldn’t be opened.',
   'inspection.cameraAgain': 'Try camera again',
   'inspection.demoCamera': 'Use demo camera capture',
   'inspection.capturedEvidence': 'Captured evidence',
@@ -333,8 +333,8 @@ export const messages: Record<string, string> = {
   'inspection.area.furniture': 'Furniture',
   'inspection.area.windows': 'Windows',
   'og.eyebrow': 'PROPERTY HANDOVERS',
-  'og.headline': 'Clear handovers. Confident decisions.',
-  'og.description': 'One guided inspection. One complete record. No loose ends.',
+  'og.headline': 'Clear handovers, confident decisions.',
+  'og.description': 'One guided inspection, one complete record, no loose ends.',
   'og.noApp': 'No tenant app',
   'og.photoFirst': 'Photo-first',
   'og.comparisons': 'Clear comparisons',

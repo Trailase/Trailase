@@ -7,8 +7,8 @@ export const messages: Record<string, string> = {
   'nav.prototype': 'Demo en vivo',
   'nav.contact': 'Solicitar una demo',
   'nav.openMenu': 'Abrir menú',
-  'home.badge': 'Cada entrega. Un registro claro.',
-  'home.title': 'Entregas claras. Decisiones con confianza.',
+  'home.badge': 'Cada entrega, un registro claro.',
+  'home.title': 'Entregas claras, decisiones con confianza.',
   'home.intro':
     'Trailase guía al inquilino durante la inspección de entrada y salida, y reúne cada foto, nota, lectura y firma en un registro listo para revisar.',
   'home.walkthrough': 'Ver Trailase en acción',
@@ -27,7 +27,7 @@ export const messages: Record<string, string> = {
   'home.wallNote': 'Marca superficial existente documentada y confirmada por el inquilino.',
   'home.evidenceRecorded': 'Evidencia registrada',
   'home.workflowEyebrow': 'De perseguir tareas a hacerlas fluir',
-  'home.workflowTitle': 'Deja de perseguir detalles. Haz que cada entrega avance.',
+  'home.workflowTitle': 'Deja de perseguir detalles y haz que cada entrega avance.',
   'home.workflowIntro':
     'Sustituye formularios en papel, fotos sueltas y conversaciones dispersas por un proceso sencillo que tu equipo pueda repetir con confianza.',
   'home.step1Title': 'Pon en marcha la entrega',
@@ -46,7 +46,7 @@ export const messages: Record<string, string> = {
     'La mayoría de los inquilinos terminan su inspección en menos de cinco minutos, desde su propio teléfono.',
   'home.teamTitle': 'Consistente por defecto',
   'home.teamText': 'El mismo estándar guiado en cada habitación, propiedad y ciudad.',
-  'home.readyTitle': 'Claro cuando cuenta',
+  'home.readyTitle': 'Listo cuando lo necesites',
   'home.readyText': 'Un historial estructurado y revisable, listo cuando surge cualquier duda.',
   'home.portfolioEyebrow': 'Creado para crecer con tu cartera',
   'home.units': 'habitaciones o unidades gestionadas',
@@ -84,7 +84,7 @@ export const messages: Record<string, string> = {
     'Cuéntanos cuándo empieza tu próxima temporada de entradas o salidas y dónde se complica…',
   'home.contactSending': 'Enviando…',
   'home.contactSuccessTitle': 'Mensaje enviado.',
-  'home.contactSuccess': 'Gracias — te responderemos el mismo día laborable.',
+  'home.contactSuccess': 'Gracias, te responderemos el mismo día laborable.',
   'home.contactError': 'No se pudo enviar. Prueba con el enlace de correo de abajo.',
   'home.contactFallbackText': 'También puedes escribirnos directamente:',
   'home.contactFallbackLink': 'Enviar correo',
@@ -108,13 +108,13 @@ export const messages: Record<string, string> = {
   'home.pricingEyebrow': 'Precios',
   'home.pricingTitle': 'Precios claros que escalan con tu cartera.',
   'home.pricingIntro':
-    'El precio escala según el número de unidades gestionadas, no según cuántas fotos tome tu equipo — desde un primer edificio piloto hasta una cartera nacional.',
+    'El precio escala según el número de unidades gestionadas, no según cuántas fotos tome tu equipo, desde un primer edificio piloto hasta una cartera nacional.',
   'home.pricingFreeNote':
     'Gratis para tus primeras 10 inspecciones en cualquier plan. Sin contrato, cancela cuando quieras.',
   'home.pricingLockInNote':
     'Date de alta ahora y conserva el precio actual mientras sigas siendo cliente, aunque los precios de lista suban más adelante.',
   'home.pricingDisclaimer':
-    'Precios de partida para carteras europeas. El precio final depende del tamaño de la cartera y del alcance de la implantación — contáctanos para un presupuesto exacto.',
+    'Precios de partida para carteras europeas. El precio final depende del tamaño de la cartera y del alcance de la implantación. Contáctanos para un presupuesto exacto.',
   'home.pricingCtaText':
     '¿Aún decidiendo qué plan te conviene? Te damos una respuesta clara para tu cartera exacta.',
   'home.pricingCta': 'Habla con nosotros sobre tu cartera',
@@ -155,9 +155,9 @@ export const messages: Record<string, string> = {
   'home.pricingTier6Period': '',
   'home.pricingTier6Tagline': 'Para plataformas nacionales y redes de franquicias.',
   'home.trustEyebrow': 'Confianza y datos',
-  'home.trustTitle': 'Sin cuentas para inquilinos. Sin venta de datos.',
+  'home.trustTitle': 'Sin cuentas para inquilinos, sin venta de datos.',
   'home.trustIntro':
-    'Trailase está pensado para recoger evidencia, no una huella de datos personales. Esto es exactamente lo que eso significa hoy.',
+    'Trailase está pensado para recoger evidencia, no para acumular datos personales. Esto es lo que significa en la práctica.',
   'home.trustPoint1Title': 'Sin cuentas de inquilino',
   'home.trustPoint1Text':
     'Sin cuenta significa sin contraseña ni perfil personal que almacenemos más allá de lo que la propia inspección necesita.',
@@ -174,12 +174,12 @@ export const messages: Record<string, string> = {
   'home.trustPoint5Text':
     'Trailase funciona sobre infraestructura ubicada en la Unión Europea, conforme a los requisitos del RGPD para carteras europeas.',
   'home.trustScope':
-    'Trailase reúne evidencia. No asigna culpas, no determina responsabilidades ni calcula deducciones del depósito — esa decisión sigue siendo de tu equipo.',
+    'Trailase reúne evidencia. No asigna culpas, no determina responsabilidades ni calcula deducciones del depósito. Esa decisión sigue siendo de tu equipo.',
   'home.founderHook':
     'Una disputa así cuesta semanas de idas y venidas. Una sola foto puede resolverla en minutos.',
   'home.founderStat1Value': '2 meses',
   'home.founderStat1Label':
-    'de idas y venidas por una pared en disputa — resuelto solo porque existían fotos de antes y después.',
+    'de idas y venidas por una pared en disputa, resuelto solo porque existían fotos de antes y después.',
   'home.founderStat2Value': '200 habitaciones',
   'home.founderStat2Label':
     'liberadas en una sola semana de agosto, sin tiempo para documentar cada una correctamente.',
@@ -201,7 +201,7 @@ export const messages: Record<string, string> = {
   'story.moveIn': 'Entrada',
   'story.moveOut': 'Salida',
   'story.potentialChange': 'Cambio potencial',
-  'story.evidenceNote': 'Compara ambos momentos. Detecta qué cambió. Decide con confianza.',
+  'story.evidenceNote': 'Compara ambos momentos, detecta qué cambió y decide con confianza.',
   'contact.redirectTitle': '¿Abrir tu servicio de correo?',
   'contact.redirectText':
     'Vas a salir de Trailase para abrir un correo preparado en una pestaña nueva.',
@@ -331,8 +331,8 @@ export const messages: Record<string, string> = {
   'inspection.area.furniture': 'Mobiliario',
   'inspection.area.windows': 'Ventanas',
   'og.eyebrow': 'ENTREGAS DE VIVIENDAS',
-  'og.headline': 'Entregas claras. Decisiones con confianza.',
-  'og.description': 'Una inspección guiada. Un registro completo. Ningún cabo suelto.',
+  'og.headline': 'Entregas claras, decisiones con confianza.',
+  'og.description': 'Una inspección guiada, un registro completo, sin cabos sueltos.',
   'og.noApp': 'Sin app para inquilinos',
   'og.photoFirst': 'Fotos primero',
   'og.comparisons': 'Comparaciones claras',

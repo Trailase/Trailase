@@ -34,7 +34,7 @@ export function Trust() {
           <h2 className="mt-5 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
             {t('home.trustTitle')}
           </h2>
-          <p className="mt-6 max-w-xl text-body-lg leading-8 text-muted-foreground">
+          <p className="mt-6 max-w-xl text-body-lg leading-8 text-foreground/75 dark:text-white/72">
             {t('home.trustIntro')}
           </p>
         </div>
@@ -65,7 +65,7 @@ export function Trust() {
           })}
         </div>
 
-        <p className="mt-8 max-w-2xl border-l-2 border-brand-teal pl-5 text-sm leading-6 text-muted-foreground">
+        <p className="mt-8 max-w-2xl border-l-2 border-brand-teal pl-5 text-sm leading-6 text-foreground/75 dark:text-white/72">
           {t('home.trustScope')}
         </p>
       </div>
