@@ -1,6 +1,3 @@
 {
-  "/api/operator/inspections/route": "app/api/operator/inspections/route.js",
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/operator/inspections/page": "app/operator/inspections/page.js",
-  "/page": "app/page.js"
+  "/admin/page": "app/admin/page.js"
 }

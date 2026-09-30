@@ -164,7 +164,7 @@ export const messages: Record<string, string> = {
   'home.trustEyebrow': 'Confiance et données',
   'home.trustTitle': 'Aucun compte locataire, aucune donnée revendue.',
   'home.trustIntro':
-    "Trailase est conçu pour recueillir des preuves, pas pour accumuler des données personnelles. Voici ce que cela signifie concrètement.",
+    'Trailase est conçu pour recueillir des preuves, pas pour accumuler des données personnelles. Voici ce que cela signifie concrètement.',
   'home.trustPoint1Title': 'Aucun compte locataire',
   'home.trustPoint1Text':
     'Pas de compte signifie pas de mot de passe ni de profil personnel que nous stockons au-delà de ce que l’état des lieux exige.',
@@ -208,7 +208,8 @@ export const messages: Record<string, string> = {
   'story.moveIn': 'Entrée',
   'story.moveOut': 'Sortie',
   'story.potentialChange': 'Changement potentiel',
-  'story.evidenceNote': 'Comparez les deux moments, repérez ce qui a changé et décidez sereinement.',
+  'story.evidenceNote':
+    'Comparez les deux moments, repérez ce qui a changé et décidez sereinement.',
   'contact.redirectTitle': 'Ouvrir votre messagerie ?',
   'contact.redirectText':
     'Vous allez quitter Trailase pour ouvrir un e-mail préparé dans un nouvel onglet.',

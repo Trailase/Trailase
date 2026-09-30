@@ -299,6 +299,11 @@ class InMemoryInspectionRepository {
             ...this.records.values()
         ].filter((record)=>record.ownerSessionId === ownerSessionId).map(clone);
     }
+    listAll() {
+        return [
+            ...this.records.values()
+        ].map(clone);
+    }
     findByToken(token) {
         const record = this.records.get(token);
         return record ? clone(record) : null;
@@ -448,6 +453,38 @@ class InspectionService {
     }
     list(ownerSessionId) {
         return this.repository.listByOwner(ownerSessionId).sort((a, b)=>b.createdAt.localeCompare(a.createdAt)).map((record)=>this.toOperatorItem(record));
+    }
+    // Aggregate across every owner session — admin-only, never expose to tenants/operators.
+    stats(days = 7, recentLimit = 8) {
+        const records = this.repository.listAll().sort((a, b)=>b.createdAt.localeCompare(a.createdAt));
+        const completed = records.filter((record)=>record.status === 'completed');
+        const buckets = new Map();
+        const today = new Date(this.now());
+        for(let offset = days - 1; offset >= 0; offset--){
+            const day = new Date(today);
+            day.setUTCDate(today.getUTCDate() - offset);
+            buckets.set(day.toISOString().slice(0, 10), 0);
+        }
+        for (const record of records){
+            const key = record.createdAt.slice(0, 10);
+            const count = buckets.get(key);
+            if (count !== undefined) buckets.set(key, count + 1);
+        }
+        return {
+            total: records.length,
+            pending: records.length - completed.length,
+            completed: completed.length,
+            completionRate: records.length ? Math.round(completed.length / records.length * 100) : 0,
+            photos: records.reduce((sum, record)=>sum + record.photos.length, 0),
+            flaggedAreas: completed.reduce((sum, record)=>sum + record.areas.filter((area)=>area.status !== 'good').length, 0),
+            daily: [
+                ...buckets
+            ].map(([date, count])=>({
+                    date,
+                    count
+                })),
+            recent: records.slice(0, recentLimit).map((record)=>this.toOperatorItem(record))
+        };
     }
     create(ownerSessionId, input) {
         const record = {

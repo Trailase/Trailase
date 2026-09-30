@@ -12,6 +12,10 @@ export class InMemoryInspectionRepository implements InspectionRepository {
       .map(clone);
   }
 
+  listAll(): InspectionRecord[] {
+    return [...this.records.values()].map(clone);
+  }
+
   findByToken(token: string): InspectionRecord | null {
     const record = this.records.get(token);
     return record ? clone(record) : null;

@@ -1,5 +1,28 @@
 {
-  "node": {},
+  "node": {
+    "0093bbbf80fa36734cb996fcd6f8bcbe8702fd7cbf": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/server/admin-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/lib/server/admin-actions.ts",
+      "exportedName": "logout"
+    },
+    "60aff7db9f1a0cb5b62233cc00ed8d3b83bf7cfc3a": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/server/admin-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/lib/server/admin-actions.ts",
+      "exportedName": "login"
+    }
+  },
   "edge": {},
   "encryptionKey": "8d1SZ6dm3Kg+sP05+ygDMJ62e1ELnjApf9iSIsx1LxY="
 }

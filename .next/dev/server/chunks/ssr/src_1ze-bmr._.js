@@ -2296,7 +2296,7 @@ function Trust() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-6 max-w-xl text-body-lg leading-8 text-muted-foreground",
+                                className: "mt-6 max-w-xl text-body-lg leading-8 text-foreground/75 dark:text-white/72",
                                 children: t('home.trustIntro')
                             }, void 0, false, {
                                 fileName: "[project]/src/views/marketing/sections/trust.tsx",
@@ -2375,7 +2375,7 @@ function Trust() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "mt-8 max-w-2xl border-l-2 border-brand-teal pl-5 text-sm leading-6 text-muted-foreground",
+                        className: "mt-8 max-w-2xl border-l-2 border-brand-teal pl-5 text-sm leading-6 text-foreground/75 dark:text-white/72",
                         children: t('home.trustScope')
                     }, void 0, false, {
                         fileName: "[project]/src/views/marketing/sections/trust.tsx",
