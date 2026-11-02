@@ -11,8 +11,8 @@ export function Faq() {
       <div className="mx-auto grid w-full max-w-[var(--container-page)] gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <SectionHeading eyebrow={t('home.faqEyebrow')} title={t('home.faqTitle')} />
         <div className="divide-y divide-border border-y border-border">
-          {questions.map((question) => (
-            <details key={question} className="group">
+          {questions.map((question, index) => (
+            <details key={question} open={index === 0} className="group">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold [&::-webkit-details-marker]:hidden">
                 {t(`home.faq${question}Q`)}
                 <Plus

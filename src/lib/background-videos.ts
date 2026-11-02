@@ -24,6 +24,11 @@ function isMarketingVideo(key: BackgroundVideo): key is MarketingVideo {
   return key in marketingVideos;
 }
 
+export function backgroundPoster(key: BackgroundVideo): string {
+  const name = isMarketingVideo(key) ? marketingVideos[key] : demoVideos[key];
+  return `/images/posters/${name}.jpg`;
+}
+
 export function backgroundVideo(key: BackgroundVideo): string {
   if (isMarketingVideo(key)) {
     return `/videos/marketing/${marketingVideos[key]}.mp4`;

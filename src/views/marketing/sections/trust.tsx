@@ -1,4 +1,5 @@
 import { Globe, KeyRound, Link2, Scale, ShieldCheck, UserX } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { SectionHeading } from '../heading';
 
@@ -16,11 +17,22 @@ export function Trust() {
   return (
     <section className="px-gutter py-section">
       <div className="mx-auto w-full max-w-[var(--container-page)]">
-        <SectionHeading
-          eyebrow={t('home.trustEyebrow')}
-          title={t('home.trustTitle')}
-          intro={t('home.trustIntro')}
-        />
+        <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <SectionHeading
+            eyebrow={t('home.trustEyebrow')}
+            title={t('home.trustTitle')}
+            intro={t('home.trustIntro')}
+          />
+          <div className="relative aspect-[16/9] overflow-hidden rounded-3xl shadow-lg">
+            <Image
+              src="/images/heroProperty.jpg"
+              alt=""
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover object-[60%_center]"
+            />
+          </div>
+        </div>
         <ul className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {points.map(({ icon: Icon, title, text }) => (
             <li key={title}>

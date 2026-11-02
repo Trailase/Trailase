@@ -1,8 +1,9 @@
 import { ArrowRight, Check } from 'lucide-react';
 import { useLanguage } from '@/components/i18n/language-provider';
+import { Button } from '@/components/ui/button';
 import { requestContactUnits } from '@/lib/contact-redirect';
 import { unitsRanges } from '@/models/contact/schema';
-import { SectionHeading } from '../heading';
+import { ctaButton, SectionHeading } from '../heading';
 
 export function Pricing() {
   const { t } = useLanguage();
@@ -18,14 +19,24 @@ export function Pricing() {
           intro={t('home.pricingIntro')}
         />
 
-        <ul className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium">
-          {includedFeatures.map((feature) => (
-            <li key={feature} className="flex items-center gap-2">
-              <Check className="size-4 shrink-0 text-brand-teal" aria-hidden />
-              {feature}
-            </li>
-          ))}
-        </ul>
+        <p className="mx-auto mt-5 max-w-2xl text-center font-semibold text-primary">
+          {t('home.pricingFreeNote')}
+        </p>
+        <p className="mx-auto mt-1 max-w-2xl text-center text-sm text-muted-foreground">
+          {t('home.pricingLockInNote')}
+        </p>
+
+        <div className="mx-auto mt-8 max-w-4xl text-center">
+          <p className="text-sm font-semibold">{t('home.pricingIncludedTitle')}</p>
+          <ul className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium">
+            {includedFeatures.map((feature) => (
+              <li key={feature} className="flex items-center gap-2">
+                <Check className="size-4 shrink-0 text-brand-teal" aria-hidden />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {unitsRanges.map((range, index) => {
@@ -66,8 +77,19 @@ export function Pricing() {
           })}
         </div>
 
+        <div className="mt-8 flex flex-col items-start gap-4 rounded-2xl border border-primary/30 bg-card p-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-md leading-7 text-muted-foreground">{t('home.pricingCtaText')}</p>
+          <Button
+            asChild
+            size="lg"
+            className={`${ctaButton} h-auto min-h-12 whitespace-normal py-3 text-center shadow-brand`}
+          >
+            <a href="#contact">{t('home.pricingCta')}</a>
+          </Button>
+        </div>
+
         <p className="mx-auto mt-8 max-w-2xl text-center text-xs leading-5 text-muted-foreground">
-          {t('home.pricingLockInNote')} {t('home.pricingDisclaimer')}
+          {t('home.pricingDisclaimer')}
         </p>
       </div>
     </section>

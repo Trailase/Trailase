@@ -17,6 +17,7 @@ import {
 import { env } from '@/lib/env';
 import { contactMailto } from '@/lib/i18n';
 import { ctaButton, sectionTitle } from '../heading';
+import { SectionVideo } from '../media';
 
 export function Contact() {
   const { locale, t } = useLanguage();
@@ -39,17 +40,18 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-14 bg-brand-navy px-gutter py-section pb-24 text-white sm:pb-section dark:bg-[#0b2a5c]"
+      className="relative isolate scroll-mt-14 overflow-hidden bg-brand-navy px-gutter py-section pb-24 text-white sm:pb-section"
     >
+      <SectionVideo video="demoComplete" scrim="bg-brand-navy/70" />
       <div className="mx-auto grid w-full max-w-[var(--container-page)] items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div>
-          <p className="text-caption font-semibold uppercase tracking-[0.08em] text-brand-teal">
-            {t('home.contactEyebrow')}
+          <p className="text-caption font-semibold uppercase tracking-[0.08em] text-white/90">
+            {t('home.tagline')}
           </p>
           <h2 className={`mt-4 ${sectionTitle}`}>{t('home.contactTitle')}</h2>
           <p className="mt-5 text-lg leading-8 text-white/75">{t('home.contactText')}</p>
           <ul className="mt-7 flex flex-col gap-3 font-medium">
-            {['home.contactSlaNote', 'home.perk1', 'home.perk2'].map((item) => (
+            {['home.contactSlaNote', 'home.contactFreeTrial'].map((item) => (
               <li key={item} className="flex items-center gap-3">
                 <span className="grid size-6 shrink-0 place-items-center rounded-full bg-white/10 text-brand-teal">
                   <Check className="size-4" aria-hidden />

@@ -3,9 +3,10 @@ import Image from 'next/image';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { cn } from '@/lib/utils';
 import { SectionHeading } from '../heading';
+import { TileVideo } from '../media';
 
 const mockFrame =
-  'flex h-52 flex-col justify-center rounded-xl border border-border bg-background p-4';
+  'flex h-52 flex-col justify-center rounded-xl border border-border bg-card p-4 shadow-lg';
 
 function SendMock() {
   const { t } = useLanguage();
@@ -82,10 +83,10 @@ function RecordMock() {
 }
 
 const steps = [
-  { title: 'home.step1Title', text: 'home.step1Text', mock: SendMock },
-  { title: 'home.step2Title', text: 'home.step2Text', mock: WalkthroughMock },
-  { title: 'home.step3Title', text: 'home.step3Text', mock: RecordMock },
-];
+  { title: 'home.step1Title', text: 'home.step1Text', mock: SendMock, video: 'demoCondition' },
+  { title: 'home.step2Title', text: 'home.step2Text', mock: WalkthroughMock, video: 'demoPhotos' },
+  { title: 'home.step3Title', text: 'home.step3Text', mock: RecordMock, video: 'demoReview' },
+] as const;
 
 export function Workflow() {
   const { t } = useLanguage();
@@ -99,10 +100,18 @@ export function Workflow() {
           intro={t('home.workflowIntro')}
         />
         <ol className="mt-12 grid gap-5 md:grid-cols-3">
-          {steps.map(({ title, text, mock: Mock }, index) => (
-            <li key={title} className="rounded-2xl border border-border bg-card p-4 shadow-sm">
-              <Mock />
-              <div className="p-2 pt-5">
+          {steps.map(({ title, text, mock: Mock, video }, index) => (
+            <li
+              key={title}
+              className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+            >
+              <div className="relative aspect-[16/10] bg-muted">
+                <TileVideo video={video} />
+              </div>
+              <div className="relative z-10 mx-4 -mt-16">
+                <Mock />
+              </div>
+              <div className="p-6 pt-5">
                 <h3 className="flex items-baseline gap-2.5 font-display text-lg font-semibold tracking-tight">
                   <span className="text-primary">{index + 1}</span>
                   {t(title)}
@@ -112,6 +121,9 @@ export function Workflow() {
             </li>
           ))}
         </ol>
+        <p className="mx-auto mt-8 max-w-2xl text-center font-medium">
+          {t('home.workflowStandard')}
+        </p>
       </div>
     </section>
   );
