@@ -1,23 +1,24 @@
 import { useLanguage } from '@/components/i18n/language-provider';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 
-export function Header({ step, total, room }: { step: number; total: number; room: string }) {
+// A stable ref callback, so the message only scrolls into view when it first appears.
+export const revealMessage = (node: HTMLElement | null) => {
+  node?.scrollIntoView({ block: 'center' });
+};
+
+export function Header({ room }: { room: string }) {
   const { t } = useLanguage();
   return (
-    <header className="video-copy mb-5 flex min-h-52 items-end justify-between gap-5 border border-border shadow-2xl sm:p-8">
-      <div className="max-w-lg">
-        <p className="text-caption font-semibold uppercase tracking-[0.14em] text-primary">
-          {t('inspection.eyebrow')}
-        </p>
-        <h1 className="mt-2 font-display text-h2 tracking-tight text-foreground">{room}</h1>
-        <p className="mt-2 text-sm text-muted-foreground">{t('inspection.intro')}</p>
-      </div>
-      <Badge className="mb-1 shrink-0 rounded-full border border-border bg-accent text-accent-foreground">
-        {step + 1} / {total}
-      </Badge>
-    </header>
+    <div className="max-w-lg">
+      <p className="text-caption font-semibold uppercase tracking-[0.14em] text-white/90">
+        {t('inspection.eyebrow')}
+      </p>
+      <h1 className="mt-2 font-display text-[clamp(1.9rem,3.2vw,2.75rem)] font-semibold leading-[1.08] tracking-[-0.03em] [overflow-wrap:anywhere]">
+        {room}
+      </h1>
+      <p className="mt-3 leading-7 text-white/90">{t('inspection.intro')}</p>
+    </div>
   );
 }
 
@@ -25,10 +26,12 @@ export function Steps({ step, labels }: { step: number; labels: string[] }) {
   const { t } = useLanguage();
   const progress = ((step + 1) / labels.length) * 100;
   return (
-    <div className="mb-5 rounded-xl border border-border bg-card/95 p-4 shadow-md backdrop-blur">
-      <div className="mb-3 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+    <div className="mb-5">
+      <div className="mb-3 flex items-center justify-between gap-3 text-sm font-semibold">
         <span>{labels[step]}</span>
-        <span>{Math.round(progress)}%</span>
+        <span className="shrink-0 text-muted-foreground">
+          {step + 1} / {labels.length} · {Math.round(progress)}%
+        </span>
       </div>
       <Progress
         value={progress}
@@ -39,7 +42,7 @@ export function Steps({ step, labels }: { step: number; labels: string[] }) {
         {labels.map((label, index) => (
           <span
             key={label}
-            className={`text-xs ${index <= step ? 'font-semibold text-brand-700 dark:text-brand-300' : 'text-muted-foreground'}`}
+            className={`text-xs ${index <= step ? 'font-semibold text-primary' : 'text-muted-foreground'}`}
           >
             {label}
           </span>
@@ -61,12 +64,12 @@ type NavigationProps = {
 export function Navigation({ step, total, submitting, previous, next, submit }: NavigationProps) {
   const { t } = useLanguage();
   return (
-    <div className="sticky bottom-3 z-10 mt-6 flex gap-3 border border-border bg-background/95 p-3 shadow-xl backdrop-blur sm:static sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-none">
+    <div className="sticky bottom-3 z-10 mt-6 flex gap-3 rounded-full border border-border bg-background/95 p-2 shadow-xl backdrop-blur sm:static sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-none">
       {step > 0 && (
         <Button
           type="button"
           variant="outline"
-          className="h-12 flex-1 rounded-sm sm:flex-none"
+          className="h-12 flex-1 rounded-full font-semibold sm:flex-none sm:px-7"
           onClick={previous}
           disabled={submitting}
         >
@@ -76,7 +79,7 @@ export function Navigation({ step, total, submitting, previous, next, submit }: 
       {step < total - 1 ? (
         <Button
           type="button"
-          className="h-12 flex-1 rounded-sm sm:ml-auto sm:flex-none sm:px-8"
+          className="h-12 flex-1 rounded-full font-semibold shadow-brand sm:ml-auto sm:flex-none sm:px-8"
           onClick={next}
         >
           {t('inspection.continue')}
@@ -84,7 +87,7 @@ export function Navigation({ step, total, submitting, previous, next, submit }: 
       ) : (
         <Button
           type="button"
-          className="h-12 flex-1 rounded-sm sm:ml-auto sm:flex-none sm:px-8"
+          className="h-12 flex-1 rounded-full font-semibold shadow-brand sm:ml-auto sm:flex-none sm:px-8"
           onClick={submit}
           disabled={submitting}
         >

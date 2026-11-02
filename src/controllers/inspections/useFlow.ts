@@ -30,6 +30,11 @@ export type FlowStatus =
 
 type Feedback = { success: (message: string) => void; error: (message: string) => void };
 
+// Each step replaces the page, so start it from the top instead of where the last one ended.
+function toTop() {
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
 export function useFlow(token: string, t: Translate, feedback: Feedback) {
   const [inspection, setInspection] = useState<InspectionTenant | null>(null);
   const [condition, setCondition] = useState<ConditionArea[]>([]);
@@ -90,12 +95,15 @@ export function useFlow(token: string, t: Translate, feedback: Feedback) {
   }
 
   function next() {
-    if (validStep()) setStep((current) => Math.min(current + 1, steps.length - 1));
+    if (!validStep()) return;
+    setStep((current) => Math.min(current + 1, steps.length - 1));
+    toTop();
   }
 
   function previous() {
     setError(null);
     setStep((current) => Math.max(current - 1, 0));
+    toTop();
   }
 
   async function submit() {
@@ -110,6 +118,7 @@ export function useFlow(token: string, t: Translate, feedback: Feedback) {
       });
       await inspectionClient.completeTenant(token, payload);
       setStatus('submitted');
+      toTop();
       feedback.success(t('inspection.complete'));
     } catch (requestError) {
       const message = errorMessage(requestError, t('inspection.submitError'));

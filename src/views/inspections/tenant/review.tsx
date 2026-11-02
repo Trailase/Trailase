@@ -18,7 +18,7 @@ export function Review({ condition, photos, notes, signed, className }: Props) {
   return (
     <Card className={className}>
       <CardHeader>
-        <CardTitle className="font-display text-h3 tracking-tight">
+        <CardTitle className="text-balance font-display text-h3 tracking-tight">
           {t('inspection.reviewTitle')}
         </CardTitle>
         <CardDescription>{t('inspection.reviewText')}</CardDescription>
@@ -40,7 +40,7 @@ export function Review({ condition, photos, notes, signed, className }: Props) {
             {notes || t('inspection.noNotes')}
           </p>
         </div>
-        <div className="border-l-2 border-brand-500 bg-brand-50/60 px-4 py-3 text-sm text-muted-foreground dark:bg-brand-900/20">
+        <div className="rounded-xl border-l-2 border-brand-500 bg-brand-50/60 px-4 py-3 text-sm text-muted-foreground dark:bg-brand-900/20">
           {t('inspection.submitNotice')}
         </div>
         <div>
@@ -83,16 +83,16 @@ function Evidence({ photo }: { photo: PhotoPayload }) {
   const { t } = useLanguage();
   const demo = photo.filename.startsWith('demo-camera-');
   return (
-    <div className="border border-border bg-muted/30 p-2">
+    <div className="rounded-xl border border-border bg-muted/30 p-2">
       <Image
         src={photo.dataUrl}
         alt={demo ? t('inspection.demoPhotoAlt') : t('inspection.capturedPhotoAlt')}
         width={240}
         height={180}
         unoptimized
-        className="aspect-[4/3] w-full object-cover"
+        className="aspect-[4/3] w-full rounded-lg object-cover"
       />
-      <Badge variant="outline" className="mt-2 rounded-sm px-1.5 py-0 text-[10px]">
+      <Badge variant="outline" className="mt-2 rounded-full px-1.5 py-0 text-[10px]">
         {demo ? t('inspection.demoCapture') : t('inspection.captured')}
       </Badge>
     </div>

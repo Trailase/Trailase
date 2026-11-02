@@ -35,11 +35,8 @@ type Props = {
 export function Queue(props: Props) {
   const { t } = useLanguage();
   return (
-    <section
-      aria-labelledby="inspection-list-title"
-      className="rounded-2xl border border-border bg-background/95 p-4 shadow-xl backdrop-blur-md"
-    >
-      <div className="mb-3 flex items-end justify-between gap-4">
+    <section aria-labelledby="inspection-list-title">
+      <div className="mb-4 flex items-end justify-between gap-4">
         <div>
           <p className="text-caption font-semibold uppercase tracking-[0.15em] text-brand-700 dark:text-brand-300">
             {t('operator.queue')}
@@ -85,7 +82,7 @@ export function Queue(props: Props) {
               type="button"
               variant="outline"
               size="sm"
-              className="rounded-sm"
+              className="rounded-full"
               disabled={props.visiblePage === 1}
               onClick={props.onPrevious}
             >
@@ -99,7 +96,7 @@ export function Queue(props: Props) {
               type="button"
               variant="outline"
               size="sm"
-              className="rounded-sm"
+              className="rounded-full"
               disabled={props.visiblePage === props.totalPages}
               onClick={props.onNext}
             >
@@ -110,7 +107,7 @@ export function Queue(props: Props) {
         </div>
       )}
       {props.latestLink && !props.items?.some((item) => item.shareUrl === props.latestLink) && (
-        <Card className="mt-5 border-brand-300 bg-brand-50/70 shadow-lg dark:border-brand-700 dark:bg-brand-900/20">
+        <Card className="mt-5 rounded-2xl border-brand-300 bg-brand-50/70 shadow-sm dark:border-brand-700 dark:bg-brand-900/20">
           <CardContent className="p-5">
             <p className="text-eyebrow">{t('operator.latest')}</p>
             <p className="mt-2 break-all font-mono text-xs leading-5 text-muted-foreground">
@@ -120,13 +117,13 @@ export function Queue(props: Props) {
               <Button
                 type="button"
                 size="sm"
-                className="rounded-sm"
+                className="rounded-full"
                 onClick={() => props.onCopy(props.latestLink ?? '')}
               >
                 <Copy aria-hidden />
                 {t('operator.copy')}
               </Button>
-              <Button asChild size="sm" variant="outline" className="rounded-sm">
+              <Button asChild size="sm" variant="outline" className="rounded-full">
                 <Link href={props.latestLink} target="_blank">
                   {t('operator.openLink')}
                   <ExternalLink aria-hidden />
@@ -143,12 +140,12 @@ export function Queue(props: Props) {
 function Failure({ message, retry }: { message: string; retry: () => void }) {
   const { t } = useLanguage();
   return (
-    <Card className="border-destructive/40 bg-card shadow-md">
+    <Card className="rounded-2xl border-destructive/40 bg-card shadow-sm">
       <CardContent className="flex flex-col gap-4 p-6">
         <p role="alert" className="text-sm text-destructive">
           {message}
         </p>
-        <Button type="button" variant="outline" className="w-fit rounded-sm" onClick={retry}>
+        <Button type="button" variant="outline" className="w-fit rounded-full" onClick={retry}>
           {t('operator.tryAgain')}
         </Button>
       </CardContent>
@@ -158,7 +155,7 @@ function Failure({ message, retry }: { message: string; retry: () => void }) {
 function Loading() {
   const { t } = useLanguage();
   return (
-    <Card className="border-border bg-card shadow-md">
+    <Card className="rounded-2xl border-border bg-card shadow-sm">
       <CardContent className="space-y-4 p-6">
         <div className="h-2 animate-pulse rounded bg-brand-200 dark:bg-brand-800" />
         <p className="text-sm text-muted-foreground">{t('operator.loading')}</p>
@@ -169,7 +166,7 @@ function Loading() {
 function Empty() {
   const { t } = useLanguage();
   return (
-    <Card className="border-dashed border-brand-300 bg-card shadow-sm dark:border-brand-700">
+    <Card className="rounded-2xl border-dashed border-brand-300 bg-card shadow-sm dark:border-brand-700">
       <CardContent className="p-8 text-center">
         <ClipboardPlus className="mx-auto size-8 text-brand-600" aria-hidden />
         <p className="mt-4 font-medium">{t('operator.empty')}</p>

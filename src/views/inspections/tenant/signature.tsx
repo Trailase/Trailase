@@ -43,6 +43,20 @@ export function Signature({
     redraw(strokes);
   }, [redraw, strokes]);
 
+  // Without this the browser reads a quick stroke as a flick and swallows the next tap,
+  // such as the one on the consent checkbox. Pointer events still fire for the drawing.
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const claim = (event: TouchEvent) => event.preventDefault();
+    canvas.addEventListener('touchstart', claim, { passive: false });
+    canvas.addEventListener('touchmove', claim, { passive: false });
+    return () => {
+      canvas.removeEventListener('touchstart', claim);
+      canvas.removeEventListener('touchmove', claim);
+    };
+  }, []);
+
   function point(event: PointerEvent<HTMLCanvasElement>): Point {
     const canvas = canvasRef.current;
     if (!canvas) return { x: 0, y: 0 };
@@ -91,7 +105,7 @@ export function Signature({
 
   return (
     <div>
-      <div className="overflow-hidden border border-border bg-background shadow-inner">
+      <div className="overflow-hidden rounded-xl border border-border bg-background shadow-inner">
         <canvas
           ref={canvasRef}
           aria-label={t('inspection.signatureTitle')}

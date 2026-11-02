@@ -16,7 +16,7 @@ export function Notes({
   return (
     <Card className={className}>
       <CardHeader>
-        <CardTitle className="font-display text-h3 tracking-tight">
+        <CardTitle className="text-balance font-display text-h3 tracking-tight">
           {t('inspection.notesTitle')}
         </CardTitle>
         <CardDescription>{t('inspection.notesText')}</CardDescription>
@@ -31,7 +31,7 @@ export function Notes({
           onChange={(event) => onChange(event.target.value)}
           placeholder={t('inspection.notesPlaceholder')}
           maxLength={1200}
-          className="min-h-48 rounded-sm bg-background text-base"
+          className="min-h-48 rounded-xl bg-background text-base"
         />
         <p className="mt-2 text-right text-xs text-muted-foreground">{value.length} / 1,200</p>
       </CardContent>

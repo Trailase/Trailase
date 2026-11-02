@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import type { CameraStatus } from '@/controllers/inspections/useCamera';
 import type { PhotoPayload } from '@/models/inspections/schema';
+import { revealMessage } from './chrome';
 
 type Props = {
   photos: PhotoPayload[];
@@ -29,7 +30,7 @@ export function Photos(props: Props) {
   return (
     <Card className={props.className}>
       <CardHeader>
-        <CardTitle className="font-display text-h3 tracking-tight">
+        <CardTitle className="text-balance font-display text-h3 tracking-tight">
           {t('inspection.photosTitle')}
         </CardTitle>
         <CardDescription>{t('inspection.photosText')}</CardDescription>
@@ -47,7 +48,7 @@ export function Photos(props: Props) {
         )}
         <canvas ref={props.canvasRef} className="hidden" />
         {props.photoError && (
-          <p role="alert" className="mt-3 text-sm text-destructive">
+          <p ref={revealMessage} role="alert" className="mt-3 text-sm text-destructive">
             {props.photoError}
           </p>
         )}
@@ -60,12 +61,12 @@ export function Photos(props: Props) {
 function Idle({ count, open }: { count: number; open: () => void }) {
   const { t } = useLanguage();
   return (
-    <div className="border border-brand-300 bg-brand-50/60 p-5 dark:border-brand-700 dark:bg-brand-900/20">
+    <div className="rounded-xl border border-brand-300 bg-brand-50/60 p-5 dark:border-brand-700 dark:bg-brand-900/20">
       <p className="text-sm font-semibold">{t('inspection.ready')}</p>
       <p className="mt-1 text-sm text-muted-foreground">{t('inspection.cameraText')}</p>
       <Button
         type="button"
-        className="mt-5 h-12 w-full rounded-sm sm:w-auto sm:px-8"
+        className="mt-5 h-12 w-full rounded-full sm:w-auto sm:px-8"
         onClick={open}
         disabled={count >= 8}
       >
@@ -86,8 +87,8 @@ function Camera({
 }) {
   const { t } = useLanguage();
   return (
-    <div className="border-2 border-foreground bg-foreground p-2 shadow-xl">
-      <div className="relative overflow-hidden bg-foreground">
+    <div className="overflow-hidden rounded-2xl bg-brand-navy p-2 shadow-xl">
+      <div className="relative overflow-hidden rounded-xl bg-brand-navy">
         <video
           ref={videoRef}
           aria-label={t('inspection.livePreviewAria')}
@@ -96,21 +97,21 @@ function Camera({
           playsInline
           className="aspect-[4/3] w-full object-cover"
         />
-        <div className="pointer-events-none absolute inset-5 border border-background/70 sm:inset-8" />
+        <div className="pointer-events-none absolute inset-5 rounded-lg border border-white/70 sm:inset-8" />
       </div>
       <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-3">
         {status === 'requesting' ? (
           <>
-            <p className="text-xs text-background/70">{t('inspection.openingCamera')}</p>
-            <p className="text-xs text-background/70">{t('inspection.allowCamera')}</p>
+            <p className="text-xs text-white/80">{t('inspection.openingCamera')}</p>
+            <p className="text-xs text-white/80">{t('inspection.allowCamera')}</p>
           </>
         ) : (
           <>
-            <p className="text-xs text-background/70">{t('inspection.livePreview')}</p>
+            <p className="text-xs text-white/80">{t('inspection.livePreview')}</p>
             <Button
               type="button"
               variant="secondary"
-              className="h-11 rounded-sm px-5"
+              className="h-11 rounded-full px-5"
               onClick={capture}
             >
               {t('inspection.takePhoto')}
@@ -133,8 +134,8 @@ function Preview({
 }) {
   const { t } = useLanguage();
   return (
-    <div className="border border-brand-300 bg-brand-50/50 p-3 dark:border-brand-700 dark:bg-brand-900/15">
-      <div className="overflow-hidden border-2 border-foreground bg-foreground p-2">
+    <div className="rounded-xl border border-brand-300 bg-brand-50/50 p-3 dark:border-brand-700 dark:bg-brand-900/15">
+      <div className="overflow-hidden rounded-lg bg-brand-navy">
         <Image
           src={photo.dataUrl}
           alt={t('inspection.photoPreviewAlt')}
@@ -153,12 +154,12 @@ function Preview({
           <Button
             type="button"
             variant="outline"
-            className="h-11 flex-1 rounded-sm sm:flex-none"
+            className="h-11 flex-1 rounded-full sm:flex-none"
             onClick={retake}
           >
             {t('inspection.retake')}
           </Button>
-          <Button type="button" className="h-11 flex-1 rounded-sm sm:flex-none" onClick={accept}>
+          <Button type="button" className="h-11 flex-1 rounded-full sm:flex-none" onClick={accept}>
             {t('inspection.usePhoto')}
           </Button>
         </div>
@@ -178,14 +179,14 @@ function Unavailable({
 }) {
   const { t } = useLanguage();
   return (
-    <div className="border-l-2 border-destructive bg-destructive/10 p-4" role="alert">
+    <div className="rounded-xl border-l-2 border-destructive bg-destructive/10 p-4" role="alert">
       <p className="text-sm font-semibold">{t('inspection.cameraUnavailable')}</p>
       <p className="mt-1 text-sm text-muted-foreground">{error ?? t('inspection.cameraFailed')}</p>
       <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-        <Button type="button" variant="outline" className="h-11 rounded-sm" onClick={retry}>
+        <Button type="button" variant="outline" className="h-11 rounded-full" onClick={retry}>
           {t('inspection.cameraAgain')}
         </Button>
-        <Button type="button" variant="secondary" className="h-11 rounded-sm" onClick={demo}>
+        <Button type="button" variant="secondary" className="h-11 rounded-full" onClick={demo}>
           {t('inspection.demoCamera')}
         </Button>
       </div>
@@ -221,17 +222,17 @@ function Photo({ photo, remove }: { photo: PhotoPayload; remove: () => void }) {
   const { t } = useLanguage();
   const demo = photo.filename.startsWith('demo-camera-');
   return (
-    <div className="relative border border-border bg-muted/30 p-2">
+    <div className="relative rounded-xl border border-border bg-muted/30 p-2">
       <Image
         src={photo.dataUrl}
         alt={demo ? t('inspection.demoPhotoAlt') : t('inspection.capturedPhotoAlt')}
         width={320}
         height={200}
         unoptimized
-        className="aspect-[4/3] w-full object-cover"
+        className="aspect-[4/3] w-full rounded-lg object-cover"
       />
       <div className="mt-2 flex items-center justify-between gap-2">
-        <Badge variant="outline" className="rounded-sm px-1.5 py-0 text-[10px]">
+        <Badge variant="outline" className="rounded-full px-1.5 py-0 text-[10px]">
           {demo ? t('inspection.demoCapture') : t('inspection.captured')}
         </Badge>
         <span className="text-[10px] text-muted-foreground">{t('inspection.readyStatus')}</span>
@@ -240,7 +241,7 @@ function Photo({ photo, remove }: { photo: PhotoPayload; remove: () => void }) {
         type="button"
         variant="secondary"
         size="sm"
-        className="mt-2 w-full rounded-sm"
+        className="mt-2 w-full rounded-full"
         onClick={remove}
       >
         {t('inspection.remove')}

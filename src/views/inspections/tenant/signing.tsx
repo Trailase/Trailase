@@ -19,7 +19,7 @@ export function Signing({ signature, consent, onSignature, onConsent, room, clas
   return (
     <Card className={className}>
       <CardHeader>
-        <CardTitle className="font-display text-h3 tracking-tight">
+        <CardTitle className="text-balance font-display text-h3 tracking-tight">
           {t('inspection.signatureTitle')}
         </CardTitle>
         <CardDescription>{t('inspection.signatureText')}</CardDescription>
@@ -32,7 +32,7 @@ export function Signing({ signature, consent, onSignature, onConsent, room, clas
             id="signature-consent"
             checked={consent}
             onCheckedChange={(checked) => onConsent(checked === true)}
-            className="mt-0.5"
+            className="mt-0.5 size-6"
           />
           <Label htmlFor="signature-consent" className="text-sm font-normal leading-6">
             {t('inspection.consent', { room })}

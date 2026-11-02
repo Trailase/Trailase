@@ -16,7 +16,7 @@ export function Condition({ areas, onChange, className }: Props) {
   return (
     <Card className={className}>
       <CardHeader>
-        <CardTitle className="font-display text-h3 tracking-tight">
+        <CardTitle className="text-balance font-display text-h3 tracking-tight">
           {t('inspection.conditionTitle')}
         </CardTitle>
         <CardDescription>{t('inspection.conditionText')}</CardDescription>
@@ -33,12 +33,12 @@ export function Condition({ areas, onChange, className }: Props) {
             </div>
             <Choices value={area.status} onChange={(status) => onChange(area.id, { status })} />
             <Input
-              aria-label={`${area.label} note`}
+              aria-label={`${t(`inspection.area.${area.id}`)}: ${t('inspection.optionalNote')}`}
               value={area.note}
               onChange={(event) => onChange(area.id, { note: event.target.value })}
               placeholder={t('inspection.optionalNote')}
               maxLength={240}
-              className="h-11 rounded-sm bg-background"
+              className="h-11 rounded-xl bg-background"
             />
           </div>
         ))}
@@ -64,8 +64,8 @@ function Choices({
           key={choice}
           type="button"
           size="sm"
-          variant={value === choice ? 'secondary' : 'outline'}
-          className={`h-auto min-h-12 whitespace-normal px-2 text-xs leading-4 ${value === choice ? 'border-brand-500 bg-brand-100 text-brand-900 dark:bg-brand-900/60 dark:text-brand-100' : ''}`}
+          variant={value === choice ? 'default' : 'outline'}
+          className="h-auto min-h-12 whitespace-normal rounded-xl px-2 text-xs font-semibold leading-4"
           onClick={() => onChange(choice)}
           aria-pressed={value === choice}
         >
