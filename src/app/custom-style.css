@@ -8,28 +8,6 @@ html.dark {
 }
 
 /* Shade the copy area; leave the surrounding footage visible in both themes. */
-.video-overlay {
-  background: linear-gradient(
-    90deg,
-    rgb(247 251 255 / 0.8),
-    rgb(247 251 255 / 0.42) 48%,
-    rgb(247 251 255 / 0.1)
-  );
-}
-
-.dark .video-overlay {
-  background: linear-gradient(
-    90deg,
-    rgb(5 25 51 / 0.72),
-    rgb(5 25 51 / 0.34) 48%,
-    rgb(5 25 51 / 0.08)
-  );
-}
-
-.video-overlay-right {
-  transform: scaleX(-1);
-}
-
 .video-copy {
   border-radius: 1rem;
   padding: 1.5rem;
@@ -104,39 +82,6 @@ html.dark {
   }
 }
 
-.video-overlay-dark {
-  background: linear-gradient(
-    90deg,
-    rgb(5 25 51 / 0.72),
-    rgb(5 25 51 / 0.4) 58%,
-    rgb(5 25 51 / 0.12)
-  );
-}
-
-.video-copy-dark {
-  background: rgb(5 25 51 / 0.7);
-}
-
-.video-overlay-story {
-  background: linear-gradient(
-    180deg,
-    rgb(247 251 255 / 0.75),
-    rgb(247 251 255 / 0.14) 35%,
-    rgb(247 251 255 / 0.12) 70%,
-    rgb(247 251 255 / 0.78)
-  );
-}
-
-.dark .video-overlay-story {
-  background: linear-gradient(
-    180deg,
-    rgb(7 23 46 / 0.72),
-    rgb(7 23 46 / 0.12) 35%,
-    rgb(7 23 46 / 0.08) 70%,
-    rgb(7 23 46 / 0.72)
-  );
-}
-
 body {
   background-image:
     radial-gradient(circle at 88% 4%, oklch(0.92 0.075 245 / 0.34), transparent 28rem),
@@ -145,100 +90,6 @@ body {
   transition:
     background-color 220ms ease,
     color 220ms ease;
-}
-
-/*
- * The scroll story needs a classic viewport-unit fallback for embedded and
- * vendor Android browsers. Keep the fallback and modern value in explicit
- * cascade order instead of relying on generated utility ordering.
- */
-.evidence-story {
-  height: 235vh;
-}
-
-.evidence-story-frame {
-  height: calc(100vh - 3.5rem);
-}
-
-.evidence-story-stage {
-  transform: translate(-50%, -50%);
-}
-
-@supports (height: 100svh) {
-  .evidence-story {
-    height: 235svh;
-  }
-
-  .evidence-story-frame {
-    height: calc(100svh - 3.5rem);
-  }
-}
-
-@media (min-width: 768px) {
-  .evidence-story {
-    height: 280vh;
-  }
-}
-
-/*
- * Browser zoom reduces the viewport's CSS height (e.g. 150% zoom on a 1080p
- * display is ~720px tall in CSS px). Once it becomes too short for the
- * pinned composition, let the story reflow as normal content instead of
- * squeezing independently positioned layers on top of each other. The
- * threshold has headroom above the ~650px where the heading/phase-pill/
- * stage stack actually starts overlapping, so common zoom levels (110-150%)
- * on laptop-class screens land safely in the reflowed layout rather than
- * the tight edge of the pinned one. Also reflows for 640-767px widths: `sm:`
- * sizing kicks in there (620px stage, 168px cards) but was never visually
- * verified against the heading/phase-pill stack above it, so it plays safe
- * instead of risking an unverified overlap. Keep both conditions in sync
- * with the `shortViewportMedia` query in story.tsx.
- */
-@media (max-height: 760px), (min-width: 640px) and (max-width: 767px) {
-  .evidence-story {
-    height: auto;
-    min-height: 0;
-  }
-
-  .evidence-story-frame {
-    position: relative;
-    top: auto;
-    height: auto;
-    min-height: 0;
-    overflow: hidden;
-  }
-
-  .evidence-story-layout {
-    height: auto;
-    min-height: 52rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .evidence-story .evidence-story-heading,
-  .evidence-story .evidence-story-phases,
-  .evidence-story .evidence-story-stage,
-  .evidence-story .evidence-story-note {
-    position: relative;
-    inset: auto;
-  }
-
-  .evidence-story .evidence-story-phases {
-    margin-top: 1.75rem;
-  }
-
-  .evidence-story .evidence-story-stage {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: min(100%, 53.75rem);
-    margin: 2.25rem auto 0;
-    transform: none;
-  }
-
-  .evidence-story .evidence-story-note {
-    margin-top: 2rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -251,6 +102,34 @@ body {
   background-image:
     radial-gradient(circle at 88% 4%, oklch(0.31 0.11 255 / 0.28), transparent 30rem),
     radial-gradient(circle at 8% 90%, oklch(0.42 0.09 190 / 0.16), transparent 28rem);
+}
+
+.hero-wash {
+  background-image:
+    radial-gradient(60rem 30rem at 90% -10%, rgb(23 102 255 / 0.1), transparent 70%),
+    radial-gradient(40rem 26rem at 0% 20%, rgb(8 191 197 / 0.09), transparent 70%);
+}
+
+.dark .hero-wash {
+  background-image:
+    radial-gradient(60rem 30rem at 90% -10%, rgb(23 102 255 / 0.2), transparent 70%),
+    radial-gradient(40rem 26rem at 0% 20%, rgb(8 191 197 / 0.1), transparent 70%);
+}
+
+.float-slow {
+  animation: trailase-float 7s ease-in-out infinite;
+}
+
+@keyframes trailase-float {
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow {
+    animation: none;
+  }
 }
 
 ::selection {

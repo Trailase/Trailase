@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Onest } from 'next/font/google';
 import { headers } from 'next/headers';
 import { GlobalMounts } from '@/components/custom/global-mounts';
 import { SiteFooter, SiteNav } from '@/components/custom/site-nav';
@@ -9,6 +10,8 @@ import { brandVisual } from '@/lib/brand';
 import { resolveRequestLocale } from '@/lib/i18n/server';
 import { siteDescription, siteName, siteUrl } from '@/lib/site';
 import './globals.css';
+
+const onest = Onest({ subsets: ['latin', 'latin-ext'], variable: '--font-onest' });
 
 // Framework SEO defaults. `metadataBase` makes every relative metadata URL
 // (canonical, OG image) absolute. `title.template` lets a page export
@@ -50,7 +53,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const activeLocale = await resolveRequestLocale();
 
   return (
-    <html lang={activeLocale} dir="ltr" suppressHydrationWarning>
+    <html lang={activeLocale} dir="ltr" className={onest.variable} suppressHydrationWarning>
       <body className="min-h-screen overflow-x-hidden bg-background font-body text-foreground antialiased">
         {/* Framework provider composition. App-wide React providers go in the
             user-owned src/components/providers.tsx (AppProviders, below), which wraps

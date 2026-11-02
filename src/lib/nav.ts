@@ -16,15 +16,15 @@ export const navItems: NavItem[] = [
     group: 'primary',
   },
   {
-    label: 'Who it’s for',
-    translationKey: 'nav.for',
-    href: '/#operators',
-    group: 'primary',
-  },
-  {
     label: 'Pricing',
     translationKey: 'nav.pricing',
     href: '/#pricing',
+    group: 'primary',
+  },
+  {
+    label: 'FAQ',
+    translationKey: 'nav.faq',
+    href: '/#faq',
     group: 'primary',
   },
   {
@@ -36,7 +36,7 @@ export const navItems: NavItem[] = [
   {
     label: 'Book a walkthrough',
     translationKey: 'nav.contact',
-    href: 'mailto:trai1ases@gmail.com',
+    href: '/#contact',
     group: 'secondary',
   },
 ];

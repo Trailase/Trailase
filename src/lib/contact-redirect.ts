@@ -11,3 +11,17 @@ export function requestContactRedirect(href: string) {
     }),
   );
 }
+
+export const contactUnitsEvent = 'trailase:contact-units';
+
+export type ContactUnitsDetail = {
+  unitsRange: string;
+};
+
+export function requestContactUnits(unitsRange: string) {
+  window.dispatchEvent(
+    new CustomEvent<ContactUnitsDetail>(contactUnitsEvent, {
+      detail: { unitsRange },
+    }),
+  );
+}

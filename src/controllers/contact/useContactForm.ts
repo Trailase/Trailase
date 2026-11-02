@@ -28,7 +28,7 @@ export function useContactForm(t: Translate, feedback: Feedback) {
           name: name || undefined,
           email,
           unitsRange: unitsRange || undefined,
-          message,
+          message: message || undefined,
         }),
       });
       setSent(true);

@@ -5,77 +5,24 @@ export const messages: Record<string, string> = {
   'language.label': 'Langue',
   'theme.toggle': 'Basculer entre les thèmes clair et sombre',
   'nav.how': 'Fonctionnement',
-  'nav.for': 'Pour qui',
   'nav.pricing': 'Tarifs',
   'nav.prototype': 'Démo en direct',
   'nav.contact': 'Demander une démo',
   'nav.openMenu': 'Ouvrir le menu',
-  'home.badge': 'Chaque état des lieux, un dossier clair.',
-  'home.title': 'Des états des lieux clairs, des décisions sereines.',
-  'home.intro':
-    'Trailase guide les locataires pendant les états des lieux d’entrée et de sortie, puis réunit chaque photo, note, relevé et signature dans un dossier prêt à être vérifié.',
-  'home.walkthrough': 'Voir Trailase en action',
   'home.prototype': 'Essayer la démo',
-  'home.scale':
-    'Conçu pour les équipes professionnelles gérant de 50 à 5 000 chambres ou logements.',
   'home.report': 'Rapport d’état des lieux d’entrée',
   'home.photos': 'Photographies',
-  'home.issue': 'Problème existant',
   'home.inventory': 'Éléments d’inventaire',
   'home.keys': 'Clés reçues',
   'home.meter': 'Relevé de compteur',
-  'home.confirmation': 'Confirmation du locataire',
-  'home.completed': 'Terminé',
   'home.wall': 'Mur près de la fenêtre',
-  'home.wallNote': 'Marque de surface existante documentée et confirmée par le locataire.',
-  'home.evidenceRecorded': 'Preuve enregistrée',
-  'home.workflowEyebrow': 'Des relances à un parcours fluide',
-  'home.workflowTitle': 'Fini les détails à réclamer, chaque remise avance enfin.',
-  'home.workflowIntro':
-    'Remplacez formulaires papier, photos éparses et fils de messages par un processus simple que votre équipe peut répéter en toute confiance.',
-  'home.step1Title': 'Lancez la remise',
-  'home.step1Text':
-    'Choisissez le bien, la chambre, le locataire et le type d’inspection depuis un seul espace.',
-  'home.step2Title': 'Le locataire fait sa part',
-  'home.step2Text':
-    'Il ouvre un lien guidé sur son téléphone, sans application, compte ni formation.',
-  'home.step3Title': 'Vérifiez un dossier complet',
-  'home.step3Text': 'Photos, état, inventaire, clés, compteurs et signatures arrivent ensemble.',
-  'home.evidenceEyebrow': 'La clarté au bon moment',
-  'home.evidenceTitle': 'Quand une question se pose, tout le contexte est déjà là.',
-  'home.evidenceText':
-    'Trailase place les preuves d’entrée et de sortie côte à côte, afin que votre équipe repère vite les changements et garde la main sur chaque décision.',
-  'home.tenantTitle': 'Facile à terminer',
-  'home.tenantText':
-    'La plupart des locataires terminent leur état des lieux en moins de cinq minutes, depuis leur propre téléphone.',
-  'home.teamTitle': 'Cohérent par défaut',
-  'home.teamText': 'Le même standard guidé dans chaque chambre, propriété et ville.',
-  'home.readyTitle': 'Prêt dès que vous en avez besoin',
-  'home.readyText': 'Un historique structuré et vérifiable, prêt dès qu’une question se pose.',
-  'home.portfolioEyebrow': 'Conçu pour grandir avec votre portefeuille',
-  'home.units': 'chambres ou logements gérés',
-  'home.standard': 'Un standard de remise fiable dans chaque propriété',
-  'home.workflowStandard':
-    'Chaque état des lieux suit les mêmes trois étapes, pour ne rien oublier.',
-  'home.operatorsEyebrow': 'Plus de cohérence, sans plus de friction',
-  'home.operatorsTitle': 'Un processus fiable, de 50 chambres à 5 000.',
-  'home.operatorsText':
-    'Trailase offre aux équipes immobilières européennes une expérience professionnelle qu’elles peuvent répéter sur tous leurs sites, tout en gardant un parcours locataire simple.',
   'home.audience.coliving': 'Coliving professionnel',
   'home.audience.student': 'Résidences étudiantes',
   'home.audience.serviced': 'Résidences avec services',
   'home.audience.btr': 'Résidences locatives gérées',
   'home.audience.managers': 'Gestion immobilière professionnelle',
-  'home.tagline': 'Un état des lieux plus clair commence ici',
-  'home.contactTitle': 'Faites de votre prochain état des lieux le plus simple à ce jour.',
-  'home.contactText':
-    'Dites-nous où les entrées ou sorties ralentissent votre équipe. Nous vous montrerons comment Trailase transforme ces détails dispersés en un processus clair.',
-  'home.contactTiming':
-    'Les résidences étudiantes et les grands portefeuilles concentrent l’essentiel de leurs entrées et sorties sur quelques semaines par an. Préparez-vous avant cette période, pas pendant.',
-  'home.contactButton': 'Demander une démo',
   'home.contactNameLabel': 'Nom (facultatif)',
   'home.contactEmailLabel': 'E-mail',
-  'home.contactMessageLabel': 'Qu’est-ce qui aiderait le plus votre équipe ?',
   'home.contactUnitsLabel': 'Combien de logements gérez-vous ? (facultatif)',
   'home.contactUnitsPlaceholder': 'Choisissez une tranche',
   'home.contactUnitsUpTo25': 'Jusqu’à 25 logements',
@@ -84,46 +31,16 @@ export const messages: Record<string, string> = {
   'home.contactUnitsRange301to1000': '301–1 000 logements',
   'home.contactUnitsRange1001to5000': '1 001–5 000 logements',
   'home.contactUnits5000Plus': 'Plus de 5 000 logements',
-  'home.contactSlaNote': 'Nous répondons dans la journée (jour ouvré).',
-  'home.contactMessagePlaceholder':
-    'Dites-nous quand commence votre prochaine saison d’entrées ou sorties, et où ça se complique…',
   'home.contactSending': 'Envoi…',
   'home.contactSuccessTitle': 'Message envoyé.',
   'home.contactSuccess': 'Merci, nous répondrons dans la journée (jour ouvré).',
   'home.contactError': 'L’envoi a échoué. Essayez le lien e-mail ci-dessous.',
-  'home.contactFallbackText': 'Vous pouvez aussi nous écrire directement :',
   'home.contactFallbackLink': 'Nous écrire',
-  'home.founderTitle': 'Pourquoi cela existe',
-  'home.founderText':
-    "Trailase est né en voyant le même problème se répéter en louant des chambres à travers l'Europe : il n'existait jamais de moyen fiable de prouver l'état d'une chambre à l'entrée ou à la sortie. Dans un cas, un propriétaire a prétendu que la peinture d'un mur avait été endommagée des mois après le départ. Il a fallu deux mois d'allers-retours pour régler cela, et cela ne s'est résolu que parce que des photos avant-après existaient. Le même problème apparaît à plus grande échelle. Une équipe de résidence étudiante qui libère 200 chambres la même semaine d'août a rarement le temps de documenter chacune correctement, si bien que des litiges apparaissent des semaines plus tard sans preuve d'aucun côté. Un portefeuille multivilles avec un personnel différent à chaque état des lieux finit par avoir un standard différent dans chaque immeuble, si bien que personne ne peut prouver une quelconque cohérence. Trailase existe pour combler cet écart avant qu'il ne devienne un litige.",
-  'home.contactFreeTrial': 'Gratuit pour vos 10 premières inspections. Sans engagement.',
   'home.contactCalButton': 'Réserver un appel',
-  'home.faqDeviceQ': "Que se passe-t-il si un locataire n'a pas de smartphone ?",
-  'home.faqDeviceA':
-    "Trailase fonctionne entièrement dans le navigateur : le locataire peut le faire depuis un téléphone, une tablette ou un ordinateur portable avec caméra. Aucune application ni compte n'est nécessaire.",
-  'home.faqSetupQ': 'Combien de temps faut-il pour la mise en place ?',
-  'home.faqSetupA':
-    'Un opérateur crée un lien à partager en quelques secondes depuis un seul espace de travail, sans rien à configurer au préalable.',
-  'home.faqPmsQ': 'Devons-nous remplacer notre logiciel de gestion immobilière ?',
-  'home.faqPmsA':
-    "Non. Trailase gère uniquement l'état des lieux et la preuve. Il fonctionne aux côtés du logiciel que votre équipe utilise déjà pour la location, la maintenance ou la comptabilité.",
-  'home.faqScaleQ': 'À quelle vitesse pouvons-nous déployer cela sur un grand portefeuille ?',
-  'home.faqScaleA':
-    "La plupart des équipes créent leur premier lien d'inspection en quelques minutes. Les grands portefeuilles peuvent le déployer propriété par propriété, car aucune formation ni installation n'est requise pour les locataires ou le personnel.",
-  'home.pricingEyebrow': 'Tarifs',
-  'home.pricingTitle': 'Des tarifs simples qui évoluent avec votre portefeuille.',
-  'home.pricingIntro':
-    "Le tarif évolue selon le nombre de logements gérés, pas selon le nombre de photos prises par votre équipe, d'un premier immeuble pilote à un portefeuille national.",
-  'home.pricingFreeNote':
-    'Gratuit pour vos 10 premières inspections, quelle que soit l’offre. Sans engagement, résiliable à tout moment.',
   'home.pricingLockInNote':
     'Inscrivez-vous maintenant et gardez le prix actuel tant que vous restez client, même si les tarifs affichés augmentent ensuite.',
   'home.pricingDisclaimer':
     "Tarifs de départ indiqués pour les portefeuilles européens. Le tarif final dépend de la taille du portefeuille et de l'ampleur du déploiement. Contactez-nous pour un devis précis.",
-  'home.pricingCtaText':
-    'Vous hésitez encore sur la formule ? Obtenez une réponse claire pour la taille exacte de votre portefeuille.',
-  'home.pricingCta': 'Parlez-nous de votre portefeuille',
-  'home.pricingIncludedTitle': 'Inclus dans toutes les offres',
   'home.pricingIncludedFeature1': 'Inspections illimitées',
   'home.pricingIncludedFeature2': "Membres d'équipe illimités",
   'home.pricingIncludedFeature3': 'Preuves photo, signature et état',
@@ -139,7 +56,6 @@ export const messages: Record<string, string> = {
   'home.pricingTier2Period': '/mois',
   'home.pricingTier2Tagline':
     'Pour les équipes en croissance qui standardisent leur premier processus.',
-  'home.pricingTier3Badge': 'Le plus populaire',
   'home.pricingTier3Name': 'Growth',
   'home.pricingTier3Range': '101 à 300 logements',
   'home.pricingTier3Price': '249 €',
@@ -161,55 +77,9 @@ export const messages: Record<string, string> = {
   'home.pricingTier6Price': 'Sur mesure',
   'home.pricingTier6Period': '',
   'home.pricingTier6Tagline': 'Pour les plateformes nationales et les réseaux de franchise.',
-  'home.trustEyebrow': 'Confiance et données',
-  'home.trustTitle': 'Aucun compte locataire, aucune donnée revendue.',
-  'home.trustIntro':
-    'Trailase est conçu pour recueillir des preuves, pas pour accumuler des données personnelles. Voici ce que cela signifie concrètement.',
-  'home.trustPoint1Title': 'Aucun compte locataire',
-  'home.trustPoint1Text':
-    'Pas de compte signifie pas de mot de passe ni de profil personnel que nous stockons au-delà de ce que l’état des lieux exige.',
-  'home.trustPoint2Title': 'Liens à usage unique',
-  'home.trustPoint2Text':
-    'Chaque lien locataire est un jeton impossible à deviner, limité à une seule inspection. Il ne peut être ni parcouru ni réutilisé pour autre chose.',
-  'home.trustPoint3Title': 'Accès opérateur limité à la session',
-  'home.trustPoint3Text':
-    "La file d'inspections de votre équipe n'est visible que depuis votre propre session opérateur. Aucun autre visiteur ne peut voir vos biens ou dossiers.",
-  'home.trustPoint4Title': 'Jamais vendu, jamais partagé',
-  'home.trustPoint4Text':
-    'Trailase ne vend ni ne partage les données des locataires avec des annonceurs ou des tiers non liés.',
-  'home.trustPoint5Title': "Infrastructure hébergée dans l'UE",
-  'home.trustPoint5Text':
-    "Trailase fonctionne sur une infrastructure située dans l'Union européenne, conformément aux exigences du RGPD pour les portefeuilles européens.",
-  'home.trustScope':
-    "Trailase réunit des preuves. Il n'attribue pas de responsabilité, ne détermine pas de faute et ne calcule pas de retenue sur dépôt de garantie. Cette décision reste celle de votre équipe.",
-  'home.founderHook':
-    'Un litige comme celui-ci coûte des semaines d’allers-retours. Une seule photo peut le régler en quelques minutes.',
-  'home.founderStat1Value': '2 mois',
-  'home.founderStat1Label':
-    'd’allers-retours pour un mur contesté, réglé uniquement grâce à des photos avant-après.',
-  'home.founderStat2Value': '200 chambres',
-  'home.founderStat2Label':
-    'libérées en une seule semaine d’août, sans le temps de documenter chacune correctement.',
-  'story.eyebrow': 'Voyez ce que la clarté change',
-  'story.title': 'Des détails dispersés à un dossier digne de confiance.',
-  'story.intro':
-    'Faites défiler pour transformer chaque détail en un dossier prêt à éclairer vos décisions.',
-  'story.phase.scattered': 'Capturer',
-  'story.phase.structured': 'Structurer',
-  'story.phase.comparison': 'Comparer',
-  'story.photos': 'Photographies',
-  'story.damage': 'Dommage existant',
-  'story.inventory': 'Éléments d’inventaire',
-  'story.meter': 'Relevé du compteur',
-  'story.keys': 'Clés reçues',
-  'story.signed': 'Signé',
-  'story.report': 'Rapport d’état',
-  'story.damageNote': 'Marque existante sur le mur · confirmée par la locataire',
   'story.moveIn': 'Entrée',
   'story.moveOut': 'Sortie',
   'story.potentialChange': 'Changement potentiel',
-  'story.evidenceNote':
-    'Comparez les deux moments, repérez ce qui a changé et décidez sereinement.',
   'contact.redirectTitle': 'Ouvrir votre messagerie ?',
   'contact.redirectText':
     'Vous allez quitter Trailase pour ouvrir un e-mail préparé dans un nouvel onglet.',
@@ -348,4 +218,107 @@ export const messages: Record<string, string> = {
   'og.noApp': 'Sans appli locataire',
   'og.photoFirst': 'Axé sur la photo',
   'og.comparisons': 'Comparaisons claires',
+  'nav.faq': 'Questions',
+  'home.badge': 'États des lieux d’entrée et de sortie',
+  'home.title': 'Des états des lieux que vos locataires terminent vraiment.',
+  'home.intro':
+    'Envoyez un lien. Le locataire parcourt le logement avec son téléphone, prend les photos et signe. Vous recevez un dossier clair pour chaque remise de clés, sans appli ni paperasse.',
+  'home.walkthrough': 'Demander une démo',
+  'home.perk1': '10 premiers états des lieux offerts',
+  'home.perk2': 'Sans engagement',
+  'home.perk3': 'Aucune appli pour les locataires',
+  'home.madeFor': 'Conçu pour',
+  'home.heroImageAlt': 'Un locataire photographie une chambre meublée avec son téléphone',
+  'home.signed': 'Signé par le locataire',
+  'home.mockRoom': 'Chambre 4B',
+  'home.mockEmail': 'E-mail',
+  'home.mockSend': 'Envoyer le lien',
+  'home.mockBedroom': 'Chambre',
+  'home.mockGood': 'Bon état',
+  'home.mockWear': 'Légère usure',
+  'home.mockDamage': 'Dommage constaté',
+  'home.mockSignature': 'Signature',
+  'home.mockAssess': 'Votre appréciation',
+  'home.workflowEyebrow': 'Fonctionnement',
+  'home.workflowTitle': 'Trois étapes simples. Plus besoin de relancer.',
+  'home.workflowIntro':
+    'Remplacez les formulaires papier, les photos éparpillées et les fils de messages par une routine que toute votre équipe peut suivre.',
+  'home.step1Title': 'Envoyez le lien',
+  'home.step1Text':
+    'Choisissez le logement et le locataire, puis partagez le lien par e-mail ou WhatsApp.',
+  'home.step2Title': 'Le locataire fait le tour du logement',
+  'home.step2Text':
+    'Il l’ouvre sur son téléphone et suit les étapes. Sans appli, sans compte et sans formation.',
+  'home.step3Title': 'Vous examinez un seul dossier',
+  'home.step3Text': 'Photos, notes, inventaire, clés, relevés et signature arrivent ensemble.',
+  'home.evidenceEyebrow': 'Quand une question se pose',
+  'home.evidenceTitle': 'Voyez ce qui a changé, côte à côte.',
+  'home.evidenceText':
+    'L’entrée et la sortie sont affichées côte à côte, les différences sautent aux yeux. Trailase les met en évidence. La décision vous revient.',
+  'home.tenantTitle': 'Simple pour les locataires',
+  'home.tenantText':
+    'Des étapes guidées sur leur propre téléphone, en anglais, espagnol, français ou néerlandais.',
+  'home.teamTitle': 'Le même standard partout',
+  'home.teamText': 'Chaque logement, bien et ville suit les mêmes étapes.',
+  'home.readyTitle': 'Prêt quand il vous le faut',
+  'home.readyText': 'L’historique complet est déjà organisé dès qu’une question se pose.',
+  'home.founderEyebrow': 'Pourquoi Trailase existe',
+  'home.founderTitle': 'Tout a commencé par un mur et deux mois d’échanges.',
+  'home.founderText':
+    'Trailase est né après des années de locations à travers l’Europe. Des mois après une sortie, un propriétaire a soulevé une question sur la peinture d’un mur. Il a fallu deux mois pour l’éclaircir, et cela n’a abouti que parce que des photos d’avant et d’après existaient.',
+  'home.founderClose':
+    'Nous avons créé Trailase pour que chaque équipe dispose de ce dossier dès le premier jour, sans travail supplémentaire.',
+  'home.founderImageAlt': 'Deux personnes se serrent la main dans un appartement meublé',
+  'home.pricingEyebrow': 'Tarifs',
+  'home.pricingTitle': 'Des tarifs simples, selon votre nombre de logements.',
+  'home.pricingIntro':
+    'Vos 10 premiers états des lieux sont offerts sur toutes les formules. Sans engagement, résiliable à tout moment.',
+  'home.pricingCardCta': 'Parlons-en',
+  'home.trustEyebrow': 'Confiance et données',
+  'home.trustTitle': 'Conçu pour réunir des preuves, pas des données personnelles.',
+  'home.trustIntro': 'Voici ce que cela signifie concrètement.',
+  'home.trustPoint1Title': 'Pas de compte locataire',
+  'home.trustPoint1Text':
+    'Ni mot de passe ni profil à conserver, seulement ce dont l’état des lieux a besoin.',
+  'home.trustPoint2Title': 'Un lien, un état des lieux',
+  'home.trustPoint2Text': 'Chaque lien est impossible à deviner et n’ouvre que cet état des lieux.',
+  'home.trustPoint3Title': 'Seule votre équipe voit vos dossiers',
+  'home.trustPoint3Text':
+    'Vos biens et états des lieux restent privés dans votre espace de travail.',
+  'home.trustPoint4Title': 'Jamais vendues, jamais partagées',
+  'home.trustPoint4Text':
+    'Nous ne vendons pas les données des locataires et ne les partageons pas avec des annonceurs.',
+  'home.trustPoint5Title': 'Hébergé dans l’UE',
+  'home.trustPoint5Text':
+    'Infrastructure située dans l’Union européenne, conformément aux exigences du RGPD.',
+  'home.trustScopeTitle': 'La décision vous revient',
+  'home.trustScope':
+    'Trailase réunit des preuves. Il n’attribue aucune faute, ne détermine aucune responsabilité et ne calcule aucune retenue sur le dépôt de garantie.',
+  'home.faqEyebrow': 'Questions',
+  'home.faqTitle': 'Bon à savoir',
+  'home.faqDeviceQ': 'Et si un locataire n’a pas de smartphone ?',
+  'home.faqDeviceA':
+    'Trailase fonctionne dans le navigateur : une tablette ou un ordinateur portable avec caméra convient aussi. Sans appli ni compte.',
+  'home.faqSetupQ': 'Combien de temps faut-il pour démarrer ?',
+  'home.faqSetupA':
+    'Ajoutez un bien et un logement, puis créez votre premier lien. Il n’y a rien à installer.',
+  'home.faqPmsQ': 'Faut-il remplacer notre logiciel de gestion ?',
+  'home.faqPmsA':
+    'Non. Trailase gère uniquement l’état des lieux et ses preuves, en complément de vos outils actuels.',
+  'home.faqScaleQ': 'Peut-on le déployer sur un grand portefeuille ?',
+  'home.faqScaleA':
+    'Oui. Vous pouvez commencer par un immeuble et ajouter des biens à votre rythme. Locataires et équipes n’ont rien à installer.',
+  'home.contactEyebrow': 'Parlons-en',
+  'home.contactTitle': 'Faisons de votre prochaine remise de clés la plus simple.',
+  'home.contactText':
+    'Dites-nous combien de logements vous gérez et où les remises de clés se compliquent. Nous vous montrerons comment Trailase fonctionnerait pour votre équipe.',
+  'home.contactTiming':
+    'Les résidences étudiantes et les grands portefeuilles concentrent leurs rotations sur quelques semaines par an. Le plus simple est de s’y préparer avant.',
+  'home.contactButton': 'Demander une démo',
+  'home.contactMessageLabel': 'Quelque chose à nous signaler ? (facultatif)',
+  'home.contactMessagePlaceholder':
+    'Quand commence votre prochaine période d’entrées ou de sorties ?',
+  'home.contactFallbackText': 'Vous pouvez aussi nous écrire directement :',
+  'home.contactSlaNote': 'Réponse dans la journée (jour ouvré)',
+  'inspection.demoCta': 'Et si cela fonctionnait pour vos biens ? Parlons-en.',
 };

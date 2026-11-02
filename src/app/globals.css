@@ -122,8 +122,8 @@
   --trailase-navy: #05265f;
   --radius: 0.75rem; /* friendly, professional surface geometry */
 
-  --font-display: "Inter", "ui-sans-serif", "system-ui", sans-serif;
-  --font-body: "Inter", "ui-sans-serif", "system-ui", sans-serif;
+  --font-display: var(--font-onest), "ui-sans-serif", "system-ui", sans-serif;
+  --font-body: var(--font-onest), "ui-sans-serif", "system-ui", sans-serif;
 }
 /* Logo-aligned blue ramp and semantic roles shared by marketing and the demo. */
 :root {

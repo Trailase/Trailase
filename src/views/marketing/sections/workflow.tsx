@@ -1,62 +1,117 @@
-import { ClipboardCheck, FileCheck2, Smartphone } from 'lucide-react';
+import { Check, Mail, MessageCircle, Send } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/components/i18n/language-provider';
-import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { SectionHeading } from '../heading';
+
+const mockFrame =
+  'flex h-52 flex-col justify-center rounded-xl border border-border bg-background p-4';
+
+function SendMock() {
+  const { t } = useLanguage();
+  return (
+    <div className={mockFrame}>
+      <p className="text-xs font-medium text-primary">{t('story.moveIn')}</p>
+      <p className="mt-1 font-semibold">{t('home.mockRoom')}</p>
+      <p className="text-sm text-muted-foreground">Sofia Martin</p>
+      <div className="mt-3 flex gap-2 text-xs font-medium">
+        <span className="flex items-center gap-1.5 rounded-full border border-border px-2.5 py-1">
+          <Mail className="size-3.5" aria-hidden /> {t('home.mockEmail')}
+        </span>
+        <span className="flex items-center gap-1.5 rounded-full border border-border px-2.5 py-1">
+          <MessageCircle className="size-3.5" aria-hidden /> WhatsApp
+        </span>
+      </div>
+      <p className="mt-3 flex items-center justify-center gap-1.5 rounded-full bg-primary py-2 text-xs font-semibold text-primary-foreground">
+        <Send className="size-3.5" aria-hidden /> {t('home.mockSend')}
+      </p>
+    </div>
+  );
+}
+
+function WalkthroughMock() {
+  const { t } = useLanguage();
+  return (
+    <div className={mockFrame}>
+      <div className="flex items-center gap-3">
+        <div className="relative size-16 shrink-0 overflow-hidden rounded-lg">
+          <Image
+            src="/images/inspectionEvidence.jpg"
+            alt=""
+            fill
+            sizes="64px"
+            className="object-cover object-[72%_center]"
+          />
+        </div>
+        <p className="font-semibold">{t('home.mockBedroom')}</p>
+      </div>
+      <div className="mt-3 flex flex-col gap-1.5 text-xs font-medium">
+        {['home.mockGood', 'home.mockWear', 'home.mockDamage'].map((option, index) => (
+          <span
+            key={option}
+            className={cn(
+              'flex items-center justify-between rounded-lg border px-3 py-1.5',
+              index === 0 ? 'border-primary bg-primary/10 text-primary' : 'border-border',
+            )}
+          >
+            {t(option)}
+            {index === 0 && <Check className="size-3.5" aria-hidden />}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function RecordMock() {
+  const { t } = useLanguage();
+  return (
+    <ul className={cn(mockFrame, 'gap-2 text-sm')}>
+      {['home.photos', 'home.inventory', 'home.keys', 'home.meter', 'home.mockSignature'].map(
+        (item) => (
+          <li key={item} className="flex items-center gap-2.5">
+            <span className="grid size-5 shrink-0 place-items-center rounded-full bg-accent text-accent-foreground">
+              <Check className="size-3" aria-hidden />
+            </span>
+            {t(item)}
+          </li>
+        ),
+      )}
+    </ul>
+  );
+}
 
 const steps = [
-  { number: '01', title: 'home.step1Title', description: 'home.step1Text', icon: ClipboardCheck },
-  { number: '02', title: 'home.step2Title', description: 'home.step2Text', icon: Smartphone },
-  { number: '03', title: 'home.step3Title', description: 'home.step3Text', icon: FileCheck2 },
+  { title: 'home.step1Title', text: 'home.step1Text', mock: SendMock },
+  { title: 'home.step2Title', text: 'home.step2Text', mock: WalkthroughMock },
+  { title: 'home.step3Title', text: 'home.step3Text', mock: RecordMock },
 ];
 
 export function Workflow() {
   const { t } = useLanguage();
   return (
-    <section
-      id="how-it-works"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-background px-gutter py-20 text-foreground md:py-28"
-    >
-      <div className="pointer-events-none absolute -left-24 top-24 -z-10 size-72 rounded-full border-[48px] border-brand-200/35 dark:border-brand-700/15" />
+    <section id="how-it-works" className="scroll-mt-20 px-gutter py-section">
       <div className="mx-auto w-full max-w-[var(--container-page)]">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-24">
-          <div className="max-w-xl">
-            <p className="text-eyebrow">{t('home.workflowEyebrow')}</p>
-            <h2 className="mt-5 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
-              {t('home.workflowTitle')}
-            </h2>
-            <p className="mt-6 text-body-lg leading-8 text-muted-foreground">
-              {t('home.workflowIntro')}
-            </p>
-          </div>
-          <p className="hidden border-l border-brand-teal pl-6 text-sm leading-6 text-foreground lg:block">
-            {t('home.workflowStandard')}
-          </p>
-        </div>
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {steps.map((step) => {
-            const Icon = step.icon;
-            return (
-              <Card
-                key={step.number}
-                className="group relative overflow-hidden border-brand-200/80 bg-card/95 shadow-md transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl dark:border-brand-800 dark:hover:border-brand-700"
-              >
-                <div className="absolute right-4 top-1 font-display text-8xl font-semibold tracking-tighter text-brand-100 transition group-hover:text-brand-200 dark:text-brand-300/50 dark:group-hover:text-brand-200/60">
-                  {step.number}
-                </div>
-                <CardContent className="relative p-7 pt-8">
-                  <span className="grid size-11 place-items-center rounded-full bg-brand-600 text-white shadow-brand dark:bg-brand-400 dark:text-brand-900">
-                    <Icon className="size-5" aria-hidden />
-                  </span>
-                  <h3 className="mt-12 max-w-[15rem] font-display text-h4 tracking-tight">
-                    {t(step.title)}
-                  </h3>
-                  <p className="mt-4 text-sm leading-6 text-muted-foreground dark:text-brand-100">
-                    {t(step.description)}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+        <SectionHeading
+          centered
+          eyebrow={t('home.workflowEyebrow')}
+          title={t('home.workflowTitle')}
+          intro={t('home.workflowIntro')}
+        />
+        <ol className="mt-12 grid gap-5 md:grid-cols-3">
+          {steps.map(({ title, text, mock: Mock }, index) => (
+            <li key={title} className="rounded-2xl border border-border bg-card p-4 shadow-sm">
+              <Mock />
+              <div className="p-2 pt-5">
+                <h3 className="flex items-baseline gap-2.5 font-display text-lg font-semibold tracking-tight">
+                  <span className="text-primary">{index + 1}</span>
+                  {t(title)}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">{t(text)}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

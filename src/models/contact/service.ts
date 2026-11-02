@@ -31,8 +31,8 @@ export async function sendContactMessage(
     input.name ? `Name: ${input.name}` : null,
     `Email: ${input.email}`,
     input.unitsRange ? `Portfolio size: ${unitsRangeLabels[input.unitsRange]}` : null,
-    '',
-    input.message,
+    input.message ? '' : null,
+    input.message ?? null,
   ]
     .filter((line) => line !== null)
     .join('\n');

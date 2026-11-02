@@ -1,127 +1,110 @@
-import { ArrowRight, Camera, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Camera, Check, CheckCircle2, Gauge, KeyRound, ListChecks } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AmbientVideo } from '@/components/custom/ambient-video';
 import { useLanguage } from '@/components/i18n/language-provider';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { backgroundVideo, backgroundVideoPortrait } from '@/lib/background-videos';
-import { requestContactRedirect } from '@/lib/contact-redirect';
-import { contactMailto } from '@/lib/i18n';
+import { cn } from '@/lib/utils';
+import { ctaButton } from '../heading';
+
+const audiences = [
+  'home.audience.coliving',
+  'home.audience.student',
+  'home.audience.serviced',
+  'home.audience.btr',
+  'home.audience.managers',
+];
 
 export function Hero() {
-  const { locale, t } = useLanguage();
-  const contactHref = contactMailto(locale);
+  const { t } = useLanguage();
+  const record = [
+    { icon: Camera, value: '12', label: t('home.photos') },
+    { icon: ListChecks, value: '8', label: t('home.inventory') },
+    { icon: KeyRound, value: '5', label: t('home.keys') },
+    { icon: Gauge, value: '048239', label: t('home.meter') },
+  ];
 
   return (
-    <section className="relative isolate min-h-[min(760px,100dvh)] overflow-hidden border-b border-brand-200/70 px-gutter py-20 md:py-28 lg:flex lg:items-center lg:py-32 dark:border-white/10">
-      <Image
-        src="/images/heroProperty.jpg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="-z-30 object-cover object-center"
-      />
-      <AmbientVideo
-        src={backgroundVideo('homeHero')}
-        portraitSrc={backgroundVideoPortrait('homeHero')}
-        poster="/images/heroProperty.jpg"
-        playbackRate={0.6}
-        className="pointer-events-none absolute inset-0 -z-[29] size-full object-cover object-center motion-reduce:hidden"
-      />
-      <div className="video-overlay pointer-events-none absolute inset-0 -z-20" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-background/35 to-transparent" />
-      <div className="pointer-events-none absolute -right-40 top-0 -z-10 size-[34rem] rounded-full bg-brand-300/25 blur-3xl dark:bg-brand-500/15" />
-      <div className="mx-auto grid w-full max-w-[var(--container-page)] gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-24">
-        <div className="video-copy max-w-2xl shadow-xl sm:p-8 lg:-ml-8">
-          <Badge
-            variant="outline"
-            className="mb-7 rounded-full border-brand-300 bg-brand-50 px-4 py-2 text-brand-800 shadow-xs dark:border-brand-700 dark:bg-brand-900/60 dark:text-brand-100"
-          >
+    <section className="hero-wash overflow-hidden px-gutter pb-12 pt-10 md:pb-16 md:pt-16">
+      <div className="mx-auto grid w-full max-w-[var(--container-page)] items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
+        <div>
+          <p className="inline-flex rounded-full bg-accent px-3.5 py-1.5 text-sm font-medium text-accent-foreground">
             {t('home.badge')}
-          </Badge>
-          <h1 className="max-w-[12ch] font-display text-[clamp(3rem,6.6vw,6.4rem)] font-semibold leading-[0.94] tracking-[-0.052em] text-brand-navy dark:text-white">
+          </p>
+          <h1 className="mt-6 text-balance font-display text-[clamp(2.4rem,4.4vw,3.6rem)] font-semibold leading-[1.05] tracking-[-0.035em] text-brand-navy dark:text-white">
             {t('home.title')}
           </h1>
-          <p className="mt-8 max-w-xl text-body-lg font-medium leading-8 text-foreground/75 dark:text-white/72">
-            {t('home.intro')}
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="h-12 rounded-sm px-6 shadow-brand">
-              <a
-                href={contactHref}
-                onClick={(event) => {
-                  event.preventDefault();
-                  requestContactRedirect(contactHref);
-                }}
-              >
+          <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">{t('home.intro')}</p>
+          <div id="hero-actions" className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button asChild size="lg" className={cn(ctaButton, 'shadow-brand')}>
+              <a href="#contact">
                 {t('home.walkthrough')} <ArrowRight aria-hidden />
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-12 rounded-sm px-6">
-              <Link href="/operator/inspections">
-                {t('home.prototype')} <ArrowRight aria-hidden />
-              </Link>
+            <Button asChild size="lg" variant="outline" className={ctaButton}>
+              <Link href="/operator/inspections">{t('home.prototype')}</Link>
             </Button>
           </div>
-          <p className="mt-6 flex items-start gap-2 text-sm font-medium text-foreground/65 dark:text-white/60">
-            <CheckCircle2
-              className="mt-0.5 size-4 shrink-0 text-brand-600 dark:text-brand-300"
-              aria-hidden
-            />
-            {t('home.scale')}
-          </p>
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
+            {['home.perk1', 'home.perk2', 'home.perk3'].map((perk) => (
+              <li key={perk} className="flex items-center gap-1.5">
+                <Check className="size-4 text-brand-teal" aria-hidden />
+                {t(perk)}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <Card className="relative overflow-hidden border-brand-200/80 bg-card/95 shadow-2xl ring-1 ring-white/50 backdrop-blur-xl dark:border-white/12 dark:bg-card/94 dark:ring-white/5">
-          <div className="border-b border-border p-6 sm:p-7">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-eyebrow">{t('home.report')}</p>
-                <h2 className="mt-2 font-display text-3xl tracking-tight">Room 4B</h2>
-                <p className="mt-1 text-sm text-muted-foreground">Chamberí Living · Sofia Martin</p>
-              </div>
-              <Badge className="bg-brand-100 text-brand-800 hover:bg-brand-100 dark:bg-brand-900 dark:text-brand-200">
-                <CheckCircle2 aria-hidden /> {t('home.completed')}
-              </Badge>
-            </div>
+        <div className="relative mb-6 lg:mb-0">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-3xl shadow-2xl">
+            <Image
+              src="/images/inspectionEvidence.jpg"
+              alt={t('home.heroImageAlt')}
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-[32%_center]"
+            />
           </div>
-          <CardContent className="p-6 sm:p-7">
-            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-3">
-              {[
-                ['12', t('home.photos')],
-                ['1', t('home.issue')],
-                ['8', t('home.inventory')],
-                ['5', t('home.keys')],
-                ['048239', t('home.meter')],
-                ['✓', t('home.confirmation')],
-              ].map(([value, label]) => (
-                <div key={label} className="bg-card p-4">
-                  <p className="text-xl font-semibold tracking-tight">{value}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">{label}</p>
+          <p className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full bg-card/95 px-3 py-1.5 text-xs font-semibold shadow-md backdrop-blur sm:left-4 sm:top-4">
+            <CheckCircle2 className="size-4 text-brand-teal" aria-hidden />
+            {t('home.signed')}
+          </p>
+          <div className="float-slow absolute -bottom-6 right-2 w-[min(17.5rem,82%)] rounded-2xl border border-border bg-card p-4 shadow-xl sm:right-4 lg:-right-4">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+              {t('home.report')}
+            </p>
+            <p className="mt-1 font-display text-lg font-semibold tracking-tight">
+              {t('home.mockRoom')}
+            </p>
+            <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2.5">
+              {record.map(({ icon: Icon, value, label }) => (
+                <div key={label} className="flex min-w-0 gap-2">
+                  <Icon className="mt-0.5 size-3.5 shrink-0 text-primary" aria-hidden />
+                  <div className="min-w-0">
+                    <dd className="text-sm font-semibold leading-tight">{value}</dd>
+                    <dt className="text-[0.7rem] leading-tight text-muted-foreground hyphens-auto [overflow-wrap:anywhere]">
+                      {label}
+                    </dt>
+                  </div>
                 </div>
               ))}
-            </div>
-            <div className="mt-5 flex items-start gap-3 border-l-2 border-amber-400 bg-amber-50/70 p-4 dark:bg-amber-950/20">
-              <Camera
-                className="mt-0.5 size-4 shrink-0 text-amber-700 dark:text-amber-300"
-                aria-hidden
-              />
-              <div>
-                <p className="text-sm font-semibold">{t('home.wall')}</p>
-                <p className="mt-1 text-xs leading-5 text-muted-foreground">{t('home.wallNote')}</p>
-              </div>
-            </div>
-            <div className="mt-5 flex items-center justify-between text-xs text-muted-foreground">
-              <span>Inspection KF-2026-00482</span>
-              <span className="font-medium text-brand-700 dark:text-brand-300">
-                {t('home.evidenceRecorded')}
-              </span>
-            </div>
-          </CardContent>
-        </Card>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-14 flex w-full max-w-[var(--container-page)] flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6 md:mt-20">
+        <p className="text-sm font-semibold">{t('home.madeFor')}</p>
+        <ul className="flex flex-wrap gap-2">
+          {audiences.map((audience) => (
+            <li
+              key={audience}
+              className="rounded-full border border-border bg-card px-3 py-1 text-sm text-muted-foreground"
+            >
+              {t(audience)}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

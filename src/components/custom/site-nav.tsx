@@ -10,34 +10,35 @@ import { useLanguage } from '@/components/i18n/language-provider';
 import { LanguageSelector } from '@/components/i18n/language-selector';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { requestContactRedirect } from '@/lib/contact-redirect';
-import { contactMailto } from '@/lib/i18n';
-import { type NavItem, navItems } from '@/lib/nav';
+import { navItems } from '@/lib/nav';
 import { siteName } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
+// next/link doesn't scroll when the address already has the same hash, so links
+// to a section of the current page scroll to it directly.
+function jumpToSection(event: MouseEvent<HTMLAnchorElement>, href: string) {
+  const section = href.startsWith('/#') ? document.getElementById(href.slice(2)) : null;
+  if (!section) return;
+  event.preventDefault();
+  window.history.replaceState(null, '', href);
+  section.scrollIntoView({ behavior: 'smooth' });
+}
+
 export function SiteNav() {
-  const { locale, t } = useLanguage();
+  const { t } = useLanguage();
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const primaryItems = navItems.filter((item) => item.group === 'primary');
   const contactItem = navItems.find((item) => item.group === 'secondary');
 
-  const hrefFor = (item: NavItem) =>
-    item.translationKey === 'nav.contact' ? contactMailto(locale) : item.href;
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`);
-  const openContact = (event: MouseEvent<HTMLAnchorElement>, item: NavItem) => {
-    if (item.translationKey !== 'nav.contact') return;
-    event.preventDefault();
-    requestContactRedirect(hrefFor(item));
-  };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/85 px-gutter backdrop-blur-xl">
       <nav
         aria-label="Primary"
-        className="mx-auto flex h-14 max-w-screen-xl items-center gap-2 px-4"
+        className="mx-auto flex h-14 w-full max-w-[var(--container-page)] items-center gap-2"
       >
         <Link
           href="/"
@@ -53,7 +54,7 @@ export function SiteNav() {
           />
         </Link>
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {primaryItems.map((item) => (
             <Button
               key={item.href}
@@ -62,17 +63,22 @@ export function SiteNav() {
               size="sm"
               className={cn(isActive(item.href) && 'bg-accent text-accent-foreground')}
             >
-              <Link href={item.href}>{t(item.translationKey)}</Link>
+              <Link href={item.href} onClick={(event) => jumpToSection(event, item.href)}>
+                {t(item.translationKey)}
+              </Link>
             </Button>
           ))}
         </div>
 
         <div className="ml-auto flex items-center gap-1">
           {contactItem ? (
-            <Button asChild variant="secondary" size="sm" className="hidden md:inline-flex">
-              <a href={hrefFor(contactItem)} onClick={(event) => openContact(event, contactItem)}>
+            <Button asChild size="sm" className="hidden rounded-full px-4 sm:inline-flex">
+              <Link
+                href={contactItem.href}
+                onClick={(event) => jumpToSection(event, contactItem.href)}
+              >
                 {t(contactItem.translationKey)}
-              </a>
+              </Link>
             </Button>
           ) : null}
           <LanguageSelector />
@@ -80,7 +86,7 @@ export function SiteNav() {
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className="lg:hidden">
                 <Menu aria-hidden />
                 <span className="sr-only">{t('nav.openMenu')}</span>
               </Button>
@@ -92,22 +98,28 @@ export function SiteNav() {
               <nav aria-label="Mobile" className="mt-6 flex flex-col gap-2">
                 {primaryItems.map((item) => (
                   <Button key={item.href} asChild variant="ghost" className="w-full justify-start">
-                    <Link href={item.href} onClick={() => setMobileOpen(false)}>
+                    <Link
+                      href={item.href}
+                      onClick={(event) => {
+                        setMobileOpen(false);
+                        jumpToSection(event, item.href);
+                      }}
+                    >
                       {t(item.translationKey)}
                     </Link>
                   </Button>
                 ))}
                 {contactItem ? (
-                  <Button asChild variant="secondary" className="mt-2 w-full justify-start">
-                    <a
-                      href={hrefFor(contactItem)}
+                  <Button asChild className="mt-2 w-full rounded-full">
+                    <Link
+                      href={contactItem.href}
                       onClick={(event) => {
-                        openContact(event, contactItem);
                         setMobileOpen(false);
+                        jumpToSection(event, contactItem.href);
                       }}
                     >
                       {t(contactItem.translationKey)}
-                    </a>
+                    </Link>
                   </Button>
                 ) : null}
               </nav>
@@ -120,11 +132,26 @@ export function SiteNav() {
 }
 
 export function SiteFooter() {
+  const { t } = useLanguage();
   return (
-    <footer className="border-t border-border bg-background px-gutter py-7 text-center text-sm text-muted-foreground">
-      <p>
-        © {new Date().getFullYear()} {siteName}
-      </p>
+    <footer className="border-t border-border bg-background px-gutter py-7 text-sm text-muted-foreground">
+      <div className="mx-auto flex w-full max-w-[var(--container-page)] flex-col items-center justify-between gap-3 sm:flex-row">
+        <p>
+          © {new Date().getFullYear()} {siteName}
+        </p>
+        <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-5 gap-y-1">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={(event) => jumpToSection(event, item.href)}
+              className="hover:text-foreground"
+            >
+              {t(item.translationKey)}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </footer>
   );
 }

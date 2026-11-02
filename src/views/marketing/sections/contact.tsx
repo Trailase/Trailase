@@ -1,6 +1,7 @@
 'use client';
 
-import { CheckCircle2, Mail } from 'lucide-react';
+import { Check, CheckCircle2, Mail } from 'lucide-react';
+import { useEffect } from 'react';
 import { toast } from 'sonner';
 import { useLanguage } from '@/components/i18n/language-provider';
 import { Button } from '@/components/ui/button';
@@ -8,9 +9,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useContactForm } from '@/controllers/contact/useContactForm';
-import { requestContactRedirect } from '@/lib/contact-redirect';
+import {
+  type ContactUnitsDetail,
+  contactUnitsEvent,
+  requestContactRedirect,
+} from '@/lib/contact-redirect';
 import { env } from '@/lib/env';
 import { contactMailto } from '@/lib/i18n';
+import { ctaButton, sectionTitle } from '../heading';
 
 export function Contact() {
   const { locale, t } = useLanguage();
@@ -19,79 +25,43 @@ export function Contact() {
     success: (message) => toast.success(message),
     error: (message) => toast.error(message),
   });
+  const { setUnitsRange } = form;
+
+  useEffect(() => {
+    const handleUnits = (event: Event) => {
+      setUnitsRange((event as CustomEvent<ContactUnitsDetail>).detail.unitsRange);
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    };
+    window.addEventListener(contactUnitsEvent, handleUnits);
+    return () => window.removeEventListener(contactUnitsEvent, handleUnits);
+  }, [setUnitsRange]);
 
   return (
     <section
       id="contact"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-background px-gutter py-20 text-foreground md:py-28"
+      className="scroll-mt-14 bg-brand-navy px-gutter py-section pb-24 text-white sm:pb-section dark:bg-[#0b2a5c]"
     >
-      <div className="relative mx-auto grid w-full max-w-[var(--container-page)] gap-10 md:grid-cols-[1.1fr_1fr] md:items-start md:gap-16">
-        <div className="max-w-xl">
-          <p className="text-eyebrow">{t('home.tagline')}</p>
-          <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
-            {t('home.contactTitle')}
-          </h2>
-          <p className="mt-5 max-w-xl text-body-lg leading-8 text-muted-foreground">
-            {t('home.contactText')}
+      <div className="mx-auto grid w-full max-w-[var(--container-page)] items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div>
+          <p className="text-caption font-semibold uppercase tracking-[0.08em] text-brand-teal">
+            {t('home.contactEyebrow')}
           </p>
-          <p className="mt-4 max-w-xl text-sm font-medium text-primary">
-            {t('home.contactTiming')}
-          </p>
-          <div className="mt-8 max-w-xl border-l-2 border-brand-teal pl-5">
-            <p className="text-caption font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-              {t('home.founderTitle')}
-            </p>
-            <p className="mt-3 font-display text-lg leading-7 text-foreground">
-              {t('home.founderHook')}
-            </p>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">{t('home.founderText')}</p>
-            <div className="mt-5 grid grid-cols-2 gap-4">
-              <div>
-                <p className="font-display text-2xl tracking-tight text-primary">
-                  {t('home.founderStat1Value')}
-                </p>
-                <p className="mt-1 text-xs leading-5 text-muted-foreground">
-                  {t('home.founderStat1Label')}
-                </p>
-              </div>
-              <div>
-                <p className="font-display text-2xl tracking-tight text-primary">
-                  {t('home.founderStat2Value')}
-                </p>
-                <p className="mt-1 text-xs leading-5 text-muted-foreground">
-                  {t('home.founderStat2Label')}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <dl className="mt-8 flex max-w-xl flex-col gap-5">
-            <div>
-              <dt className="text-sm font-semibold text-foreground">{t('home.faqDeviceQ')}</dt>
-              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
-                {t('home.faqDeviceA')}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-sm font-semibold text-foreground">{t('home.faqSetupQ')}</dt>
-              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
-                {t('home.faqSetupA')}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-sm font-semibold text-foreground">{t('home.faqPmsQ')}</dt>
-              <dd className="mt-1 text-sm leading-6 text-muted-foreground">{t('home.faqPmsA')}</dd>
-            </div>
-            <div>
-              <dt className="text-sm font-semibold text-foreground">{t('home.faqScaleQ')}</dt>
-              <dd className="mt-1 text-sm leading-6 text-muted-foreground">
-                {t('home.faqScaleA')}
-              </dd>
-            </div>
-          </dl>
+          <h2 className={`mt-4 ${sectionTitle}`}>{t('home.contactTitle')}</h2>
+          <p className="mt-5 text-lg leading-8 text-white/75">{t('home.contactText')}</p>
+          <ul className="mt-7 flex flex-col gap-3 font-medium">
+            {['home.contactSlaNote', 'home.perk1', 'home.perk2'].map((item) => (
+              <li key={item} className="flex items-center gap-3">
+                <span className="grid size-6 shrink-0 place-items-center rounded-full bg-white/10 text-brand-teal">
+                  <Check className="size-4" aria-hidden />
+                </span>
+                {t(item)}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-7 max-w-lg text-sm leading-6 text-white/65">{t('home.contactTiming')}</p>
         </div>
 
-        <div className="w-full rounded-xl border border-border bg-card p-6 text-card-foreground shadow-lg sm:p-7">
+        <div className="w-full rounded-3xl bg-card p-6 text-card-foreground shadow-2xl sm:p-8">
           {form.sent ? (
             <div className="flex flex-col items-start gap-3 py-2">
               <span className="grid size-11 place-items-center rounded-full bg-accent text-accent-foreground">
@@ -102,25 +72,27 @@ export function Contact() {
             </div>
           ) : (
             <form className="flex flex-col gap-4" onSubmit={form.submit}>
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor="contact-name">{t('home.contactNameLabel')}</Label>
-                <Input
-                  id="contact-name"
-                  autoComplete="name"
-                  value={form.name}
-                  onChange={(event) => form.setName(event.target.value)}
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor="contact-email">{t('home.contactEmailLabel')}</Label>
-                <Input
-                  id="contact-email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  value={form.email}
-                  onChange={(event) => form.setEmail(event.target.value)}
-                />
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex flex-col gap-1.5">
+                  <Label htmlFor="contact-email">{t('home.contactEmailLabel')}</Label>
+                  <Input
+                    id="contact-email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    value={form.email}
+                    onChange={(event) => form.setEmail(event.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <Label htmlFor="contact-name">{t('home.contactNameLabel')}</Label>
+                  <Input
+                    id="contact-name"
+                    autoComplete="name"
+                    value={form.name}
+                    onChange={(event) => form.setName(event.target.value)}
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-1.5">
                 <Label htmlFor="contact-units">{t('home.contactUnitsLabel')}</Label>
@@ -143,40 +115,27 @@ export function Contact() {
                 <Label htmlFor="contact-message">{t('home.contactMessageLabel')}</Label>
                 <Textarea
                   id="contact-message"
-                  required
-                  minLength={10}
-                  rows={4}
+                  rows={3}
                   placeholder={t('home.contactMessagePlaceholder')}
                   value={form.message}
                   onChange={(event) => form.setMessage(event.target.value)}
                 />
               </div>
-              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-primary">
-                {t('home.contactFreeTrial')}
-              </p>
-              <p className="text-xs text-muted-foreground">{t('home.contactSlaNote')}</p>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={form.submitting}
-                  className="h-auto min-h-12 flex-1 whitespace-normal rounded-sm px-7 py-3 font-semibold shadow-brand"
-                >
-                  {form.submitting ? t('home.contactSending') : t('home.contactButton')}
+              <Button
+                type="submit"
+                size="lg"
+                disabled={form.submitting}
+                className={`${ctaButton} mt-1 w-full shadow-brand`}
+              >
+                {form.submitting ? t('home.contactSending') : t('home.contactButton')}
+              </Button>
+              {env.NEXT_PUBLIC_CAL_LINK && (
+                <Button asChild size="lg" variant="outline" className={`${ctaButton} w-full`}>
+                  <a href={env.NEXT_PUBLIC_CAL_LINK} target="_blank" rel="noopener noreferrer">
+                    {t('home.contactCalButton')}
+                  </a>
                 </Button>
-                {env.NEXT_PUBLIC_CAL_LINK && (
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="h-auto min-h-12 flex-1 whitespace-normal rounded-sm px-7 py-3 font-semibold"
-                  >
-                    <a href={env.NEXT_PUBLIC_CAL_LINK} target="_blank" rel="noopener noreferrer">
-                      {t('home.contactCalButton')}
-                    </a>
-                  </Button>
-                )}
-              </div>
+              )}
               {form.unavailable && (
                 <p className="text-sm text-muted-foreground">
                   {t('home.contactFallbackText')}{' '}

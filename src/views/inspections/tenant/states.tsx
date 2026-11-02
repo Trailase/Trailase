@@ -85,6 +85,12 @@ export function Complete({ status, room }: { status: FlowStatus; room: string })
             {submitted ? t('inspection.submittedText', { room }) : t('inspection.alreadyText')}
           </p>
           <p className="mt-5 text-sm text-muted-foreground">{t('inspection.close')}</p>
+          <div className="mt-7 border-t border-border pt-6">
+            <p className="font-semibold">{t('inspection.demoCta')}</p>
+            <Button asChild className="mt-3 h-12 rounded-full px-7 font-semibold shadow-brand">
+              <Link href="/#contact">{t('home.walkthrough')}</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </main>
